@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v2006 sp2 U (http://www.xmlspy.com) by Edan Ayal (Elsec) -->
+<snsr_std:schema xmlns="urn:SNSR_STD" xmlns:snsr_std="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:SNSR_STD" elementFormDefault="qualified">
+	<snsr_std:include schemaLocation="SensorConfiguration.xsd"/>
+	<snsr_std:annotation>
+		<snsr_std:documentation>Sensor Subscription used in the generic sensor protocol.</snsr_std:documentation>
+	</snsr_std:annotation>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="DeviceSubscriptionConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="DeviceIdentification" type="DeviceIdentificationType"/>
+				<snsr_std:element name="RequestorIdentification" type="LimitedLengthString"/>
+				<snsr_std:element name="SubscriptionType" type="SubscriptionTypeType" minOccurs="0" maxOccurs="3"/>
+				<snsr_std:element ref="DeviceSubscriptionConfiguration" minOccurs="0" maxOccurs="100"/>
+			</snsr_std:sequence>
+			<snsr_std:attribute name="MessageType" type="MessageType" use="optional"/>
+			<snsr_std:attribute name="ExecutionStatus" type="ExecutionStatusType" use="optional"/>
+			<snsr_std:attribute name="ProtocolVersion" type="ProtocolVersionType" use="required"/>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Subscription and Report types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+	
+	-->
+	<snsr_std:simpleType name="SubscriptionTypeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="TechnicalStatus"/>
+			<snsr_std:enumeration value="Configuration"/>
+			<snsr_std:enumeration value="OperationalIndication"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	   -->
+</snsr_std:schema>

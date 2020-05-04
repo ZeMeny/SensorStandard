@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Assi B. (Elbit) -->
+<!-- edited with XML Spy v2006 sp2 U (http://www.xmlspy.com) by Edan Ayal (Elsec) -->
+<!-- edited by Roi Shraga (hatal - project mrs) june 2017-->
+<!-- edited by Or Saffar (hatal - project mrs) Mar 2019-->
+<snsr_std:schema xmlns="urn:SNSR_STD" xmlns:snsr_std="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:SNSR_STD" elementFormDefault="qualified">
+	<snsr_std:include schemaLocation="SensorStatusReport.xsd"/>
+	<snsr_std:annotation>
+		<snsr_std:documentation>Sensor (and Device) Configuration used in the generic sensor protocol.</snsr_std:documentation>
+	</snsr_std:annotation>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="SensorConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SensorIdentification" type="SensorIdentificationType"/>
+				<snsr_std:element ref="LocationType" minOccurs="0"/>
+				<snsr_std:choice minOccurs="0">
+					<snsr_std:element ref="OpticalConfiguration"/>
+					<snsr_std:element ref="PedestalConfiguration"/>
+					<snsr_std:element ref="PointerConfiguration"/>
+					<snsr_std:element ref="GyroStabilizationConfiguration"/>
+					<snsr_std:element ref="VideoSwitchConfiguration"/>
+					<snsr_std:element ref="VideoEncoderConfiguration"/>
+					<snsr_std:element ref="AlertIndicatorConfiguration"/>
+					<snsr_std:element ref="AntennaConfiguration"/>
+					<snsr_std:element ref="VideoMotionDetectorConfiguration"/>
+					<snsr_std:element ref="ReceiverConfiguration"/>
+					<snsr_std:element ref="DetectionControllerConfiguration"/>
+					<snsr_std:element ref="DebriefConfiguration"/>
+					<snsr_std:element ref="TrackerConfiguration"/>
+					<snsr_std:element ref="DroneConfiguration"/>
+					<snsr_std:element ref="PayloadConfiguration"/>
+				</snsr_std:choice>
+				<snsr_std:element name="SimpleCommandConfiguration" type="SimpleCommandType" minOccurs="0" maxOccurs="50"/>
+				<snsr_std:element name="SingleValueRangeCommandConfiguration" type="SingleValueRangeCommandConfigurationType" minOccurs="0" maxOccurs="50"/>
+				<snsr_std:element name="ExpandedLocationType" type="GeometricElement" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="DeviceConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="DeviceIdentification" type="DeviceIdentificationType" minOccurs="0"/>
+				<snsr_std:element name="RequestorIdentification" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="NotificationServiceIPAddress" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="NotificationServicePort" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element ref="LocationType" minOccurs="0"/>
+				<!-- self location -->
+				<snsr_std:element ref="DeviceConfiguration" minOccurs="0" maxOccurs="100"/>
+				<snsr_std:element ref="SensorConfiguration" minOccurs="0" maxOccurs="100"/>
+				<snsr_std:element name="ExpandedLocationType" type="GeometricElement" minOccurs="0"/>
+				<snsr_std:element name="DeviceArea" type="DeviceArea" minOccurs="0" maxOccurs="100"/>
+			</snsr_std:sequence>
+			<snsr_std:attribute name="MessageType" type="MessageType" use="optional"/>
+			<snsr_std:attribute name="ExecutionStatus" type="ExecutionStatusType" use="optional"/>
+			<snsr_std:attribute name="ProtocolVersion" type="ProtocolVersionType" use="required"/>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="OpticalConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="MechanicalScanningSupported" type="snsr_std:boolean" minOccurs="0"/>
+				<snsr_std:element ref="OpticalCommandConfiguration" maxOccurs="20"/>
+				<snsr_std:element name="OpticalCapabilities" minOccurs="0">
+					<snsr_std:complexType>
+						<snsr_std:sequence>
+							<snsr_std:element name="RecognitionRanges" type="OpticalCapabilitiesRanges"/>
+							<snsr_std:element name="IdentificationRanges" type="OpticalCapabilitiesRanges"/>
+						</snsr_std:sequence>
+					</snsr_std:complexType>
+				</snsr_std:element>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="OpticalCommandConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="Operation" type="OperationType" maxOccurs="7"/>
+				<snsr_std:element name="Control" type="ControlType" minOccurs="0" maxOccurs="2"/>
+				<snsr_std:element name="Limit" type="OpticalLimitType" minOccurs="0" maxOccurs="2"/>
+				<snsr_std:choice minOccurs="0">
+					<snsr_std:element ref="FieldOfViewConfigurationType" maxOccurs="9"/>
+					<snsr_std:element name="NUCDescriptionType" type="NUCDescriptionType" maxOccurs="9"/>
+					<snsr_std:element name="FilterDescriptionType" type="FilterDescriptionType" maxOccurs="9"/>
+					<snsr_std:element name="ImageImprovementDescriptionType" type="ImageImprovementDescriptionType" maxOccurs="9"/>
+					<snsr_std:element name="PolarityHotColorDescription" type="PolarityHotColorDescriptionType" maxOccurs="2"/>
+					<snsr_std:element name="GammaNumber" type="GammaNumberType" maxOccurs="9"/>
+					<snsr_std:element name="ValueRange" type="ValueRangeType"/>
+				</snsr_std:choice>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="FieldOfViewConfigurationType">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="Description" type="FieldOfViewDescriptionType" minOccurs="0"/>
+				<snsr_std:choice minOccurs="0">
+					<snsr_std:element name="Value" type="AzimuthType"/>
+					<snsr_std:element name="ValueRange" type="AzimuthRangeType"/>
+				</snsr_std:choice>
+				<snsr_std:element name="CrossHairHorizontalValueRange" type="ValueRangeType" minOccurs="0"/>
+				<snsr_std:element name="CrossHairVerticalValueRange" type="ValueRangeType" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="PedestalConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="LocationPrecision" type="DeltaAngleType"/>
+				<snsr_std:element name="HorizontalVelocityRange" type="VelocityRangeType" minOccurs="0"/>
+				<snsr_std:element name="VerticalVelocityRange" type="VelocityRangeType" minOccurs="0"/>
+				<snsr_std:element name="VectorVelocityRange" type="VelocityRangeType" minOccurs="0"/>
+				<snsr_std:element name="AzimuthRange" type="AzimuthRangeType" minOccurs="0"/>
+				<!-- if no range, no limit -->
+				<snsr_std:element name="ElevationAngleRange" type="ElevationAngleRangeType"/>
+				<snsr_std:element name="PedestalMovementTypeCapabilities" type="PedestalMovementTypeCapabilitiesType"/>
+				<snsr_std:element name="PedestalVelocityControl" type="PedestalVelocityControlType"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="PedestalMovementTypeCapabilitiesType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Horizontal Only"/>
+			<snsr_std:enumeration value="Vertical Only"/>
+			<snsr_std:enumeration value="Non Simultaneous Horizontal Vertical"/>
+			<snsr_std:enumeration value="Simultaneous Horizontal Vertical"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+			<!-- aka 2 axis-->
+			<!-- aka 4 axis-->
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:complexType name="VelocityRangeType">
+		<snsr_std:all>
+			<snsr_std:element name="Min" type="AngularSpeed"/>
+			<snsr_std:element name="Max" type="AngularSpeed"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="AzimuthRangeType">
+		<snsr_std:all>
+			<snsr_std:element name="Min" type="AzimuthType"/>
+			<snsr_std:element name="Max" type="AzimuthType"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="ElevationAngleRangeType">
+		<snsr_std:all>
+			<snsr_std:element name="Min" type="ElevationAngle"/>
+			<snsr_std:element name="Max" type="ElevationAngle"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="PedestalVelocityControlType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Manual"/>
+			<snsr_std:enumeration value="Automatic"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="TrackerConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element ref="TrackerCommandConfiguration" maxOccurs="5"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="TrackerCommandConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="TrackMode" type="TrackModeType"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="PointerConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element ref="PointerCommandConfiguration" maxOccurs="5"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="PointerCommandConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="LasingMode" type="LasingModeType" maxOccurs="2"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="VideoSwitchConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="PrimaryVideoChannelID" type="VideoChannelIDType"/>
+				<snsr_std:element ref="VideoSwitchCommandConfiguration"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="VideoSwitchCommandConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="VideoChannelConfiguration" type="VideoChannelConfigurationType" maxOccurs="3"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="VideoChannelConfigurationType">
+		<snsr_std:sequence>
+			<snsr_std:element name="VideoChannelID" type="VideoChannelIDType"/>
+			<snsr_std:element name="SensorIdentification" type="SensorIdentificationType" maxOccurs="20"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="VideoEncoderConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="VideoChannelID" type="VideoChannelIDType"/>
+				<snsr_std:element name="MulticastAddress" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="MulticastPort" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="VideoEncoderAddress" type="LimitedLengthString" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="AlertIndicatorConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:choice>
+					<snsr_std:element name="SimpleDetectorAlertType" type="SimpleDetectorAlertType" maxOccurs="5"/>
+					<snsr_std:element name="DoorAlertType" type="DoorAlertType" maxOccurs="10"/>
+					<snsr_std:element name="FenceAlertType" type="FenceAlertType" maxOccurs="10"/>
+				</snsr_std:choice>
+				<snsr_std:element name="NormallyOpen" type="snsr_std:boolean" minOccurs="0"/>
+				<snsr_std:element name="Threshold" type="LimitedDoubleType" minOccurs="0"/>
+				<snsr_std:element name="ThresholdTriggerOperation" type="OperationType" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="AntennaConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="CoverageCalculationSupported" type="snsr_std:boolean" minOccurs="0"/>
+				<snsr_std:element name="MechanicalScanningSupported" type="snsr_std:boolean"/>
+				<snsr_std:element name="HorizontalVelocityRange" type="VelocityRangeType"/>
+				<snsr_std:element name="VerticalVelocityRange" type="VelocityRangeType"/>
+				<snsr_std:element name="AzimuthRange" type="AzimuthRangeType"/>
+				<snsr_std:element name="ElevationAngleRange" type="ElevationAngleRangeType"/>
+				<snsr_std:element name="RangeRange" type="ValueRangeType"/>
+				<snsr_std:element name="AntennaScanCommand" type="AntennaScanCommandType" minOccurs="0" maxOccurs="4"/>
+				<snsr_std:element ref="AntennaCommandConfiguration" minOccurs="0" maxOccurs="20"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	
+	
+		-->
+	<snsr_std:element name="AntennaCommandConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="Operation" type="OperationType" maxOccurs="7"/>
+				<snsr_std:element name="Control" type="ControlType" minOccurs="0" maxOccurs="2"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!--	
+		
+		-->
+	<snsr_std:element name="VideoMotionDetectorConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="MechanicalScanningSupported" type="snsr_std:boolean" minOccurs="0"/>
+				<snsr_std:element ref="OpticalCommandConfiguration" maxOccurs="20"/>
+				<snsr_std:element name="OpticalCapabilities" minOccurs="0">
+					<snsr_std:complexType>
+						<snsr_std:sequence>
+							<snsr_std:element name="RecognitionRanges" type="OpticalCapabilitiesRanges"/>
+							<snsr_std:element name="IdentificationRanges" type="OpticalCapabilitiesRanges"/>
+						</snsr_std:sequence>
+					</snsr_std:complexType>
+				</snsr_std:element>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!--	
+			
+	   -->
+	<snsr_std:element name="ReceiverConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="ReceiverMode" type="ReceiverModeType" minOccurs="0" maxOccurs="2"/>
+				<snsr_std:element name="Band" type="FrequencyCategory" minOccurs="0" maxOccurs="5"/>
+				<snsr_std:element name="FrequencyRange">
+					<snsr_std:complexType>
+						<snsr_std:sequence>
+							<snsr_std:element name="LowFrequency" type="Frequency"/>
+							<snsr_std:element name="HighFrequency" type="Frequency"/>
+						</snsr_std:sequence>
+					</snsr_std:complexType>
+				</snsr_std:element>
+				<snsr_std:element name="FrequencyRangeAmountSupported" type="snsr_std:nonNegativeInteger"/>
+				<snsr_std:element name="MaxFrequencyRangeSize" type="Frequency"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="DetectionControllerConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="OperationProfile" type="OperationProfile" maxOccurs="10"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="GyroStabilizationConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element ref="GyroStabilizationCommandConfiguration" maxOccurs="5"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="GyroStabilizationCommandConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="Operation" type="OperationType" maxOccurs="7"/>
+				<snsr_std:element name="Axis" type="AxisType" minOccurs="0" maxOccurs="2"/>
+				<snsr_std:element name="ValueRange" type="ValueRangeType" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+
+		-->
+	<snsr_std:element name="DroneConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="VerticalVelocityRange" type="VelocityRangeType"/>
+				<snsr_std:element name="HorizontalVelocityRange" type="VelocityRangeType"/>
+				<snsr_std:element name="AltitudeVelocityRange" type="VelocityRangeType"/>
+				<snsr_std:element name="MaxAirTime" type="DeltaTime"/>
+				<snsr_std:element name="MaxRange" type="Distance"/>
+				<snsr_std:element name="MinAltitude" type="AltitudeType" minOccurs="0"/>
+				<snsr_std:element name="MaxAltitude" type="AltitudeType" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	
+		-->
+	<snsr_std:element name="PayloadConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element ref="PedestalConfiguration"/>
+				<snsr_std:element ref="VideoSwitchConfiguration"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!--
+	   -->
+	<snsr_std:complexType name="SingleValueRangeCommandConfigurationType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:choice>
+				<snsr_std:element name="ValueRange" type="ValueRangeType" minOccurs="0"/>
+				<snsr_std:element name="LasingMode" type="LasingModeType" maxOccurs="3"/>
+				<snsr_std:element name="SelfTestType" type="SelfTestType" maxOccurs="3"/>
+				<snsr_std:element name="AlertResetType" type="AlertResetType" maxOccurs="2"/>
+				<snsr_std:element name="OperationProfile" type="OperationProfile" maxOccurs="10"/>
+				<snsr_std:element name="FreeCommandType" type="FreeDescriptionType" maxOccurs="20"/>
+				<snsr_std:element name="SamplingRateRangeType" type="SamplingRateRangeType"/>
+			</snsr_std:choice>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="DebriefConfiguration">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+				<snsr_std:element name="DebriefOperation" type="DebriefOperationType" maxOccurs="20"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!---->
+	<snsr_std:complexType name="FreeDescriptionType">
+		<snsr_std:all>
+			<snsr_std:element name="Description" type="LimitedLengthString"/>
+			<snsr_std:element name="Number">
+				<snsr_std:simpleType>
+					<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+						<snsr_std:minInclusive value="1"/>
+						<snsr_std:maxInclusive value="20"/>
+					</snsr_std:restriction>
+				</snsr_std:simpleType>
+			</snsr_std:element>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!---->
+	<snsr_std:complexType name="SamplingRateRangeType">
+		<snsr_std:sequence>
+			<snsr_std:element name="MinSamplingRate" type="Frequency"/>
+			<snsr_std:element name="MaxSamplingRate" type="Frequency"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!---->
+	<snsr_std:complexType name="OpticalCapabilitiesRanges">
+		<snsr_std:sequence>
+			<snsr_std:element name="PersonRange" type="Distance"/>
+			<snsr_std:element name="VehicleRange" type="Distance"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+</snsr_std:schema>

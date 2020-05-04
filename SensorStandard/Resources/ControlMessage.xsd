@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Assi B. (Elbit) -->
+<!-- edited with XML Spy v2006 sp2 U (http://www.xmlspy.com) by Edan Ayal (Elsec) -->
+<!-- edited by Roi Shraga (hatal - project mrs) june 2017-->
+<!-- edited by Or Saffar (hatal - project mrs) Mar 2019-->
+<snsr_std:schema xmlns:snsr_std="http://www.w3.org/2001/XMLSchema" xmlns="urn:SNSR_STD" targetNamespace="urn:SNSR_STD" elementFormDefault="qualified">
+	<snsr_std:include schemaLocation="BasicTypes.xsd"/>
+	<snsr_std:annotation>
+		<snsr_std:documentation>Control messages used in the generic sensor protocol.</snsr_std:documentation>
+	</snsr_std:annotation>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="CommandMessage">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="DeviceIdentification" type="DeviceIdentificationType"/>
+				<snsr_std:element name="SensorIdentification" type="SensorIdentificationType" minOccurs="0"/>
+				<snsr_std:element name="RequestorIdentification" type="LimitedLengthString"/>
+				<snsr_std:element name="Command" type="CommandType"/>
+			</snsr_std:sequence>
+			<snsr_std:attribute name="ProtocolVersion" type="ProtocolVersionType" use="required"/>
+			<snsr_std:attribute name="SequenceNumber" type="LimitedNonNegativeIntegerType" use="optional"/>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="CommandType">
+		<snsr_std:choice>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="SingleValueCommand" type="SingleValueCommandType"/>
+			<snsr_std:element name="LocationCommand" type="LocationCommandType"/>
+			<snsr_std:element name="OpticalCommand" type="OpticalCommandType"/>
+			<snsr_std:element name="GyroStabilizationCommand" type="GyroStabilizationCommandType"/>
+			<snsr_std:element name="ScriptCommand" type="ScriptCommandType"/>
+			<snsr_std:element name="CrossHairCommand" type="CrossHairCommandType"/>
+			<snsr_std:element name="VideoSwitchCommand" type="VideoSwitchCommandType"/>
+			<snsr_std:element name="ReceiverCommand" type="ReceiverCommandType"/>
+			<snsr_std:element name="DetectionAreaCommand" type="DetectionAreaCommandType"/>
+			<snsr_std:element name="AntennaScanCommand" type="AntennaScanCommandType"/>
+			<snsr_std:element name="DetectionControllerCommand" type="DetectionControllerCommandType"/>
+		</snsr_std:choice>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="SimpleCommandType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="On"/>
+			<snsr_std:enumeration value="Off"/>
+			<snsr_std:enumeration value="Flicker"/>
+			<snsr_std:enumeration value="GoHome"/>
+			<snsr_std:enumeration value="GEO-GoTo"/>
+			<snsr_std:enumeration value="SelfTest"/>
+			<snsr_std:enumeration value="Reset"/>
+			<snsr_std:enumeration value="Abort"/>
+			<snsr_std:enumeration value="GoTo"/>
+			<snsr_std:enumeration value="Stop"/>
+			<snsr_std:enumeration value="Move"/>
+			<snsr_std:enumeration value="SetNorth"/>
+			<snsr_std:enumeration value="Calibrate"/>
+			<snsr_std:enumeration value="Track"/>
+			<snsr_std:enumeration value="SnapShot"/>
+			<snsr_std:enumeration value="Shutter"/>
+			<snsr_std:enumeration value="Iris"/>
+			<snsr_std:enumeration value="Zoom"/>
+			<snsr_std:enumeration value="eZoom"/>
+			<snsr_std:enumeration value="Focus"/>
+			<snsr_std:enumeration value="Gain"/>
+			<snsr_std:enumeration value="Level"/>
+			<snsr_std:enumeration value="Filter"/>
+			<snsr_std:enumeration value="ImageImprovement"/>
+			<snsr_std:enumeration value="FOV"/>
+			<snsr_std:enumeration value="Polarity"/>
+			<snsr_std:enumeration value="NUC"/>
+			<snsr_std:enumeration value="Grayscale"/>
+			<snsr_std:enumeration value="Sensitivity"/>
+			<snsr_std:enumeration value="Gamma"/>
+			<snsr_std:enumeration value="Brightness"/>
+			<snsr_std:enumeration value="Contrast"/>
+			<snsr_std:enumeration value="Mode"/>
+			<snsr_std:enumeration value="KeepAlive"/>
+			<snsr_std:enumeration value="Lase"/>
+			<snsr_std:enumeration value="Set"/>
+			<snsr_std:enumeration value="Cage"/>
+			<snsr_std:enumeration value="Stow"/>
+			<snsr_std:enumeration value="Alert Reset"/>
+			<snsr_std:enumeration value="Secure"/>
+			<snsr_std:enumeration value="Stand By"/>
+			<snsr_std:enumeration value="Power"/>
+			<snsr_std:enumeration value="DetectionArea"/>
+			<snsr_std:enumeration value="ImportPicture"/>
+			<snsr_std:enumeration value="SwitchCamera"/>
+			<snsr_std:enumeration value="Restart"/>
+			<snsr_std:enumeration value="SelfDestruct"/>
+			<snsr_std:enumeration value="TakePhoto"/>
+			<snsr_std:enumeration value="Debrief"/>
+			<snsr_std:enumeration value="LocalGain"/>
+			<snsr_std:enumeration value="FLIRImageType"/>
+			<snsr_std:enumeration value="FreeCommand"/>
+			<snsr_std:enumeration value="SetReceiver"/>
+			<snsr_std:enumeration value="StartTransmission"/>
+			<snsr_std:enumeration value="StopTransmission"/>
+			<snsr_std:enumeration value="CalculateCoverage"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="ScriptCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="PedestalSensorIdentification" type="SensorIdentificationType"/>
+			<snsr_std:element name="OpticalSensorIdentification" type="SensorIdentificationType"/>
+			<snsr_std:element name="DroneSensorIdentification" type="SensorIdentificationType" minOccurs="0"/>
+			<snsr_std:element name="GoTo-Command" type="LocationCommandType"/>
+			<snsr_std:element name="GEO-GoTo-Command" type="LocationCommandType" minOccurs="0"/>
+			<snsr_std:element name="FOV-Zoom-Command" type="OpticalCommandType" minOccurs="0"/>
+			<snsr_std:element name="Focus-Command" type="OpticalCommandType" minOccurs="0"/>
+			<snsr_std:element name="DebriefCommand" type="DebriefCommandType" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="VideoSwitchCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="VideoChannel" type="VideoChannelType" maxOccurs="3"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="VideoChannelType">
+		<snsr_std:sequence>
+			<snsr_std:element name="VideoChannelID" type="VideoChannelIDType"/>
+			<snsr_std:choice>
+				<snsr_std:element name="SensorType" type="SensorTypeType"/>
+				<snsr_std:element name="SensorIdentification" type="SensorIdentificationType"/>
+			</snsr_std:choice>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="VideoChannelIDType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="1"/>
+			<snsr_std:enumeration value="2"/>
+			<snsr_std:enumeration value="3"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="CrossHairCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="Position" type="AnnotationPosition"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="GyroStabilizationCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="Axis" type="AxisType" minOccurs="0"/>
+			<snsr_std:element name="Operation" type="OperationType" minOccurs="0"/>
+			<snsr_std:element name="Value" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="ReceiverCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="ReceiverMode" type="ReceiverModeType" minOccurs="0"/>
+			<snsr_std:element name="Band" type="FrequencyCategory" minOccurs="0"/>
+			<snsr_std:element name="SpecificFrequency" type="Frequency" minOccurs="0"/>
+			<snsr_std:element name="FrequencyRange" minOccurs="0" maxOccurs="10">
+				<snsr_std:complexType>
+					<snsr_std:sequence>
+						<snsr_std:element name="LowFrequency" type="Frequency"/>
+						<snsr_std:element name="HighFrequency" type="Frequency"/>
+					</snsr_std:sequence>
+				</snsr_std:complexType>
+			</snsr_std:element>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="DetectionAreaCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="DetectionZoneType" type="DetectionZoneType" maxOccurs="50"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="DetectionZoneType">
+		<snsr_std:sequence>
+			<snsr_std:element name="ID" type="LimitedNonNegativeIntegerType"/>
+			<snsr_std:element name="Enabled" type="snsr_std:boolean"/>
+			<snsr_std:element name="Area" type="GeometricElement"/>
+			<snsr_std:element name="AreaType" type="AreaType" minOccurs="0"/>
+			<snsr_std:element name="AreaSensitivity" type="AreaSensitivityType" minOccurs="0"/>
+			<snsr_std:element name="AllowedType" type="DetectionType" minOccurs="0" maxOccurs="20"/>
+			<snsr_std:element name="CensoredType" type="DetectionType" minOccurs="0" maxOccurs="20"/>
+			<snsr_std:element name="PrioritizedType" type="DetectionType" minOccurs="0" maxOccurs="20"/>
+			<snsr_std:element name="Band" type="FrequencyCategory" minOccurs="0" maxOccurs="50"/>
+			<snsr_std:element name="SpecificFrequency" type="Frequency" minOccurs="0"/>
+			<snsr_std:element name="FrequencyRange" minOccurs="0" maxOccurs="10">
+				<snsr_std:complexType>
+					<snsr_std:sequence>
+						<snsr_std:element name="LowFrequency" type="Frequency"/>
+						<snsr_std:element name="HighFrequency" type="Frequency"/>
+					</snsr_std:sequence>
+				</snsr_std:complexType>
+			</snsr_std:element>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="AntennaScanCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:sequence minOccurs="0">
+				<snsr_std:element name="Sector" type="Sector"/>
+				<snsr_std:element name="Speed" type="AngularSpeed"/>
+				<snsr_std:element name="Range" type="DistanceType"/>
+			</snsr_std:sequence>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="DetectionControllerCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="DetectionControllerMode" type="DetectionControllerModeType"/>
+			<snsr_std:choice minOccurs="0">
+				<snsr_std:element name="ExploreDetectionID" type="LimitedNonNegativeIntegerType"/>
+				<snsr_std:element name="ExplorePoint" type="Point"/>
+			</snsr_std:choice>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="DetectionControllerModeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Explore"/>
+			<snsr_std:enumeration value="Normal"/>
+			<snsr_std:enumeration value="TB1"/>
+			<snsr_std:enumeration value="TB2"/>
+			<snsr_std:enumeration value="TB3"/>
+			<snsr_std:enumeration value="TB4"/>
+			<snsr_std:enumeration value="TB5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="SingleValueCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:choice>
+				<snsr_std:element name="Value" type="LimitedNonNegativeIntegerType"/>
+				<snsr_std:element name="LasingMode" type="LasingModeType"/>
+				<snsr_std:element name="SelfTestType" type="SelfTestType"/>
+				<snsr_std:element name="AlertResetType" type="AlertResetType"/>
+				<snsr_std:element name="OperationProfile" type="OperationProfile"/>
+				<snsr_std:element name="FreeCommandNumber">
+					<snsr_std:simpleType>
+						<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+							<snsr_std:minInclusive value="1"/>
+							<snsr_std:maxInclusive value="20"/>
+						</snsr_std:restriction>
+					</snsr_std:simpleType>
+				</snsr_std:element>
+				<snsr_std:element name="SamplingRate" type="Frequency"/>
+			</snsr_std:choice>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="AlertResetType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="All"/>
+			<snsr_std:enumeration value="Last"/>
+			<snsr_std:enumeration value="TB1"/>
+			<snsr_std:enumeration value="TB2"/>
+			<snsr_std:enumeration value="TB3"/>
+			<snsr_std:enumeration value="TB4"/>
+			<snsr_std:enumeration value="TB5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="SelfTestType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Full"/>
+			<snsr_std:enumeration value="Normal"/>
+			<snsr_std:enumeration value="Short"/>
+			<snsr_std:enumeration value="TB1"/>
+			<snsr_std:enumeration value="TB2"/>
+			<snsr_std:enumeration value="TB3"/>
+			<snsr_std:enumeration value="TB4"/>
+			<snsr_std:enumeration value="TB5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="LocationCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="Point" type="Point" minOccurs="0" maxOccurs="10"/>
+			<snsr_std:choice minOccurs="0">
+				<snsr_std:sequence>
+					<snsr_std:element name="HorizontalVelocity" type="AngularSpeed"/>
+					<snsr_std:element name="VerticalVelocity" type="AngularSpeed"/>
+					<snsr_std:element name="AltitudeVelocity" type="AngularSpeed" minOccurs="0"/>
+				</snsr_std:sequence>
+				<snsr_std:element name="VectorVelocity" type="AngularSpeed"/>
+			</snsr_std:choice>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	-->
+	<snsr_std:complexType name="OpticalCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="Operation" type="OperationType" minOccurs="0"/>
+			<snsr_std:element name="Control" type="ControlType" minOccurs="0"/>
+			<snsr_std:choice minOccurs="0">
+				<snsr_std:choice>
+					<snsr_std:element name="FieldOfViewDescription" type="FieldOfViewDescriptionType"/>
+					<snsr_std:element name="FieldOfViewValue" type="AzimuthType"/>
+				</snsr_std:choice>
+				<snsr_std:element name="PolarityHotColorDescription" type="PolarityHotColorDescriptionType"/>
+				<snsr_std:element name="NUCNumber" type="NUCNumberType"/>
+				<snsr_std:element name="FilterNumber" type="FilterNumberType"/>
+				<snsr_std:element name="ImageImprovementNumber" type="ImageImprovementNumberType"/>
+				<snsr_std:element name="GammaNumber" type="GammaNumberType"/>
+				<snsr_std:element name="eZoomEnable" type="StatusType"/>
+				<snsr_std:element name="Value" type="LimitedNonNegativeIntegerType"/>
+			</snsr_std:choice>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="FieldOfViewDescriptionType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Super Wide"/>
+			<snsr_std:enumeration value="Wide"/>
+			<snsr_std:enumeration value="Middle"/>
+			<snsr_std:enumeration value="Narrow"/>
+			<snsr_std:enumeration value="Super Narrow"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="PolarityHotColorDescriptionType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Black"/>
+			<snsr_std:enumeration value="White"/>
+			<snsr_std:enumeration value="Rain"/>
+			<snsr_std:enumeration value="Fusion"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="FilterNumberType">
+		<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="20"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="FilterDescriptionType">
+		<snsr_std:all>
+			<snsr_std:element name="FilterDescription" type="LimitedLengthString"/>
+			<snsr_std:element name="FilterNumber" type="FilterNumberType"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!---->
+	<snsr_std:simpleType name="NUCNumberType">
+		<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="20"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="NUCDescriptionType">
+		<snsr_std:all>
+			<snsr_std:element name="NUCDescription" type="LimitedLengthString"/>
+			<snsr_std:element name="NUCNumber" type="NUCNumberType"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="ImageImprovementNumberType">
+		<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="20"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="ImageImprovementDescriptionType">
+		<snsr_std:all>
+			<snsr_std:element name="ImageImprovementDescription" type="LimitedLengthString"/>
+			<snsr_std:element name="ImageImprovementNumber" type="ImageImprovementNumberType"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="GammaNumberType">
+		<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+			<snsr_std:minInclusive value="1"/>
+			<snsr_std:maxInclusive value="9"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="OperationType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Plus"/>
+			<snsr_std:enumeration value="Minus"/>
+			<snsr_std:enumeration value="Stop"/>
+			<snsr_std:enumeration value="Set"/>
+			<snsr_std:enumeration value="Far Limit"/>
+			<snsr_std:enumeration value="Near Limit"/>
+			<snsr_std:enumeration value="Get"/>
+			<snsr_std:enumeration value="Default"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+			<!-- value is reported -->
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="LasingModeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Continuous"/>
+			<snsr_std:enumeration value="Pulse"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="TrackModeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="CenterPoint"/>
+			<snsr_std:enumeration value="TopLeftBottomRight"/>
+			<snsr_std:enumeration value="ThreePoints"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="AxisType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Horizontal"/>
+			<snsr_std:enumeration value="Vertical"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="ControlType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Continuous Auto"/>
+			<snsr_std:enumeration value="Momentary Auto"/>
+			<snsr_std:enumeration value="Manual"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="DetectionType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Person"/>
+			<snsr_std:enumeration value="Armed Person"/>
+			<snsr_std:enumeration value="Group"/>
+			<snsr_std:enumeration value="Animal"/>
+			<snsr_std:enumeration value="Bird"/>
+			<snsr_std:enumeration value="Herd"/>
+			<snsr_std:enumeration value="Vehicle"/>
+			<snsr_std:enumeration value="Armed Vehicle"/>
+			<snsr_std:enumeration value="Drone"/>
+			<snsr_std:enumeration value="Kite"/>
+			<snsr_std:enumeration value="Balloon"/>
+			<snsr_std:enumeration value="Aircraft"/>
+			<snsr_std:enumeration value="Docking Station"/>
+			<snsr_std:enumeration value="Return Location"/>
+			<snsr_std:enumeration value="Sea-craft"/>
+			<snsr_std:enumeration value="Suspicious Person"/>
+			<snsr_std:enumeration value="Small-Arms"/>
+			<snsr_std:enumeration value="AT"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="DetectionActivityType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Walking"/>
+			<snsr_std:enumeration value="Standing"/>
+			<snsr_std:enumeration value="Running"/>
+			<snsr_std:enumeration value="Sitting"/>
+			<snsr_std:enumeration value="Lying"/>
+			<snsr_std:enumeration value="Crawling"/>
+			<snsr_std:enumeration value="Riding"/>
+			<snsr_std:enumeration value="Digging"/>
+			<snsr_std:enumeration value="Weapon Carrying"/>
+			<snsr_std:enumeration value="Crowding"/>
+			<snsr_std:enumeration value="Aircraft Operating"/>
+			<snsr_std:enumeration value="Smoke"/>
+			<snsr_std:enumeration value="Fire"/>
+			<snsr_std:enumeration value="Abandoned Object"/>
+			<snsr_std:enumeration value="Object Removal"/>
+			<snsr_std:enumeration value="Forbidden Direction"/>
+			<snsr_std:enumeration value="Forbidden Crossing"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="OperationProfile">
+		<snsr_std:annotation>
+			<snsr_std:documentation>Radar operation profile</snsr_std:documentation>
+		</snsr_std:annotation>
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Default"/>
+			<snsr_std:enumeration value="Light Rain"/>
+			<snsr_std:enumeration value="Heavy Rain"/>
+			<snsr_std:enumeration value="Fog"/>
+			<snsr_std:enumeration value="Strong Winds"/>
+			<snsr_std:enumeration value="Snow"/>
+			<snsr_std:enumeration value="Loud"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!--
+	        
+	 -->
+	<snsr_std:simpleType name="DebriefOperationType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Play"/>
+			<snsr_std:enumeration value="Stop"/>
+			<snsr_std:enumeration value="Pause"/>
+			<snsr_std:enumeration value="Fast Forward X2"/>
+			<snsr_std:enumeration value="Fast Forward X4"/>
+			<snsr_std:enumeration value="Fast Forward X8"/>
+			<snsr_std:enumeration value="Fast Forward X16"/>
+			<snsr_std:enumeration value="Reverse Play"/>
+			<snsr_std:enumeration value="Fast Backward X2"/>
+			<snsr_std:enumeration value="Fast Backward X4"/>
+			<snsr_std:enumeration value="Fast Backward X8"/>
+			<snsr_std:enumeration value="Fast Backward X16"/>
+			<snsr_std:enumeration value="Back To Live"/>
+			<snsr_std:enumeration value="Jump To Time"/>
+			<snsr_std:enumeration value="Reserved 1"/>
+			<snsr_std:enumeration value="Reserved 2"/>
+			<snsr_std:enumeration value="Reserved 3"/>
+			<snsr_std:enumeration value="Reserved 4"/>
+			<snsr_std:enumeration value="Reserved 5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:complexType name="DebriefCommandType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SimpleCommand" type="SimpleCommandType"/>
+			<snsr_std:element name="DebriefOperation" type="DebriefOperationType"/>
+			<snsr_std:element name="DebriefDeltaTime" type="DeltaTime" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!---->
+	<snsr_std:simpleType name="AreaType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Interest"/>
+			<snsr_std:enumeration value="Priority"/>
+			<snsr_std:enumeration value="Censored"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:simpleType name="AreaSensitivityType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Flora"/>
+			<snsr_std:enumeration value="AT"/>
+			<snsr_std:enumeration value="Low Sensitivity"/>
+			<snsr_std:enumeration value="Medium Sensitivity"/>
+			<snsr_std:enumeration value="High Sensitivity"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:complexType name="FrequencySetType">
+		<snsr_std:sequence>
+			<snsr_std:element name="LowFrequency" type="Frequency"/>
+			<snsr_std:element name="HighFrequency" type="Frequency"/>
+			<snsr_std:element name="FrequencyPriority" type="PriorityType"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+</snsr_std:schema>

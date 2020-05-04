@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Assi B. (Elbit) -->
+<!-- edited with XML Spy v2006 sp2 U (http://www.xmlspy.com) by Edan Ayal (Elsec) -->
+<!-- edited by Roi Shraga (hatal - project mrs) june 2017-->
+<!-- edited by Or Saffar (hatal - project mrs) Mar 2019-->
+<snsr_std:schema xmlns="urn:SNSR_STD" xmlns:snsr_std="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:SNSR_STD" elementFormDefault="qualified">
+	<snsr_std:include schemaLocation="ControlMessage.xsd"/>
+	<snsr_std:annotation>
+		<snsr_std:documentation>Sensor (and Device) Operation Indication Report used in the generic sensor protocol.</snsr_std:documentation>
+	</snsr_std:annotation>
+	<!-- 
+	        
+	 -->
+	<snsr_std:element name="DeviceIndicationReport">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="DeviceIdentification" type="DeviceIdentificationType"/>
+				<snsr_std:choice>
+					<snsr_std:element ref="SensorIndicationReport" maxOccurs="100"/>
+					<snsr_std:element ref="DeviceIndicationReport" maxOccurs="100"/>
+				</snsr_std:choice>
+			</snsr_std:sequence>
+			<snsr_std:attribute name="ProtocolVersion" type="ProtocolVersionType" use="required"/>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	 -->
+	<snsr_std:element name="SensorIndicationReport">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SensorIdentification" type="SensorIdentificationType"/>
+				<snsr_std:element ref="IndicationType" maxOccurs="400"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	 -->
+	<snsr_std:element name="IndicationType">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="ID" type="LimitedNonNegativeIntegerType"/>
+				<snsr_std:element name="CreationTime" type="TimeType"/>
+				<snsr_std:element name="Description" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="Quantity" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="Reliability" type="Percent" minOccurs="0"/>
+				<snsr_std:choice>
+					<snsr_std:element ref="FireDetectionType"/>
+					<snsr_std:element ref="IntelligenceDetectionType"/>
+					<snsr_std:element name="AerialSingleDetectionType" type="AerialSingleDetectionType"/>
+					<snsr_std:element ref="AerialTrackDetectionType"/>
+					<snsr_std:element name="RadarSingleDetectionType" type="RadarSingleDetectionType"/>
+					<snsr_std:element ref="RadarTrackDetectionType"/>
+					<snsr_std:element ref="VideoMotionDetectionType"/>
+					<snsr_std:element ref="AlertIndicationType"/>
+					<snsr_std:element ref="FenceDetectionType"/>
+					<snsr_std:element ref="GeneralDetectionType"/>
+				</snsr_std:choice>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="FireDetectionType">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="LaunchingPoint" type="Point"/>
+				<snsr_std:element name="ImpactPoint" type="Point"/>
+				<snsr_std:element name="FireAzimuth" type="AzimuthType" minOccurs="0"/>
+				<snsr_std:element name="FireType" type="FireType"/>
+				<snsr_std:element name="FireTypeReliability" type="Percent"/>
+				<snsr_std:element name="ProjectileType" type="ProjectileType" minOccurs="0"/>
+				<snsr_std:element name="LaunchTime" type="TimeType"/>
+				<snsr_std:element name="ImpactTime" type="TimeType"/>
+				<snsr_std:element name="Accuracy" type="Ellipse" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="IntelligenceDetectionType">
+		<snsr_std:annotation>
+			<snsr_std:documentation>Intelligence location (SIGINT, ELINT, COMMINT) data</snsr_std:documentation>
+		</snsr_std:annotation>
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="TerminalID" type="LimitedNonNegativeIntegerType" minOccurs="0">
+					<snsr_std:annotation>
+						<snsr_std:documentation>Emmiter ID</snsr_std:documentation>
+					</snsr_std:annotation>
+				</snsr_std:element>
+				<snsr_std:element name="Commander" type="StatusType" minOccurs="0"/>
+				<snsr_std:element name="PostID" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="PostName" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="NetworkID" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="NetworkCategory" type="NetworkCategory" minOccurs="0">
+					<snsr_std:annotation>
+						<snsr_std:documentation>Amnon-להכניס את סוגי הרשתות להאזנה</snsr_std:documentation>
+					</snsr_std:annotation>
+				</snsr_std:element>
+				<snsr_std:element name="IdentificationFriendFoe" type="IdentificationFriendFoe" minOccurs="0"/>
+				<snsr_std:element name="CommunicationCategory" type="CommunicationCategory" minOccurs="0"/>
+				<snsr_std:element name="Priority" type="PriorityType" minOccurs="0"/>
+				<snsr_std:element name="FrequencyPIRType" type="FrequencyPIRType" minOccurs="0"/>
+				<snsr_std:element name="Band" type="FrequencyCategory" minOccurs="0"/>
+				<snsr_std:element name="SignalType" type="EmitterTypeType" minOccurs="0"/>
+				<snsr_std:element name="SignalFrequency" type="Frequency" minOccurs="0"/>
+				<snsr_std:element name="PhoneNumber" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="FixFrequency" type="Frequency" minOccurs="0"/>
+				<snsr_std:element name="HopperParameters" type="HopperParametersType" minOccurs="0"/>
+				<snsr_std:element name="Bandwidth" type="Bandwidth" minOccurs="0"/>
+				<snsr_std:element name="Modulation" type="TransmissionTechnology" minOccurs="0"/>
+				<snsr_std:element name="Technology" type="TransmissionTechnology" minOccurs="0"/>
+				<snsr_std:element name="SNR" minOccurs="0">
+					<snsr_std:annotation>
+						<snsr_std:documentation>in DB</snsr_std:documentation>
+					</snsr_std:annotation>
+					<snsr_std:simpleType>
+						<snsr_std:restriction base="snsr_std:integer">
+							<snsr_std:minInclusive value="-1000"/>
+							<snsr_std:maxInclusive value="1000"/>
+						</snsr_std:restriction>
+					</snsr_std:simpleType>
+				</snsr_std:element>
+				<snsr_std:element name="MultipathLevel" minOccurs="0">
+					<snsr_std:simpleType>
+						<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+							<snsr_std:minInclusive value="1"/>
+							<snsr_std:maxInclusive value="3"/>
+						</snsr_std:restriction>
+					</snsr_std:simpleType>
+				</snsr_std:element>
+				<snsr_std:element name="DetectionStartTime" type="TimeType" minOccurs="0"/>
+				<snsr_std:element name="Duration" type="DeltaTime" minOccurs="0"/>
+				<snsr_std:element name="Location" type="GeometricElement" maxOccurs="20"/>
+				<snsr_std:element name="Accuracy" type="Ellipse" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+
+	   -->
+	<snsr_std:complexType name="AerialSingleDetectionType">
+		<snsr_std:sequence>
+			<snsr_std:element name="Location" type="Point"/>
+			<snsr_std:element ref="VarianceLocation" minOccurs="0"/>
+			<snsr_std:element name="DetectionType" type="DetectionType" minOccurs="0"/>
+			<snsr_std:element name="DetectionTypeReliability" type="Percent" minOccurs="0"/>
+			<snsr_std:element name="DetectionSpeed" type="VelocityType" minOccurs="0"/>
+			<snsr_std:element ref="VectorDetectionSpeed" minOccurs="0"/>
+			<snsr_std:element name="ActivityType" type="DetectionActivityType" minOccurs="0"/>
+			<snsr_std:element name="ActivityTypeReliability" type="Percent" minOccurs="0"/>
+			<snsr_std:element name="GroupID" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+			<snsr_std:element name="IdentificationFriendFoe" type="IdentificationFriendFoe" minOccurs="0"/>
+			<snsr_std:element name="IdentificationDetectionSerial" type="LimitedLengthString" minOccurs="0"/>
+			<snsr_std:element name="IdentificationDetectionType" type="LimitedLengthString" minOccurs="0"/>
+			<snsr_std:element name="RadarCrossSection" type="AreaMeasuring" minOccurs="0"/>
+			<snsr_std:element name="Accuracy" type="Ellipse" minOccurs="0"/>
+			<snsr_std:element name="SNR" minOccurs="0">
+				<snsr_std:annotation>
+					<snsr_std:documentation>in DB</snsr_std:documentation>
+				</snsr_std:annotation>
+				<snsr_std:simpleType>
+					<snsr_std:restriction base="snsr_std:integer">
+						<snsr_std:minInclusive value="-1000"/>
+						<snsr_std:maxInclusive value="1000"/>
+					</snsr_std:restriction>
+				</snsr_std:simpleType>
+			</snsr_std:element>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+
+	     -->
+	<snsr_std:element name="AerialTrackDetectionType">
+		<snsr_std:complexType>
+			<snsr_std:complexContent>
+				<snsr_std:extension base="AerialSingleDetectionType">
+					<snsr_std:sequence>
+						<snsr_std:element name="LastUpdatedDetectionTime" type="TimeType"/>
+						<snsr_std:element name="Direction" type="AzimuthType"/>
+						<snsr_std:element name="VelocityType" type="VelocityType"/>
+						<snsr_std:element name="IsFusedTrack" type="snsr_std:boolean" minOccurs="0"/>
+						<snsr_std:element name="LinkedIndication" type="LimitedNonNegativeIntegerType" minOccurs="0" maxOccurs="99"/>
+						<snsr_std:element name="TrackingStatus" type="TrackingStatusType" minOccurs="0"/>
+					</snsr_std:sequence>
+				</snsr_std:extension>
+			</snsr_std:complexContent>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	
+  	   -->
+	<snsr_std:element name="VectorDetectionSpeed">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="Vx" type="VelocityType" minOccurs="0"/>
+				<snsr_std:element name="Vy" type="VelocityType" minOccurs="0"/>
+				<snsr_std:element name="Vz" type="VelocityType" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!--
+	
+	   -->
+	<snsr_std:element name="VarianceLocation">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="Xx" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Xy" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Xz" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Yx" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Yy" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Yz" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Zx" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Zy" type="Variance" minOccurs="0"/>
+				<snsr_std:element name="Zz" type="Variance" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+		
+	   -->
+	<snsr_std:complexType name="RadarSingleDetectionType">
+		<snsr_std:sequence>
+			<snsr_std:element name="Location" type="Point"/>
+			<snsr_std:element name="DetectionType" type="DetectionType" minOccurs="0"/>
+			<snsr_std:element name="DetectionTypeReliability" type="Percent" minOccurs="0"/>
+			<snsr_std:element name="DetectionSpeed" type="VelocityType" minOccurs="0"/>
+			<snsr_std:element name="ActivityType" type="DetectionActivityType" minOccurs="0"/>
+			<snsr_std:element name="ActivityTypeReliability" type="Percent" minOccurs="0"/>
+			<snsr_std:element name="IdentificationFriendFoe" type="IdentificationFriendFoe" minOccurs="0"/>
+			<snsr_std:element name="IdentificationFriendFoeCode" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+			<snsr_std:element name="RadarCrossSection" type="AreaMeasuring" minOccurs="0"/>
+			<snsr_std:element name="Accuracy" type="Ellipse" minOccurs="0"/>
+			<snsr_std:element name="SNR" minOccurs="0">
+				<snsr_std:annotation>
+					<snsr_std:documentation>in DB</snsr_std:documentation>
+				</snsr_std:annotation>
+				<snsr_std:simpleType>
+					<snsr_std:restriction base="snsr_std:integer">
+						<snsr_std:minInclusive value="-1000"/>
+						<snsr_std:maxInclusive value="1000"/>
+					</snsr_std:restriction>
+				</snsr_std:simpleType>
+			</snsr_std:element>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="RadarTrackDetectionType">
+		<snsr_std:complexType>
+			<snsr_std:complexContent>
+				<snsr_std:extension base="RadarSingleDetectionType">
+					<snsr_std:sequence>
+						<snsr_std:element name="LastUpdatedDetectionTime" type="TimeType"/>
+						<snsr_std:element name="Direction" type="AzimuthType"/>
+						<snsr_std:element name="VelocityType" type="VelocityType"/>
+						<snsr_std:element name="IsFusedTrack" type="snsr_std:boolean" minOccurs="0"/>
+						<snsr_std:element name="LinkedIndication" type="LimitedNonNegativeIntegerType" minOccurs="0" maxOccurs="99"/>
+						<snsr_std:element name="TrackingStatus" type="TrackingStatusType" minOccurs="0"/>
+					</snsr_std:sequence>
+				</snsr_std:extension>
+			</snsr_std:complexContent>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="VideoMotionDetectionType">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="LocationOnVideo" type="GeometricElement"/>
+				<snsr_std:element name="GeographicLocation" type="GeometricElement" minOccurs="0"/>
+				<snsr_std:element name="DetectionType" type="DetectionType" minOccurs="0"/>
+				<snsr_std:element name="DetectionTypeReliability" type="Percent" minOccurs="0"/>
+				<snsr_std:element name="DetectionSpeed" type="VelocityType" minOccurs="0"/>
+				<snsr_std:element name="DetectionDirection" type="AzimuthType" minOccurs="0"/>
+				<snsr_std:element name="DetectionColor" type="ColorType" minOccurs="0"/>
+				<snsr_std:element name="ActivityType" type="DetectionActivityType" minOccurs="0"/>
+				<snsr_std:element name="ActivityTypeReliability" type="Percent" minOccurs="0"/>
+				<snsr_std:element name="LastUpdatedDetectionTime" type="TimeType"/>
+				<snsr_std:element name="Size" type="AreaMeasuring" minOccurs="0"/>
+				<snsr_std:element name="MediaFile" type="File" minOccurs="0" maxOccurs="99"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="AlertIndicationType">
+		<snsr_std:complexType>
+			<snsr_std:choice>
+				<snsr_std:element name="SimpleDetectorAlertType" type="SimpleDetectorAlertType"/>
+				<snsr_std:element name="DoorAlertType" type="DoorAlertType"/>
+				<snsr_std:element name="FenceAlertType" type="FenceAlertType"/>
+			</snsr_std:choice>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	 -->
+	<snsr_std:element name="FenceDetectionType">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="Location" type="GeometricElement"/>
+				<snsr_std:element name="FenceAlertType" type="FenceAlertType"/>
+				<snsr_std:element name="Direction" type="AzimuthType" minOccurs="0"/>
+				<snsr_std:element name="VelocityType" type="VelocityType" minOccurs="0"/>
+				<snsr_std:element name="DetectionType" type="DetectionType" minOccurs="0"/>
+				<snsr_std:element name="DetectionTypeReliability" type="Percent" minOccurs="0"/>
+				<snsr_std:element name="ActivityType" type="DetectionActivityType" minOccurs="0"/>
+				<snsr_std:element name="ActivityTypeReliability" type="Percent" minOccurs="0"/>
+				<snsr_std:element name="IdentificationFriendFoe" type="IdentificationFriendFoe" minOccurs="0"/>
+				<snsr_std:element name="IdentificationFriendFoeCode" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="Accuracy" type="Ellipse" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!--
+
+	-->
+	<snsr_std:simpleType name="FireType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="AT"/>
+			<snsr_std:enumeration value="SmallArm"/>
+			<snsr_std:enumeration value="Artillery"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="ProjectileType">
+		<snsr_std:annotation>
+			<snsr_std:documentation>Location Projectile Type</snsr_std:documentation>
+		</snsr_std:annotation>
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="AT"/>
+			<snsr_std:enumeration value="SmallArms"/>
+			<snsr_std:enumeration value="Artillery"/>
+			<snsr_std:enumeration value="Mortar"/>
+			<snsr_std:enumeration value="Missile"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="IntelligenceType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Sector"/>
+			<snsr_std:enumeration value="Location"/>
+			<snsr_std:enumeration value="Network"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="TransceiverType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Transceiver"/>
+			<snsr_std:enumeration value="Receiver"/>
+			<snsr_std:enumeration value="Transmitter"/>
+			<snsr_std:enumeration value="Jammer"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="IdentificationFriendFoe">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Friend"/>
+			<snsr_std:enumeration value="Own"/>
+			<snsr_std:enumeration value="Foe"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="SimpleDetectorAlertType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Secure"/>
+			<snsr_std:enumeration value="Alarmed"/>
+			<snsr_std:enumeration value="Fault"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="SpecificDoorAlertType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Alarmed Forced"/>
+			<snsr_std:enumeration value="Alarmed Long"/>
+			<snsr_std:enumeration value="Emergency"/>
+			<snsr_std:enumeration value="TBD6"/>
+			<snsr_std:enumeration value="TBD7"/>
+			<snsr_std:enumeration value="TBD8"/>
+			<snsr_std:enumeration value="TBD9"/>
+			<snsr_std:enumeration value="TBD10"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="DoorAlertType">
+		<snsr_std:union memberTypes="SimpleDetectorAlertType SpecificDoorAlertType"/>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="SpecificFenceAlertType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Fence Touch"/>
+			<snsr_std:enumeration value="Fence Cut"/>
+			<snsr_std:enumeration value="Fence Strech"/>
+			<snsr_std:enumeration value="Movement"/>
+			<snsr_std:enumeration value="Proximity"/>
+			<snsr_std:enumeration value="Crossing"/>
+			<snsr_std:enumeration value="Excavation"/>
+			<snsr_std:enumeration value="Open Gate"/>
+			<snsr_std:enumeration value="Communication Failure"/>
+			<snsr_std:enumeration value="TBD6"/>
+			<snsr_std:enumeration value="TBD7"/>
+			<snsr_std:enumeration value="TBD8"/>
+			<snsr_std:enumeration value="TBD9"/>
+			<snsr_std:enumeration value="TBD10"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="FenceAlertType">
+		<snsr_std:union memberTypes="SimpleDetectorAlertType SpecificFenceAlertType"/>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="EmitterTypeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Fix Frequency"/>
+			<snsr_std:enumeration value="Hopper"/>
+			<snsr_std:enumeration value="Burst"/>
+			<snsr_std:enumeration value="Reserved 1"/>
+			<snsr_std:enumeration value="Reserved 2"/>
+			<snsr_std:enumeration value="Reserved 3"/>
+			<snsr_std:enumeration value="Reserved 4"/>
+			<snsr_std:enumeration value="Reserved 5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:complexType name="HopperParametersType">
+		<snsr_std:sequence>
+			<snsr_std:element name="HopRate" minOccurs="0">
+				<snsr_std:complexType>
+					<snsr_std:simpleContent>
+						<snsr_std:extension base="LimitedNonNegativeIntegerType">
+							<snsr_std:attribute name="Units" type="TimeUnitsType" use="required"/>
+						</snsr_std:extension>
+					</snsr_std:simpleContent>
+				</snsr_std:complexType>
+			</snsr_std:element>
+			<snsr_std:element name="HopPhase" minOccurs="0">
+				<snsr_std:complexType>
+					<snsr_std:simpleContent>
+						<snsr_std:extension base="LimitedNonNegativeIntegerType">
+							<snsr_std:attribute name="Units" type="TimeUnitsType" use="required"/>
+						</snsr_std:extension>
+					</snsr_std:simpleContent>
+				</snsr_std:complexType>
+			</snsr_std:element>
+			<snsr_std:element name="HopDuration" minOccurs="0">
+				<snsr_std:complexType>
+					<snsr_std:simpleContent>
+						<snsr_std:extension base="LimitedNonNegativeIntegerType">
+							<snsr_std:attribute name="Units" type="TimeUnitsType" use="required"/>
+						</snsr_std:extension>
+					</snsr_std:simpleContent>
+				</snsr_std:complexType>
+			</snsr_std:element>
+			<snsr_std:element name="HopHighestFrequency" type="Frequency" minOccurs="0"/>
+			<snsr_std:element name="HopLowestFrequency" type="Frequency" minOccurs="0"/>
+			<snsr_std:element name="HopSetSize" minOccurs="0">
+				<snsr_std:simpleType>
+					<snsr_std:restriction base="snsr_std:integer">
+						<snsr_std:minInclusive value="0"/>
+						<snsr_std:maxInclusive value="999"/>
+					</snsr_std:restriction>
+				</snsr_std:simpleType>
+			</snsr_std:element>
+			<snsr_std:element name="HopSetList" minOccurs="0">
+				<snsr_std:complexType>
+					<snsr_std:sequence>
+						<snsr_std:element name="Frequency" type="Frequency" minOccurs="0" maxOccurs="100"/>
+					</snsr_std:sequence>
+				</snsr_std:complexType>
+			</snsr_std:element>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!---->
+	<snsr_std:simpleType name="TrackingStatusType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Tracking"/>
+			<snsr_std:enumeration value="Estimating"/>
+			<snsr_std:enumeration value="Reserved 1"/>
+			<snsr_std:enumeration value="Reserved 2"/>
+			<snsr_std:enumeration value="Reserved 3"/>
+			<snsr_std:enumeration value="Reserved 4"/>
+			<snsr_std:enumeration value="Reserved 5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:element name="GeneralDetectionType">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="Location" type="GeometricElement"/>
+				<snsr_std:element name="Accuracy" type="Ellipse" minOccurs="0"/>
+				<snsr_std:element name="DetectionType" type="DetectionType" minOccurs="0"/>
+				<snsr_std:element name="DetectionTypeReliability" type="Percent" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+</snsr_std:schema>

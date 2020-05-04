@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Assi B. (Elbit) -->
+<!-- edited with XML Spy v2006 sp2 U (http://www.xmlspy.com) by Edan Ayal (Elsec) -->
+<!-- edited by Roi Shraga (hatal - project mrs) june 2017-->
+<!-- edited by Or Saffar (hatal - project mrs) Mar 2019-->
+<snsr_std:schema xmlns="urn:SNSR_STD" xmlns:snsr_std="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:SNSR_STD" elementFormDefault="qualified">
+	<snsr_std:annotation>
+		<snsr_std:documentation>Basic types used in the generic sensor protocol.</snsr_std:documentation>
+	</snsr_std:annotation>
+	<!-- 
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   sensor protocol versions
+	/////////////////////////////////////////////////////////////////////////////////////////////    
+		        
+	-->
+	<snsr_std:simpleType name="ProtocolVersionType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="0.13"/>
+			<snsr_std:enumeration value="2.0"/>
+			<snsr_std:enumeration value="2.2"/>
+			<snsr_std:enumeration value="2.3"/>
+			<snsr_std:enumeration value="2.6"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Device identification  types
+	/////////////////////////////////////////////////////////////////////////////////////////////    
+		        
+	-->
+	<snsr_std:complexType name="DeviceIdentificationType">
+		<snsr_std:sequence>
+			<snsr_std:element name="DeviceName" type="LimitedLengthString"/>
+			<snsr_std:element name="DeviceType" type="DeviceTypeType"/>
+			<snsr_std:element name="DeviceCategory" type="DeviceCategoryType" minOccurs="0"/>
+			<snsr_std:element name="OEM" type="LimitedLengthString" minOccurs="0"/>
+			<snsr_std:element name="Model" type="LimitedLengthString" minOccurs="0"/>
+			<snsr_std:element name="Version" type="LimitedLengthString" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="SensorIdentificationType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SensorName" type="LimitedLengthString"/>
+			<snsr_std:element name="SensorType" type="SensorTypeType"/>
+			<snsr_std:element name="SensorSubType" type="SensorSubTypeType" minOccurs="0"/>
+			<snsr_std:element name="OEM" type="LimitedLengthString" minOccurs="0"/>
+			<snsr_std:element name="Model" type="LimitedLengthString" minOccurs="0"/>
+			<snsr_std:element name="Version" type="LimitedLengthString" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+
+	   -->
+	<snsr_std:simpleType name="LimitedLengthString">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:maxLength value="70"/>
+			<snsr_std:pattern value="[a-zA-Zא-ת0-9_()';,*. \\\-/]*"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="LimitedFileNameString">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:maxLength value="40"/>
+			<snsr_std:pattern value="[a-zA-Zא-ת0-9_]*"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="DeviceTypeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Device Hub"/>
+			<snsr_std:enumeration value="EO Device"/>
+			<snsr_std:enumeration value="Fire Locating Device"/>
+			<snsr_std:enumeration value="Artillery Locating Device"/>
+			<snsr_std:enumeration value="Radar"/>
+			<snsr_std:enumeration value="OMTI Radar"/>
+			<snsr_std:enumeration value="Aerial Detection System"/>
+			<snsr_std:enumeration value="Aircraft"/>
+			<snsr_std:enumeration value="Balloon"/>
+			<snsr_std:enumeration value="Vehicle"/>
+			<snsr_std:enumeration value="Docking Station"/>
+			<snsr_std:enumeration value="SIGINT Device"/>
+			<snsr_std:enumeration value="COMMINT Device"/>
+			<snsr_std:enumeration value="ELINT Device"/>
+			<snsr_std:enumeration value="Site Security Device"/>
+			<snsr_std:enumeration value="Electric Fence Device"/>
+			<snsr_std:enumeration value="Virtual Fence Device"/>
+			<snsr_std:enumeration value="AT Defense Device"/>
+			<snsr_std:enumeration value="Unattended Ground Sensors"/>
+			<snsr_std:enumeration value="Underground Fence Device"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="SensorTypeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Pedestal"/>
+			<snsr_std:enumeration value="Day Camera BW"/>
+			<snsr_std:enumeration value="Day Camera Color"/>
+			<snsr_std:enumeration value="FLIR"/>
+			<snsr_std:enumeration value="LRF"/>
+			<snsr_std:enumeration value="Pointer"/>
+			<snsr_std:enumeration value="Video Switch"/>
+			<snsr_std:enumeration value="Tracker"/>
+			<snsr_std:enumeration value="Gyro Stabilizer"/>
+			<snsr_std:enumeration value="Electronic Stabilizer"/>
+			<snsr_std:enumeration value="Inclinometer"/>
+			<snsr_std:enumeration value="Video Fusion"/>
+			<snsr_std:enumeration value="Video Encoder"/>
+			<snsr_std:enumeration value="Video Motion Detector"/>
+			<snsr_std:enumeration value="Simple Detector"/>
+			<snsr_std:enumeration value="Temperature Detector"/>
+			<snsr_std:enumeration value="Fence Segment"/>
+			<snsr_std:enumeration value="Door"/>
+			<snsr_std:enumeration value="Energy Source"/>
+			<snsr_std:enumeration value="Antenna"/>
+			<snsr_std:enumeration value="Drone"/>
+			<snsr_std:enumeration value="Payload"/>
+			<snsr_std:enumeration value="Docking Station"/>
+			<snsr_std:enumeration value="Transceiver"/>
+			<snsr_std:enumeration value="Signal Processing Unit"/>
+			<snsr_std:enumeration value="Simple Controller"/>
+			<snsr_std:enumeration value="Operation Controller"/>
+			<snsr_std:enumeration value="Multi Detector"/>
+			<snsr_std:enumeration value="Zone"/>
+			<snsr_std:enumeration value="Fence Gate"/>
+			<snsr_std:enumeration value="Smoke Detector"/>
+			<snsr_std:enumeration value="Volume Detector"/>
+			<snsr_std:enumeration value="Lighting System"/>
+			<snsr_std:enumeration value="Siren"/>
+			<snsr_std:enumeration value="UPS"/>
+			<snsr_std:enumeration value="Fuel Tank"/>
+			<snsr_std:enumeration value="PIR"/>
+			<snsr_std:enumeration value="Seismic"/>
+			<snsr_std:enumeration value="Acoustic"/>
+			<snsr_std:enumeration value="Seismic-Acoustic"/>
+			<snsr_std:enumeration value="Seismic-Acoustic-PIR"/>
+			<snsr_std:enumeration value="Seismic-Acoustic-Optic"/>
+			<snsr_std:enumeration value="Magnetic"/>
+			<snsr_std:enumeration value="Radar"/>
+			<snsr_std:enumeration value="Stills Camera"/>
+			<snsr_std:enumeration value="Staring Camera"/>
+			<snsr_std:enumeration value="Shake Detector"/>
+			<snsr_std:enumeration value="Stairs Detector"/>
+			<snsr_std:enumeration value="Generator"/>
+			<snsr_std:enumeration value="SWIR"/>
+			<snsr_std:enumeration value="GPS"/>
+			<snsr_std:enumeration value="Antenna Rotator"/>
+			<snsr_std:enumeration value="Acoustic-Radar"/>
+			<snsr_std:enumeration value="Acoustic-Radar-Magnetic"/>
+			<snsr_std:enumeration value="Communication Unit"/>
+			<snsr_std:enumeration value="Solar Panel"/>
+			<snsr_std:enumeration value="Speaker"/>
+			<snsr_std:enumeration value="Generic Detector"/>
+			<snsr_std:enumeration value="RF Unit"/>
+			<snsr_std:enumeration value="Standing Receiver"/>
+			<snsr_std:enumeration value="Scanning Receiver"/>
+			<snsr_std:enumeration value="Remote Power"/>
+			<snsr_std:enumeration value="Sensor Computer"/>
+			<snsr_std:enumeration value="Recorder"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="SensorSubTypeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Zone"/>
+			<snsr_std:enumeration value="Fence Gate"/>
+			<snsr_std:enumeration value="Smoke Detector"/>
+			<snsr_std:enumeration value="Temperature Detector"/>
+			<snsr_std:enumeration value="Volume Detector"/>
+			<snsr_std:enumeration value="Lighting System"/>
+			<snsr_std:enumeration value="Siren"/>
+			<snsr_std:enumeration value="UPS"/>
+			<snsr_std:enumeration value="Fuel Tank"/>
+			<snsr_std:enumeration value="PIR"/>
+			<snsr_std:enumeration value="Seismic"/>
+			<snsr_std:enumeration value="Acoustic"/>
+			<snsr_std:enumeration value="Seismic-Acoustic"/>
+			<snsr_std:enumeration value="Seismic-Acoustic-PIR"/>
+			<snsr_std:enumeration value="Seismic-Acoustic-Optic"/>
+			<snsr_std:enumeration value="Magnetic"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="DeviceCategoryType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Observation System"/>
+			<snsr_std:enumeration value="Locating System"/>
+			<snsr_std:enumeration value="Defense System"/>
+			<snsr_std:enumeration value="General Intelligence System"/>
+			<snsr_std:enumeration value="Firing System"/>
+			<snsr_std:enumeration value="Multi Device System"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Location types
+	/////////////////////////////////////////////////////////////////////////////////////////////    
+		        
+	-->
+	<snsr_std:element name="LocationType">
+		<snsr_std:complexType>
+			<snsr_std:annotation>
+				<snsr_std:documentation>Absolute location.</snsr_std:documentation>
+			</snsr_std:annotation>
+			<snsr_std:choice>
+				<snsr_std:element ref="GeodeticLocation"/>
+				<snsr_std:element ref="GeoPixelLocationType"/>
+			</snsr_std:choice>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="RelativeLocationType">
+		<snsr_std:complexType>
+			<snsr_std:annotation>
+				<snsr_std:documentation>Relative Location using range, azumith angle and elevation angle.</snsr_std:documentation>
+			</snsr_std:annotation>
+			<snsr_std:all>
+				<snsr_std:element name="Range" type="Distance" minOccurs="0"/>
+				<snsr_std:element name="Azimuth" type="AzimuthType"/>
+				<snsr_std:element name="Elevation" type="ElevationAngle" minOccurs="0"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+ 
+	   -->
+	<snsr_std:element name="GeodeticLocation">
+		<snsr_std:annotation>
+			<snsr_std:documentation>Geodetic (lat/lon) elements
+        </snsr_std:documentation>
+		</snsr_std:annotation>
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element ref="Latitude"/>
+				<snsr_std:element ref="Longitude"/>
+				<snsr_std:element name="Altitude" type="AltitudeType" minOccurs="0"/>
+				<snsr_std:element name="Altitude-AboveGroundLevel" type="AltitudeType" minOccurs="0"/>
+				<snsr_std:element name="DepthBelowGround" type="AltitudeType" minOccurs="0">
+					<snsr_std:annotation>
+						<snsr_std:documentation>for sensores under the ground</snsr_std:documentation>
+					</snsr_std:annotation>
+				</snsr_std:element>
+			</snsr_std:all>
+			<snsr_std:attribute name="Datum" type="DatumType" use="required"/>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+ 
+	   -->
+	<snsr_std:simpleType name="DatumType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="WGS84"/>
+			<snsr_std:enumeration value="ED50"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="GeoPixelLocationType">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element name="X" type="snsr_std:nonNegativeInteger"/>
+				<snsr_std:element name="Y" type="snsr_std:nonNegativeInteger"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="Latitude">
+		<snsr_std:complexType>
+			<snsr_std:simpleContent>
+				<snsr_std:extension base="LatitudeType">
+					<snsr_std:attribute name="Units" type="LatLonUnitsType" use="required"/>
+				</snsr_std:extension>
+			</snsr_std:simpleContent>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="LatitudeType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="-90.0"/>
+			<snsr_std:maxInclusive value="90.0"/>
+			<snsr_std:pattern value="-?[0-9]{1,2}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="Longitude">
+		<snsr_std:complexType>
+			<snsr_std:simpleContent>
+				<snsr_std:extension base="LongitudeType">
+					<snsr_std:attribute name="Units" type="LatLonUnitsType" use="required"/>
+				</snsr_std:extension>
+			</snsr_std:simpleContent>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="LongitudeType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="-180.0"/>
+			<snsr_std:maxInclusive value="360.0"/>
+			<snsr_std:pattern value="-?[0-9]{1,3}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="LatLonUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Decimal Degrees"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="AnnotationPosition">
+		<snsr_std:all>
+			<snsr_std:element name="i" type="AnnotationPositionType"/>
+			<snsr_std:element name="j" type="AnnotationPositionType"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="AnnotationPositionType">
+		<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="5000"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Geometric types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+		
+	-->
+	<snsr_std:complexType name="GeometricElement">
+		<snsr_std:choice>
+			<snsr_std:element name="Point" type="Point"/>
+			<snsr_std:element name="Line" type="Line"/>
+			<snsr_std:element name="Polygon" type="Polygon"/>
+			<snsr_std:element name="Circle" type="Circle"/>
+			<snsr_std:element name="Ellipse" type="Ellipse"/>
+			<snsr_std:element name="Sector" type="Sector"/>
+		</snsr_std:choice>
+	</snsr_std:complexType>
+	<!-- 
+	
+	-->
+	<snsr_std:complexType name="Point">
+		<snsr_std:choice>
+			<snsr_std:element ref="LocationType"/>
+			<snsr_std:element ref="RelativeLocationType"/>
+			<snsr_std:element name="PixelPosition" type="AnnotationPosition"/>
+		</snsr_std:choice>
+	</snsr_std:complexType>
+	<!-- 
+	
+	-->
+	<snsr_std:complexType name="Line">
+		<snsr_std:sequence>
+			<snsr_std:element name="Point" type="Point" minOccurs="2" maxOccurs="99"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	
+	-->
+	<snsr_std:complexType name="Polygon">
+		<snsr_std:sequence>
+			<snsr_std:element name="Point" type="Point" minOccurs="3" maxOccurs="99"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	
+	-->
+	<snsr_std:complexType name="Circle">
+		<snsr_std:sequence>
+			<snsr_std:element name="Center" type="Point"/>
+			<snsr_std:element name="Radius" type="Distance"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	
+	-->
+	<snsr_std:complexType name="Ellipse">
+		<snsr_std:sequence>
+			<snsr_std:element name="Center" type="Point"/>
+			<snsr_std:element name="Radius_V" type="Distance"/>
+			<snsr_std:element name="Radius_H" type="Distance"/>
+			<snsr_std:element name="Azimuth" type="AzimuthType" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	
+	-->
+	<snsr_std:complexType name="Sector">
+		<snsr_std:sequence>
+			<snsr_std:element name="AzimuthStart" type="AzimuthType">
+				<snsr_std:annotation>
+					<snsr_std:documentation>Mils right from X axis</snsr_std:documentation>
+				</snsr_std:annotation>
+			</snsr_std:element>
+			<snsr_std:element name="AzimuthEnd" type="AzimuthType">
+				<snsr_std:annotation>
+					<snsr_std:documentation>Mils right from X axis</snsr_std:documentation>
+				</snsr_std:annotation>
+			</snsr_std:element>
+			<snsr_std:element name="Center" type="Point"/>
+			<snsr_std:element name="MinRange" type="Distance" minOccurs="0"/>
+			<snsr_std:element name="MaxRange" type="Distance"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Distance, Area and altitude types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+		
+	-->
+	<snsr_std:complexType name="Distance">
+		<snsr_std:simpleContent>
+			<snsr_std:restriction base="DistanceType">
+				<snsr_std:minInclusive value="0"/>
+				<snsr_std:maxInclusive value="9999999"/>
+				<snsr_std:pattern value="[0-9]{1,7}(\.[0-9]{0,50})?"/>
+			</snsr_std:restriction>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="DistanceType">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="snsr_std:double">
+				<snsr_std:attribute name="Units" type="DistanceUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="DistanceUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Meters"/>
+			<snsr_std:enumeration value="Pixels"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="AreaMeasuringUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Sq. Meters"/>
+			<snsr_std:enumeration value="Sq. Pixels"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	
+	-->
+	<snsr_std:complexType name="AreaMeasuring">
+		<snsr_std:simpleContent>
+			<snsr_std:restriction base="AreaMeasuringType">
+				<snsr_std:minInclusive value="0"/>
+				<snsr_std:maxInclusive value="999999999"/>
+				<snsr_std:pattern value="[0-9]{1,9}(\.[0-9]{0,50})?"/>
+			</snsr_std:restriction>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="AreaMeasuringType">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="snsr_std:double">
+				<snsr_std:attribute name="Units" type="AreaMeasuringUnitsType"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="AltitudeTypeType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="-500"/>
+			<snsr_std:maxInclusive value="9999999"/>
+			<snsr_std:pattern value="-?[0-9]{1,7}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:complexType name="AltitudeType">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="AltitudeTypeType">
+				<snsr_std:attribute name="Units" type="DistanceUnitsType" use="required"/>
+				<snsr_std:attribute name="Reference" type="AltitudeReferenceType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- -->
+	<snsr_std:simpleType name="AltitudeReferenceType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="AGL"/>
+			<snsr_std:enumeration value="MSL"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!--
+	
+	 
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Velocity/vector types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+	
+	
+	-->
+	<snsr_std:element name="Speed">
+		<snsr_std:complexType>
+			<snsr_std:simpleContent>
+				<snsr_std:extension base="SpeedType">
+					<snsr_std:attribute name="Units" type="SpeedUnitsType" use="required"/>
+				</snsr_std:extension>
+			</snsr_std:simpleContent>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="SpeedType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="-9999999"/>
+			<snsr_std:maxInclusive value="9999999"/>
+			<snsr_std:pattern value="-?[0-9]{1,7}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:complexType name="AngularSpeed">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="AngularSpeedType">
+				<snsr_std:attribute name="Units" type="AngularSpeedUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="AngularSpeedType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="-9999999"/>
+			<snsr_std:maxInclusive value="9999999"/>
+			<snsr_std:pattern value="-?[0-9]{1,7}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="SpeedUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="MetersPerSecond"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="AngularSpeedUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="MilsPerSecond"/>
+			<snsr_std:enumeration value="MeterPerSecond"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:complexType name="VelocityType">
+		<snsr_std:choice>
+			<snsr_std:element ref="Speed"/>
+			<snsr_std:element name="AngularSpeed" type="AngularSpeed"/>
+		</snsr_std:choice>
+	</snsr_std:complexType>
+	<!-- 
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Time types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+	
+	
+	-->
+	<snsr_std:complexType name="DeltaTime">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="DeltaTimeType">
+				<snsr_std:attribute name="Units" type="TimeUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="DeltaTimeType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="9999999999"/>
+			<snsr_std:pattern value="[0-9]{1,10}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+
+	   -->
+	<snsr_std:simpleType name="TimeUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Seconds"/>
+			<snsr_std:enumeration value="Milliseconds"/>
+			<snsr_std:enumeration value="Microseconds"/>
+			<snsr_std:enumeration value="Nanoseconds"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+
+	   -->
+	<snsr_std:complexType name="TimeType">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="snsr_std:dateTime">
+				<snsr_std:attribute name="Zone" type="TimezoneType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="TimezoneType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="GMT"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Angle types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+	
+	
+	-->
+	<snsr_std:complexType name="AzimuthType">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="AngularMeasurementType">
+				<snsr_std:attribute name="Units" type="AngularUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="AngularMeasurementType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0.0"/>
+			<snsr_std:maxInclusive value="6400.0"/>
+			<snsr_std:pattern value="[0-9]{1,4}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="AngularUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Mils"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Current 'tilt' angle of the device, where level equals 0, straight up equals 1600 mils, 
+	   and straight down equals -1600 mils.	        
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+
+	-->
+	<snsr_std:complexType name="ElevationAngle">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="ElevationAngleType">
+				<snsr_std:attribute name="Units" type="AngularUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="ElevationAngleType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="-1600.0"/>
+			<snsr_std:maxInclusive value="1600.0"/>
+			<snsr_std:pattern value="-?[0-9]{1,4}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:complexType name="DeltaAngleType">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="AngularMeasurementType">
+				<snsr_std:attribute name="Units" type="AngularUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Communications  types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+	
+	
+	-->
+	<snsr_std:complexType name="Frequency">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="FrequencyType">
+				<snsr_std:attribute name="Units" type="FrequencyUnitsType" use="required"/>
+				<snsr_std:attribute name="Mode" type="FrequencyModeType" use="optional"/>
+				<snsr_std:attribute name="Priority" type="FrequencyPriorityType" use="optional"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="FrequencyType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="999.99999"/>
+			<snsr_std:pattern value="[0-9]{1,3}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="FrequencyUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="KHz"/>
+			<snsr_std:enumeration value="mHz"/>
+			<snsr_std:enumeration value="MHz"/>
+			<snsr_std:enumeration value="GHz"/>
+			<snsr_std:enumeration value="Hz"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="FrequencyModeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Uplink"/>
+			<snsr_std:enumeration value="Downlink"/>
+			<snsr_std:enumeration value="Bidirectional"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="FrequencyPriorityType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Censor"/>
+			<snsr_std:enumeration value="Normal"/>
+			<snsr_std:enumeration value="Priority"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:complexType name="Bandwidth">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="BandwidthType">
+				<snsr_std:attribute name="Units" type="BandwidthUnitsType"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="BandwidthType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="1024"/>
+			<snsr_std:pattern value="[0-9]{1,4}(\.[0-9]{0,50})?"/>
+			<!-- Edan -->
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="BandwidthUnitsType">
+		<snsr_std:annotation>
+			<snsr_std:documentation>Bandwith Units</snsr_std:documentation>
+		</snsr_std:annotation>
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="bps"/>
+			<snsr_std:enumeration value="kbps"/>
+			<snsr_std:enumeration value="mbps"/>
+			<snsr_std:enumeration value="gbps"/>
+			<snsr_std:enumeration value="Bps"/>
+			<snsr_std:enumeration value="KBps"/>
+			<snsr_std:enumeration value="MBps"/>
+			<snsr_std:enumeration value="GBps"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="FrequencyCategory">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="VLF"/>
+			<snsr_std:enumeration value="LF"/>
+			<snsr_std:enumeration value="HF"/>
+			<snsr_std:enumeration value="VHF"/>
+			<snsr_std:enumeration value="UHF"/>
+			<snsr_std:enumeration value="AF"/>
+			<snsr_std:enumeration value="Cellular"/>
+			<snsr_std:enumeration value="Satellite"/>
+			<snsr_std:enumeration value="Radar"/>
+			<snsr_std:enumeration value="Wideband"/>
+			<snsr_std:enumeration value="Narrowband"/>
+			<snsr_std:enumeration value="LAN"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="FrequencyPIRType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Preset Frequency"/>
+			<snsr_std:enumeration value="Search"/>
+			<snsr_std:enumeration value="Awareness Only"/>
+			<snsr_std:enumeration value="Other"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="NetworkState">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Open Radio"/>
+			<snsr_std:enumeration value="Coded Radio"/>
+			<snsr_std:enumeration value="Open DATA"/>
+			<snsr_std:enumeration value="Coded DATA"/>
+			<snsr_std:enumeration value="Hopping"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="NetworkCategory">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="AT"/>
+			<snsr_std:enumeration value="Mining"/>
+			<snsr_std:enumeration value="Artillery"/>
+			<snsr_std:enumeration value="SF"/>
+			<snsr_std:enumeration value="Infantry"/>
+			<snsr_std:enumeration value="AA"/>
+			<snsr_std:enumeration value="SeaMissile"/>
+			<snsr_std:enumeration value="UAV"/>
+			<snsr_std:enumeration value="Intelligence"/>
+			<snsr_std:enumeration value="commandcontrol"/>
+			<snsr_std:enumeration value="Logistics"/>
+			<snsr_std:enumeration value="MobileForce"/>
+			<snsr_std:enumeration value="ElectronicWarfare"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="TransmissionTechnology">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="AM"/>
+			<snsr_std:enumeration value="FM"/>
+			<snsr_std:enumeration value="CW"/>
+			<snsr_std:enumeration value="USB"/>
+			<snsr_std:enumeration value="LSB"/>
+			<snsr_std:enumeration value="NFM"/>
+			<snsr_std:enumeration value="WFM"/>
+			<snsr_std:enumeration value="CDMA"/>
+			<snsr_std:enumeration value="GSM"/>
+			<snsr_std:enumeration value="IDEN"/>
+			<snsr_std:enumeration value="BOKE"/>
+			<snsr_std:enumeration value="WiMax"/>
+			<snsr_std:enumeration value="Wifi"/>
+			<snsr_std:enumeration value="LTE"/>
+			<snsr_std:enumeration value="Noise"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="CommunicationCategory">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="TAC COMM"/>
+			<snsr_std:enumeration value="Radiotelephony\Link"/>
+			<snsr_std:enumeration value="Cellular"/>
+			<snsr_std:enumeration value="Civilian Radio"/>
+			<snsr_std:enumeration value="Ground TV"/>
+			<snsr_std:enumeration value="Satellite TV"/>
+			<snsr_std:enumeration value="Military COMM"/>
+			<snsr_std:enumeration value="Wifi\WiMax"/>
+			<snsr_std:enumeration value="Radar"/>
+			<snsr_std:enumeration value="GPS"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="ReceiverModeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Standing"/>
+			<snsr_std:enumeration value="Scanning"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<!-- 
+	
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Command and Request types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+	
+	
+	-->
+	<snsr_std:simpleType name="MessageType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Report"/>
+			<snsr_std:enumeration value="Request"/>
+			<snsr_std:enumeration value="Response"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="ExecutionStatusType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Busy"/>
+			<snsr_std:enumeration value="InProcess"/>
+			<snsr_std:enumeration value="Idle"/>
+			<snsr_std:enumeration value="Done"/>
+			<snsr_std:enumeration value="Fail"/>
+			<snsr_std:enumeration value="Timeout"/>
+			<snsr_std:enumeration value="Aborted"/>
+			<snsr_std:enumeration value="Unknown"/>
+			<snsr_std:enumeration value="NotSupported"/>
+			<snsr_std:enumeration value="Invalid"/>
+			<snsr_std:enumeration value="BadSequence"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="BITResultType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="OK"/>
+			<snsr_std:enumeration value="Fault"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="StatusType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Yes"/>
+			<snsr_std:enumeration value="No"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	   Other types
+	/////////////////////////////////////////////////////////////////////////////////////////////        
+	
+	
+	-->
+	<snsr_std:complexType name="Power">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="PowerType">
+				<snsr_std:attribute name="Units" type="PowerUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="PowerType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="9999999"/>
+			<snsr_std:pattern value="[0-9]{1,7}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="PowerUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Watt"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="Intensity">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="IntensityType">
+				<snsr_std:attribute name="Units" type="IntensityUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="IntensityType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="9999999"/>
+			<snsr_std:pattern value="[0-9]{1,7}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="IntensityUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Db"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+
+	   -->
+	<snsr_std:complexType name="Variance">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="VarianceType">
+				<snsr_std:attribute name="Units" type="VarianceUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+  
+	-->
+	<snsr_std:simpleType name="VarianceType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="999.99999"/>
+			<snsr_std:pattern value="[0-9]{1,3}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!--
+
+	   -->
+	<snsr_std:simpleType name="VarianceUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Sq. Meters"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	   -->
+	<snsr_std:complexType name="Percent">
+		<snsr_std:simpleContent>
+			<snsr_std:extension base="PercentType">
+				<snsr_std:attribute name="Units" type="PercentUnitsType" use="required"/>
+			</snsr_std:extension>
+		</snsr_std:simpleContent>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="PercentType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="100"/>
+			<snsr_std:pattern value="[0-9]{1,3}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="PercentUnitsType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Percent"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="ValueRangeType">
+		<snsr_std:all>
+			<snsr_std:element name="Min" type="LimitedDoubleType"/>
+			<snsr_std:element name="Max" type="LimitedDoubleType"/>
+		</snsr_std:all>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="LimitedDoubleType">
+		<snsr_std:restriction base="snsr_std:double">
+			<snsr_std:minInclusive value="-999999"/>
+			<snsr_std:maxInclusive value="999999"/>
+			<snsr_std:pattern value="-?[0-9]{1,6}(\.[0-9]{0,50})?"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+
+	   -->
+	<snsr_std:simpleType name="LimitedNonNegativeIntegerType">
+		<snsr_std:restriction base="snsr_std:nonNegativeInteger">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="999999"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+
+	   -->
+	<snsr_std:complexType name="File">
+		<snsr_std:sequence>
+			<snsr_std:element name="CreationTime" type="TimeType" minOccurs="0"/>
+			<snsr_std:element name="ID" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+			<snsr_std:element name="File" type="snsr_std:base64Binary" />
+			<snsr_std:choice>
+				<snsr_std:element name="NameJPEG" type="NameJPEG"/>
+				<snsr_std:element name="NameMPEG" type="NameMPEG"/>
+				<snsr_std:element name="NameMP4" type="NameMP4"/>
+			</snsr_std:choice>
+			<snsr_std:element name="Location" type="Point" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 	
+
+	   -->
+	<snsr_std:simpleType name="NameJPEG">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:pattern value="[a-zA-Zא-ת0-9_(). -]{1,100}\.(jpeg|jpg)"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+
+	   -->
+	<snsr_std:simpleType name="NameMPEG">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:pattern value="[a-zA-Zא-ת0-9_(). -]{1,100}\.(mpeg)"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+
+	   -->
+	<snsr_std:simpleType name="NameMP4">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:pattern value="[a-zA-Zא-ת0-9_(). -]{1,100}\.(mp4)"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	
+		-->
+	<snsr_std:simpleType name="PriorityType">
+		<snsr_std:restriction base="LimitedNonNegativeIntegerType">
+			<snsr_std:minInclusive value="1"/>
+			<snsr_std:maxInclusive value="10"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!--
+	
+	-->
+	<snsr_std:complexType name="ColorType">
+		<snsr_std:choice>
+			<snsr_std:element name="GrayScale" type="GrayScale"/>
+			<snsr_std:element name="Color" type="Color"/>
+		</snsr_std:choice>
+	</snsr_std:complexType>
+	<!-- 
+	
+	-->
+	<snsr_std:simpleType name="GrayScale">
+		<snsr_std:restriction base="LimitedNonNegativeIntegerType">
+			<snsr_std:minInclusive value="0"/>
+			<snsr_std:maxInclusive value="255"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="Color">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="White"/>
+			<snsr_std:enumeration value="Black"/>
+			<snsr_std:enumeration value="Red"/>
+			<snsr_std:enumeration value="Green"/>
+			<snsr_std:enumeration value="LightGreen"/>
+			<snsr_std:enumeration value="Blue"/>
+			<snsr_std:enumeration value="LightBlue"/>
+			<snsr_std:enumeration value="Yellow"/>
+			<snsr_std:enumeration value="Orange"/>
+			<snsr_std:enumeration value="Purple"/>
+			<snsr_std:enumeration value="Pink"/>
+			<snsr_std:enumeration value="Cyan"/>
+			<snsr_std:enumeration value="Brown"/>
+			<snsr_std:enumeration value="Gray"/>
+			<snsr_std:enumeration value="Gold"/>
+			<snsr_std:enumeration value="Silver"/>
+			<snsr_std:enumeration value="Bronze"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!--
+	
+	-->
+	<snsr_std:simpleType name="SeverityLevelsType">
+		<snsr_std:restriction base="snsr_std:string"/>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="DeviceArea">
+		<snsr_std:sequence>
+			<snsr_std:element name="AreaID" type="LimitedLengthString"/>
+			<snsr_std:element name="IsActive" type="StatusType"/>
+			<snsr_std:element name="Location" type="GeometricElement"/>
+			<snsr_std:element name="AreaType" type="DeviceAreaType"/>
+			<snsr_std:element name="MinAltitude" type="AltitudeType"/>
+			<snsr_std:element name="MaxAltitude" type="AltitudeType"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!--
+       -->
+	<snsr_std:simpleType name="DeviceAreaType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="AllowedFlight"/>
+			<snsr_std:enumeration value="NoFlight"/>
+			<snsr_std:enumeration value="Priority"/>
+			<snsr_std:enumeration value="Censor"/>
+			<snsr_std:enumeration value="Ignorance"/>
+			<snsr_std:enumeration value="Defence"/>
+			<snsr_std:enumeration value="AreaOfIntrest"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+</snsr_std:schema>

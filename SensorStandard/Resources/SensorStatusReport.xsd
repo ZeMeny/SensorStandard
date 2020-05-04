@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Assi B. (Elbit) -->
+<!-- edited with XML Spy v2006 sp2 U (http://www.xmlspy.com) by Edan Ayal (Elsec) -->
+<!-- edited by Roi Shraga (hatal - project mrs) june 2017-->
+<!-- edited by Or Saffar (hatal - project mrs) Mar 2019-->
+<snsr_std:schema xmlns="urn:SNSR_STD" xmlns:snsr_std="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:SNSR_STD" elementFormDefault="qualified">
+	<snsr_std:include schemaLocation="SensorIndicationReport.xsd"/>
+	<snsr_std:annotation>
+		<snsr_std:documentation>Sensor (and Device) Status Report used in the generic sensor protocol.</snsr_std:documentation>
+	</snsr_std:annotation>
+	<!-- 
+	        
+	 -->
+	<snsr_std:element name="DeviceStatusReport">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="DeviceIdentification" type="DeviceIdentificationType"/>
+				<snsr_std:element ref="LocationType" minOccurs="0"/>
+				<snsr_std:choice>
+					<snsr_std:sequence>
+						<snsr_std:element name="DetailedSensorBIT" type="DetailedSensorBITType" minOccurs="0" maxOccurs="100"/>
+						<snsr_std:element ref="SensorStatusReport" maxOccurs="100"/>
+					</snsr_std:sequence>
+					<snsr_std:sequence>
+						<snsr_std:element ref="DetailedDeviceBIT" minOccurs="0" maxOccurs="100"/>
+						<snsr_std:element ref="DeviceStatusReport" maxOccurs="100"/>
+						<!-- for hub mode -->
+						<snsr_std:element name="DeviceAreaStatusReport" type="DeviceArea" minOccurs="0" maxOccurs="100"/>
+					</snsr_std:sequence>
+				</snsr_std:choice>
+			</snsr_std:sequence>
+			<snsr_std:attribute name="MessageType" type="MessageType" use="required"/>
+			<snsr_std:attribute name="ExecutionStatus" type="ExecutionStatusType" use="optional"/>
+			<snsr_std:attribute name="ProtocolVersion" type="ProtocolVersionType" use="required"/>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	 -->
+	<snsr_std:element name="SensorStatusReport">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SensorIdentification" type="SensorIdentificationType"/>
+				<snsr_std:element name="SensorTechnicalState" type="BITResultType"/>
+				<snsr_std:element name="CommunicationState" type="BITResultType"/>
+				<snsr_std:element name="PowerState" type="StatusType"/>
+				<snsr_std:element name="SensorMode" type="SensorModeType"/>
+				<snsr_std:element name="CalibrationState" type="BITResultType" minOccurs="0"/>
+				<snsr_std:element ref="EnergyStatus" minOccurs="0"/>
+				<snsr_std:choice minOccurs="0">
+					<snsr_std:element ref="PedestalStatus"/>
+					<snsr_std:element ref="OpticalStatus"/>
+					<snsr_std:element ref="LRFStatus"/>
+					<snsr_std:element ref="PointerStatus"/>
+					<snsr_std:element ref="VideoSwitchStatus"/>
+					<snsr_std:element ref="AlertIndicatorStatus"/>
+					<snsr_std:element ref="TransceiverStatus"/>
+					<snsr_std:element ref="AntennaStatus"/>
+					<snsr_std:element ref="DetectionControllerStatus"/>
+					<snsr_std:element ref="DroneStatus"/>
+					<snsr_std:element ref="PayloadStatus"/>
+				</snsr_std:choice>
+				<snsr_std:element ref="DebriefStatus" minOccurs="0"/>
+				<snsr_std:element ref="PictureStatus" minOccurs="0"/>
+				<snsr_std:element name="SamplingRate" type="Frequency" minOccurs="0"/>
+				<snsr_std:element name="ShakeStatus" type="StatusType" minOccurs="0"/>
+			</snsr_std:sequence>
+			<snsr_std:attribute name="ExecutionStatus" type="ExecutionStatusType" use="optional"/>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+
+	  -->
+	<snsr_std:element name="DroneStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element ref="LocationType"/>
+				<snsr_std:element name="DroneMode" type="DroneModeType"/>
+				<snsr_std:element name="RemainingTime" type="DeltaTime" minOccurs="0"/>
+				<snsr_std:element name="RemainingMissionTime" type="DeltaTime" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+
+	 -->
+	<snsr_std:element name="EnergyStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="EnergyState" type="BITResultType" minOccurs="0"/>
+				<snsr_std:element name="RemainingEnergy" type="Percent" minOccurs="0"/>
+				<snsr_std:element name="IsCharging" type="StatusType" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	 -->
+	<snsr_std:simpleType name="SensorModeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Normal"/>
+			<snsr_std:enumeration value="Calibration"/>
+			<snsr_std:enumeration value="Northing"/>
+			<snsr_std:enumeration value="Exploring"/>
+			<snsr_std:enumeration value="BIT"/>
+			<snsr_std:enumeration value="ON"/>
+			<snsr_std:enumeration value="OFF"/>
+			<snsr_std:enumeration value="StandBy"/>
+			<snsr_std:enumeration value="Tracking"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	 -->
+	<snsr_std:element name="DetailedDeviceBIT">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="DeviceIdentification" type="DeviceIdentificationType"/>
+				<snsr_std:element name="DetailedSensorBIT" type="DetailedSensorBITType" minOccurs="0" maxOccurs="100"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	   -->
+	<snsr_std:complexType name="DetailedSensorBITType">
+		<snsr_std:sequence>
+			<snsr_std:element name="SensorIdentification" type="SensorIdentificationType"/>
+			<snsr_std:element name="FaultCode" type="LimitedNonNegativeIntegerType" maxOccurs="10"/>
+			<snsr_std:element ref="LocationType" minOccurs="0"/>
+			<snsr_std:element name="FaultDescriptionString" type="LimitedLengthString" minOccurs="0"/>
+			<snsr_std:element name="SeverityLevel" type="SeverityLevelsType" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:element name="PedestalStatus">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element name="Elevation" type="ElevationAngle" minOccurs="0"/>
+				<snsr_std:element name="Azimuth" type="AzimuthType" minOccurs="0"/>
+				<snsr_std:element name="HorizontalVelocity" type="AngularSpeed" minOccurs="0"/>
+				<snsr_std:element name="VerticalVelocity" type="AngularSpeed" minOccurs="0"/>
+				<snsr_std:element name="LastNorthingTime" type="TimeType" minOccurs="0"/>
+				<snsr_std:element name="HorizontalMovementState" type="StatusType"/>
+				<snsr_std:element name="VerticalMovementState" type="StatusType"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="PointerStatus">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element name="LasingState" type="StatusType"/>
+				<snsr_std:element name="LasingMode" type="LasingModeType" minOccurs="0"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="VideoSwitchStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="VideoChannel" type="VideoChannelType" maxOccurs="3"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="OpticalStatus">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element ref="FieldOfViewStatusType" minOccurs="0"/>
+				<snsr_std:element ref="ZoomStatusType" minOccurs="0"/>
+				<snsr_std:element ref="FocusStatusType" minOccurs="0"/>
+				<snsr_std:element ref="GainLevelStatusType" minOccurs="0"/>
+				<snsr_std:element name="IrisControlType" type="ControlType" minOccurs="0"/>
+				<snsr_std:element name="PolarityHotColorDescription" type="PolarityHotColorDescriptionType" minOccurs="0"/>
+				<snsr_std:element name="NUCNumber" type="NUCNumberType" minOccurs="0"/>
+				<snsr_std:element name="FilterNumber" type="FilterNumberType" minOccurs="0"/>
+				<snsr_std:element name="ImageImprovementNumber" type="ImageImprovementNumberType" minOccurs="0"/>
+				<snsr_std:element name="GammaNumber" type="GammaNumberType" minOccurs="0"/>
+				<snsr_std:element name="Brightness" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="Contrast" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="CrossHair" type="AnnotationPosition" minOccurs="0"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="FieldOfViewStatusType">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element name="Description" type="FieldOfViewDescriptionType" minOccurs="0"/>
+				<snsr_std:element name="Value" type="AzimuthType" minOccurs="0"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="FocusStatusType">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element name="Control" type="ControlType" minOccurs="0"/>
+				<snsr_std:element name="Value" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="Limit" type="OpticalLimitType" minOccurs="0"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="ZoomStatusType">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element name="Limit" type="OpticalLimitType" minOccurs="0"/>
+				<snsr_std:element name="eZoomEnabled" type="StatusType"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="GainLevelStatusType">
+		<snsr_std:complexType>
+			<snsr_std:all>
+				<snsr_std:element name="Control" type="ControlType" minOccurs="0"/>
+				<snsr_std:element name="GainValue" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="LevelValue" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+			</snsr_std:all>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="OpticalLimitType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Near"/>
+			<snsr_std:enumeration value="Far"/>
+			<snsr_std:enumeration value="Reserved1"/>
+			<snsr_std:enumeration value="Reserved2"/>
+			<snsr_std:enumeration value="Reserved3"/>
+			<snsr_std:enumeration value="Reserved4"/>
+			<snsr_std:enumeration value="Reserved5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	   -->
+	<snsr_std:simpleType name="LRFMeasureResultPhrase">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="No Target"/>
+			<snsr_std:enumeration value="Target(s) Available"/>
+			<snsr_std:enumeration value="Too Many Targets"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="LRFStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="LRFMeasureResultPhrase" type="LRFMeasureResultPhrase"/>
+				<snsr_std:element name="Range" type="Distance" minOccurs="0" maxOccurs="3"/>
+				<snsr_std:element name="CrossHair" type="AnnotationPosition" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="AlertIndicatorStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="SimpleDetectorOperationalState" type="SimpleDetectorOperationalState"/>
+				<snsr_std:element name="RemainingEnergy" type="Percent" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="TransceiverStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="Intensity" type="Intensity"/>
+				<snsr_std:element name="FrequencySet" type="FrequencySetType" maxOccurs="100"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="AntennaStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="Scanning" type="snsr_std:boolean" minOccurs="0"/>
+				<snsr_std:element name="IsTransmitting" type="snsr_std:boolean" minOccurs="0"/>
+				<snsr_std:element name="IsCoverageCalculating" type="snsr_std:boolean" minOccurs="0"/>
+				<snsr_std:element name="Sector" type="Sector"/>
+				<snsr_std:element name="Speed" type="AngularSpeed" minOccurs="0"/>
+				<snsr_std:element name="Range" type="Distance" minOccurs="0"/>
+				<snsr_std:element name="CoverageArea" type="GeometricElement" minOccurs="0" maxOccurs="1000"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:element name="DetectionControllerStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:choice minOccurs="0">
+					<snsr_std:element name="ExploreDetectionID" type="LimitedDoubleType"/>
+					<snsr_std:element name="ExplorePoint" type="Point"/>
+				</snsr_std:choice>
+				<snsr_std:element name="OperationProfile" type="OperationProfile"/>
+				<snsr_std:element name="OperationalState" type="SimpleDetectorOperationalState"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="SimpleDetectorOperationalState">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Stand By"/>
+			<snsr_std:enumeration value="Alertness"/>
+			<snsr_std:enumeration value="TBD1"/>
+			<snsr_std:enumeration value="TBD2"/>
+			<snsr_std:enumeration value="TBD3"/>
+			<snsr_std:enumeration value="TBD4"/>
+			<snsr_std:enumeration value="TBD5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!-- 
+	        
+	-->
+	<snsr_std:simpleType name="PictureState">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="No Pictures"/>
+			<snsr_std:enumeration value="Pictures Attached"/>
+			<snsr_std:enumeration value="Pictures Available"/>
+			<snsr_std:enumeration value="Reserved 1"/>
+			<snsr_std:enumeration value="Reserved 2"/>
+			<snsr_std:enumeration value="Reserved 3"/>
+			<snsr_std:enumeration value="Reserved 4"/>
+			<snsr_std:enumeration value="Reserved 5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:element name="DebriefStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="DebriefState" type="DebriefState"/>
+				<snsr_std:element name="DebriefDeltaTime" type="DeltaTime" minOccurs="0"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!---->
+	<snsr_std:simpleType name="DebriefState">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Play"/>
+			<snsr_std:enumeration value="Stop"/>
+			<snsr_std:enumeration value="Pause"/>
+			<snsr_std:enumeration value="Fast Forward X2"/>
+			<snsr_std:enumeration value="Fast Forward X4"/>
+			<snsr_std:enumeration value="Fast Forward X8"/>
+			<snsr_std:enumeration value="Fast Forward X16"/>
+			<snsr_std:enumeration value="Reverse Play"/>
+			<snsr_std:enumeration value="Fast Backward X2"/>
+			<snsr_std:enumeration value="Fast Backward X4"/>
+			<snsr_std:enumeration value="Fast Backward X8"/>
+			<snsr_std:enumeration value="Fast Backward X16"/>
+			<snsr_std:enumeration value="Reserved 1"/>
+			<snsr_std:enumeration value="Reserved 2"/>
+			<snsr_std:enumeration value="Reserved 3"/>
+			<snsr_std:enumeration value="Reserved 4"/>
+			<snsr_std:enumeration value="Reserved 5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:element name="PictureStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element name="PictureState" type="PictureState"/>
+				<snsr_std:element name="IndicationID" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="MediaFile" type="File" minOccurs="0" maxOccurs="5"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+	<!---->
+	<snsr_std:simpleType name="DroneModeType">
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Hover"/>
+			<snsr_std:enumeration value="OnTheWay"/>
+			<snsr_std:enumeration value="Exchange"/>
+			<snsr_std:enumeration value="Anchorage"/>
+			<snsr_std:enumeration value="Return"/>
+			<snsr_std:enumeration value="Preparing"/>
+			<snsr_std:enumeration value="OnMission"/>
+			<snsr_std:enumeration value="Ready"/>
+			<snsr_std:enumeration value="Maintenance"/>
+			<snsr_std:enumeration value="Calibration"/>
+			<snsr_std:enumeration value="Reserved 1"/>
+			<snsr_std:enumeration value="Reserved 2"/>
+			<snsr_std:enumeration value="Reserved 3"/>
+			<snsr_std:enumeration value="Reserved 4"/>
+			<snsr_std:enumeration value="Reserved 5"/>
+		</snsr_std:restriction>
+	</snsr_std:simpleType>
+	<!---->
+	<snsr_std:element name="PayloadStatus">
+		<snsr_std:complexType>
+			<snsr_std:sequence>
+				<snsr_std:element ref="PedestalStatus" minOccurs="0"/>
+				<snsr_std:element name="PayloadChannel" type="VideoChannelType" minOccurs="0"/>
+				<snsr_std:element name="IsActive" type="StatusType"/>
+			</snsr_std:sequence>
+		</snsr_std:complexType>
+	</snsr_std:element>
+</snsr_std:schema>
