@@ -17,6 +17,7 @@ using System.Xml.Serialization;
 namespace SensorStandard.MrsTypes
 {
     /// <remarks/>
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -33,8 +34,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("GeodeticLocation", typeof(GeodeticLocation))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
     }
 
@@ -56,16 +63,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string X
         {
-            get { return this.xField; }
-            set { this.xField = value; }
+            get
+            {
+                return this.xField;
+            }
+            set
+            {
+                this.xField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Y
         {
-            get { return this.yField; }
-            set { this.yField = value; }
+            get
+            {
+                return this.yField;
+            }
+            set
+            {
+                this.yField = value;
+            }
         }
     }
 
@@ -86,16 +105,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public AngularUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -130,16 +161,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public AngularUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -161,16 +204,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public DistanceUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -220,24 +275,42 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public DistanceUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public AltitudeReferenceType Reference
         {
-            get { return this.referenceField; }
-            set { this.referenceField = value; }
+            get
+            {
+                return this.referenceField;
+            }
+            set
+            {
+                this.referenceField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -283,45 +356,81 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Latitude Latitude
         {
-            get { return this.latitudeField; }
-            set { this.latitudeField = value; }
+            get
+            {
+                return this.latitudeField;
+            }
+            set
+            {
+                this.latitudeField = value;
+            }
         }
 
         /// <remarks/>
         public Longitude Longitude
         {
-            get { return this.longitudeField; }
-            set { this.longitudeField = value; }
+            get
+            {
+                return this.longitudeField;
+            }
+            set
+            {
+                this.longitudeField = value;
+            }
         }
 
         /// <remarks/>
         public AltitudeType Altitude
         {
-            get { return this.altitudeField; }
-            set { this.altitudeField = value; }
+            get
+            {
+                return this.altitudeField;
+            }
+            set
+            {
+                this.altitudeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Altitude-AboveGroundLevel")]
         public AltitudeType AltitudeAboveGroundLevel
         {
-            get { return this.altitudeAboveGroundLevelField; }
-            set { this.altitudeAboveGroundLevelField = value; }
+            get
+            {
+                return this.altitudeAboveGroundLevelField;
+            }
+            set
+            {
+                this.altitudeAboveGroundLevelField = value;
+            }
         }
 
         /// <remarks/>
         public AltitudeType DepthBelowGround
         {
-            get { return this.depthBelowGroundField; }
-            set { this.depthBelowGroundField = value; }
+            get
+            {
+                return this.depthBelowGroundField;
+            }
+            set
+            {
+                this.depthBelowGroundField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public DatumType Datum
         {
-            get { return this.datumField; }
-            set { this.datumField = value; }
+            get
+            {
+                return this.datumField;
+            }
+            set
+            {
+                this.datumField = value;
+            }
         }
     }
 
@@ -343,16 +452,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public LatLonUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -389,16 +510,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public LatLonUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -438,22 +571,40 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Distance Range
         {
-            get { return this.rangeField; }
-            set { this.rangeField = value; }
+            get
+            {
+                return this.rangeField;
+            }
+            set
+            {
+                this.rangeField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Azimuth
         {
-            get { return this.azimuthField; }
-            set { this.azimuthField = value; }
+            get
+            {
+                return this.azimuthField;
+            }
+            set
+            {
+                this.azimuthField = value;
+            }
         }
 
         /// <remarks/>
         public ElevationAngle Elevation
         {
-            get { return this.elevationField; }
-            set { this.elevationField = value; }
+            get
+            {
+                return this.elevationField;
+            }
+            set
+            {
+                this.elevationField = value;
+            }
         }
     }
 
@@ -475,16 +626,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public SpeedUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -527,45 +690,81 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DeviceIdentificationType DeviceIdentification
         {
-            get { return this.deviceIdentificationField; }
-            set { this.deviceIdentificationField = value; }
+            get
+            {
+                return this.deviceIdentificationField;
+            }
+            set
+            {
+                this.deviceIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public SensorIdentificationType SensorIdentification
         {
-            get { return this.sensorIdentificationField; }
-            set { this.sensorIdentificationField = value; }
+            get
+            {
+                return this.sensorIdentificationField;
+            }
+            set
+            {
+                this.sensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public string RequestorIdentification
         {
-            get { return this.requestorIdentificationField; }
-            set { this.requestorIdentificationField = value; }
+            get
+            {
+                return this.requestorIdentificationField;
+            }
+            set
+            {
+                this.requestorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public CommandType Command
         {
-            get { return this.commandField; }
-            set { this.commandField = value; }
+            get
+            {
+                return this.commandField;
+            }
+            set
+            {
+                this.commandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ProtocolVersionType ProtocolVersion
         {
-            get { return this.protocolVersionField; }
-            set { this.protocolVersionField = value; }
+            get
+            {
+                return this.protocolVersionField;
+            }
+            set
+            {
+                this.protocolVersionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "nonNegativeInteger")]
         public string SequenceNumber
         {
-            get { return this.sequenceNumberField; }
-            set { this.sequenceNumberField = value; }
+            get
+            {
+                return this.sequenceNumberField;
+            }
+            set
+            {
+                this.sequenceNumberField = value;
+            }
         }
     }
 
@@ -595,51 +794,93 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public string DeviceName
         {
-            get { return this.deviceNameField; }
-            set { this.deviceNameField = value; }
+            get
+            {
+                return this.deviceNameField;
+            }
+            set
+            {
+                this.deviceNameField = value;
+            }
         }
 
         /// <remarks/>
         public DeviceTypeType DeviceType
         {
-            get { return this.deviceTypeField; }
-            set { this.deviceTypeField = value; }
+            get
+            {
+                return this.deviceTypeField;
+            }
+            set
+            {
+                this.deviceTypeField = value;
+            }
         }
 
         /// <remarks/>
         public DeviceCategoryType DeviceCategory
         {
-            get { return this.deviceCategoryField; }
-            set { this.deviceCategoryField = value; }
+            get
+            {
+                return this.deviceCategoryField;
+            }
+            set
+            {
+                this.deviceCategoryField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DeviceCategorySpecified
         {
-            get { return this.deviceCategoryFieldSpecified; }
-            set { this.deviceCategoryFieldSpecified = value; }
+            get
+            {
+                return this.deviceCategoryFieldSpecified;
+            }
+            set
+            {
+                this.deviceCategoryFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public string OEM
         {
-            get { return this.oEMField; }
-            set { this.oEMField = value; }
+            get
+            {
+                return this.oEMField;
+            }
+            set
+            {
+                this.oEMField = value;
+            }
         }
 
         /// <remarks/>
         public string Model
         {
-            get { return this.modelField; }
-            set { this.modelField = value; }
+            get
+            {
+                return this.modelField;
+            }
+            set
+            {
+                this.modelField = value;
+            }
         }
 
         /// <remarks/>
         public string Version
         {
-            get { return this.versionField; }
-            set { this.versionField = value; }
+            get
+            {
+                return this.versionField;
+            }
+            set
+            {
+                this.versionField = value;
+            }
         }
     }
 
@@ -656,6 +897,10 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Device Hub")]
         DeviceHub,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Acoustic Detection System")]
+        AcousticDetectionSystem,
 
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("EO Device")]
@@ -728,6 +973,10 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Underground Fence Device")]
         UndergroundFenceDevice,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Video Analytic System")]
+        VideoAnalyticSystem,
 
         /// <remarks/>
         Reserved1,
@@ -821,51 +1070,93 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public string SensorName
         {
-            get { return this.sensorNameField; }
-            set { this.sensorNameField = value; }
+            get
+            {
+                return this.sensorNameField;
+            }
+            set
+            {
+                this.sensorNameField = value;
+            }
         }
 
         /// <remarks/>
         public SensorTypeType SensorType
         {
-            get { return this.sensorTypeField; }
-            set { this.sensorTypeField = value; }
+            get
+            {
+                return this.sensorTypeField;
+            }
+            set
+            {
+                this.sensorTypeField = value;
+            }
         }
 
         /// <remarks/>
         public SensorSubTypeType SensorSubType
         {
-            get { return this.sensorSubTypeField; }
-            set { this.sensorSubTypeField = value; }
+            get
+            {
+                return this.sensorSubTypeField;
+            }
+            set
+            {
+                this.sensorSubTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool SensorSubTypeSpecified
         {
-            get { return this.sensorSubTypeFieldSpecified; }
-            set { this.sensorSubTypeFieldSpecified = value; }
+            get
+            {
+                return this.sensorSubTypeFieldSpecified;
+            }
+            set
+            {
+                this.sensorSubTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public string OEM
         {
-            get { return this.oEMField; }
-            set { this.oEMField = value; }
+            get
+            {
+                return this.oEMField;
+            }
+            set
+            {
+                this.oEMField = value;
+            }
         }
 
         /// <remarks/>
         public string Model
         {
-            get { return this.modelField; }
-            set { this.modelField = value; }
+            get
+            {
+                return this.modelField;
+            }
+            set
+            {
+                this.modelField = value;
+            }
         }
 
         /// <remarks/>
         public string Version
         {
-            get { return this.versionField; }
-            set { this.versionField = value; }
+            get
+            {
+                return this.versionField;
+            }
+            set
+            {
+                this.versionField = value;
+            }
         }
     }
 
@@ -1045,6 +1336,9 @@ namespace SensorStandard.MrsTypes
         StaringCamera,
 
         /// <remarks/>
+        LPR,
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Shake Detector")]
         ShakeDetector,
 
@@ -1110,6 +1404,9 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         Recorder,
+
+        /// <remarks/>
+        Microphone,
 
         /// <remarks/>
         Reserved1,
@@ -1225,8 +1522,7 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("AntennaScanCommand", typeof(AntennaScanCommandType))]
         [System.Xml.Serialization.XmlElementAttribute("CrossHairCommand", typeof(CrossHairCommandType))]
         [System.Xml.Serialization.XmlElementAttribute("DetectionAreaCommand", typeof(DetectionAreaCommandType))]
-        [System.Xml.Serialization.XmlElementAttribute("DetectionControllerCommand",
-            typeof(DetectionControllerCommandType))]
+        [System.Xml.Serialization.XmlElementAttribute("DetectionControllerCommand", typeof(DetectionControllerCommandType))]
         [System.Xml.Serialization.XmlElementAttribute("GyroStabilizationCommand", typeof(GyroStabilizationCommandType))]
         [System.Xml.Serialization.XmlElementAttribute("LocationCommand", typeof(LocationCommandType))]
         [System.Xml.Serialization.XmlElementAttribute("OpticalCommand", typeof(OpticalCommandType))]
@@ -1237,8 +1533,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("VideoSwitchCommand", typeof(VideoSwitchCommandType))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
     }
 
@@ -1262,29 +1564,53 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public Sector Sector
         {
-            get { return this.sectorField; }
-            set { this.sectorField = value; }
+            get
+            {
+                return this.sectorField;
+            }
+            set
+            {
+                this.sectorField = value;
+            }
         }
 
         /// <remarks/>
         public AngularSpeed Speed
         {
-            get { return this.speedField; }
-            set { this.speedField = value; }
+            get
+            {
+                return this.speedField;
+            }
+            set
+            {
+                this.speedField = value;
+            }
         }
 
         /// <remarks/>
         public DistanceType Range
         {
-            get { return this.rangeField; }
-            set { this.rangeField = value; }
+            get
+            {
+                return this.rangeField;
+            }
+            set
+            {
+                this.rangeField = value;
+            }
         }
     }
 
@@ -1507,36 +1833,66 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public AzimuthType AzimuthStart
         {
-            get { return this.azimuthStartField; }
-            set { this.azimuthStartField = value; }
+            get
+            {
+                return this.azimuthStartField;
+            }
+            set
+            {
+                this.azimuthStartField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType AzimuthEnd
         {
-            get { return this.azimuthEndField; }
-            set { this.azimuthEndField = value; }
+            get
+            {
+                return this.azimuthEndField;
+            }
+            set
+            {
+                this.azimuthEndField = value;
+            }
         }
 
         /// <remarks/>
         public Point Center
         {
-            get { return this.centerField; }
-            set { this.centerField = value; }
+            get
+            {
+                return this.centerField;
+            }
+            set
+            {
+                this.centerField = value;
+            }
         }
 
         /// <remarks/>
         public Distance MinRange
         {
-            get { return this.minRangeField; }
-            set { this.minRangeField = value; }
+            get
+            {
+                return this.minRangeField;
+            }
+            set
+            {
+                this.minRangeField = value;
+            }
         }
 
         /// <remarks/>
         public Distance MaxRange
         {
-            get { return this.maxRangeField; }
-            set { this.maxRangeField = value; }
+            get
+            {
+                return this.maxRangeField;
+            }
+            set
+            {
+                this.maxRangeField = value;
+            }
         }
     }
 
@@ -1557,8 +1913,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("RelativeLocationType", typeof(RelativeLocationType))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
     }
 
@@ -1579,16 +1941,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string i
         {
-            get { return this.iField; }
-            set { this.iField = value; }
+            get
+            {
+                return this.iField;
+            }
+            set
+            {
+                this.iField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string j
         {
-            get { return this.jField; }
-            set { this.jField = value; }
+            get
+            {
+                return this.jField;
+            }
+            set
+            {
+                this.jField = value;
+            }
         }
     }
 
@@ -1609,16 +1983,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public AngularSpeedUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -1655,15 +2041,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public AnnotationPosition Position
         {
-            get { return this.positionField; }
-            set { this.positionField = value; }
+            get
+            {
+                return this.positionField;
+            }
+            set
+            {
+                this.positionField = value;
+            }
         }
     }
 
@@ -1683,16 +2081,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DetectionZoneType")]
         public DetectionZoneType[] DetectionZoneType
         {
-            get { return this.detectionZoneTypeField; }
-            set { this.detectionZoneTypeField = value; }
+            get
+            {
+                return this.detectionZoneTypeField;
+            }
+            set
+            {
+                this.detectionZoneTypeField = value;
+            }
         }
     }
 
@@ -1735,99 +2145,177 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string ID
         {
-            get { return this.idField; }
-            set { this.idField = value; }
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+            }
         }
 
         /// <remarks/>
         public bool Enabled
         {
-            get { return this.enabledField; }
-            set { this.enabledField = value; }
+            get
+            {
+                return this.enabledField;
+            }
+            set
+            {
+                this.enabledField = value;
+            }
         }
 
         /// <remarks/>
         public GeometricElement Area
         {
-            get { return this.areaField; }
-            set { this.areaField = value; }
+            get
+            {
+                return this.areaField;
+            }
+            set
+            {
+                this.areaField = value;
+            }
         }
 
         /// <remarks/>
         public AreaType AreaType
         {
-            get { return this.areaTypeField; }
-            set { this.areaTypeField = value; }
+            get
+            {
+                return this.areaTypeField;
+            }
+            set
+            {
+                this.areaTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AreaTypeSpecified
         {
-            get { return this.areaTypeFieldSpecified; }
-            set { this.areaTypeFieldSpecified = value; }
+            get
+            {
+                return this.areaTypeFieldSpecified;
+            }
+            set
+            {
+                this.areaTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public AreaSensitivityType AreaSensitivity
         {
-            get { return this.areaSensitivityField; }
-            set { this.areaSensitivityField = value; }
+            get
+            {
+                return this.areaSensitivityField;
+            }
+            set
+            {
+                this.areaSensitivityField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AreaSensitivitySpecified
         {
-            get { return this.areaSensitivityFieldSpecified; }
-            set { this.areaSensitivityFieldSpecified = value; }
+            get
+            {
+                return this.areaSensitivityFieldSpecified;
+            }
+            set
+            {
+                this.areaSensitivityFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AllowedType")]
         public DetectionType[] AllowedType
         {
-            get { return this.allowedTypeField; }
-            set { this.allowedTypeField = value; }
+            get
+            {
+                return this.allowedTypeField;
+            }
+            set
+            {
+                this.allowedTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("CensoredType")]
         public DetectionType[] CensoredType
         {
-            get { return this.censoredTypeField; }
-            set { this.censoredTypeField = value; }
+            get
+            {
+                return this.censoredTypeField;
+            }
+            set
+            {
+                this.censoredTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("PrioritizedType")]
         public DetectionType[] PrioritizedType
         {
-            get { return this.prioritizedTypeField; }
-            set { this.prioritizedTypeField = value; }
+            get
+            {
+                return this.prioritizedTypeField;
+            }
+            set
+            {
+                this.prioritizedTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Band")]
         public FrequencyCategory[] Band
         {
-            get { return this.bandField; }
-            set { this.bandField = value; }
+            get
+            {
+                return this.bandField;
+            }
+            set
+            {
+                this.bandField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency SpecificFrequency
         {
-            get { return this.specificFrequencyField; }
-            set { this.specificFrequencyField = value; }
+            get
+            {
+                return this.specificFrequencyField;
+            }
+            set
+            {
+                this.specificFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("FrequencyRange")]
         public DetectionZoneTypeFrequencyRange[] FrequencyRange
         {
-            get { return this.frequencyRangeField; }
-            set { this.frequencyRangeField = value; }
+            get
+            {
+                return this.frequencyRangeField;
+            }
+            set
+            {
+                this.frequencyRangeField = value;
+            }
         }
     }
 
@@ -1854,16 +2342,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceType2 ItemElementName
         {
-            get { return this.itemElementNameField; }
-            set { this.itemElementNameField = value; }
+            get
+            {
+                return this.itemElementNameField;
+            }
+            set
+            {
+                this.itemElementNameField = value;
+            }
         }
     }
 
@@ -1883,15 +2383,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Point Center
         {
-            get { return this.centerField; }
-            set { this.centerField = value; }
+            get
+            {
+                return this.centerField;
+            }
+            set
+            {
+                this.centerField = value;
+            }
         }
 
         /// <remarks/>
         public Distance Radius
         {
-            get { return this.radiusField; }
-            set { this.radiusField = value; }
+            get
+            {
+                return this.radiusField;
+            }
+            set
+            {
+                this.radiusField = value;
+            }
         }
     }
 
@@ -1915,29 +2427,53 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Point Center
         {
-            get { return this.centerField; }
-            set { this.centerField = value; }
+            get
+            {
+                return this.centerField;
+            }
+            set
+            {
+                this.centerField = value;
+            }
         }
 
         /// <remarks/>
         public Distance Radius_V
         {
-            get { return this.radius_VField; }
-            set { this.radius_VField = value; }
+            get
+            {
+                return this.radius_VField;
+            }
+            set
+            {
+                this.radius_VField = value;
+            }
         }
 
         /// <remarks/>
         public Distance Radius_H
         {
-            get { return this.radius_HField; }
-            set { this.radius_HField = value; }
+            get
+            {
+                return this.radius_HField;
+            }
+            set
+            {
+                this.radius_HField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Azimuth
         {
-            get { return this.azimuthField; }
-            set { this.azimuthField = value; }
+            get
+            {
+                return this.azimuthField;
+            }
+            set
+            {
+                this.azimuthField = value;
+            }
         }
     }
 
@@ -1956,8 +2492,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("Point")]
         public Point[] Point
         {
-            get { return this.pointField; }
-            set { this.pointField = value; }
+            get
+            {
+                return this.pointField;
+            }
+            set
+            {
+                this.pointField = value;
+            }
         }
     }
 
@@ -1976,8 +2518,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("Point")]
         public Point[] Point
         {
-            get { return this.pointField; }
-            set { this.pointField = value; }
+            get
+            {
+                return this.pointField;
+            }
+            set
+            {
+                this.pointField = value;
+            }
         }
     }
 
@@ -2260,48 +2808,84 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public FrequencyUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public FrequencyModeType Mode
         {
-            get { return this.modeField; }
-            set { this.modeField = value; }
+            get
+            {
+                return this.modeField;
+            }
+            set
+            {
+                this.modeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ModeSpecified
         {
-            get { return this.modeFieldSpecified; }
-            set { this.modeFieldSpecified = value; }
+            get
+            {
+                return this.modeFieldSpecified;
+            }
+            set
+            {
+                this.modeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public FrequencyPriorityType Priority
         {
-            get { return this.priorityField; }
-            set { this.priorityField = value; }
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool PrioritySpecified
         {
-            get { return this.priorityFieldSpecified; }
-            set { this.priorityFieldSpecified = value; }
+            get
+            {
+                return this.priorityFieldSpecified;
+            }
+            set
+            {
+                this.priorityFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -2387,15 +2971,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Frequency LowFrequency
         {
-            get { return this.lowFrequencyField; }
-            set { this.lowFrequencyField = value; }
+            get
+            {
+                return this.lowFrequencyField;
+            }
+            set
+            {
+                this.lowFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency HighFrequency
         {
-            get { return this.highFrequencyField; }
-            set { this.highFrequencyField = value; }
+            get
+            {
+                return this.highFrequencyField;
+            }
+            set
+            {
+                this.highFrequencyField = value;
+            }
         }
     }
 
@@ -2417,25 +3013,42 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionControllerModeType DetectionControllerMode
         {
-            get { return this.detectionControllerModeField; }
-            set { this.detectionControllerModeField = value; }
+            get
+            {
+                return this.detectionControllerModeField;
+            }
+            set
+            {
+                this.detectionControllerModeField = value;
+            }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExploreDetectionID", typeof(string),
-            DataType = "nonNegativeInteger")]
+        [System.Xml.Serialization.XmlElementAttribute("ExploreDetectionID", typeof(string), DataType = "nonNegativeInteger")]
         [System.Xml.Serialization.XmlElementAttribute("ExplorePoint", typeof(Point))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
     }
 
@@ -2495,46 +3108,82 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public AxisType Axis
         {
-            get { return this.axisField; }
-            set { this.axisField = value; }
+            get
+            {
+                return this.axisField;
+            }
+            set
+            {
+                this.axisField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AxisSpecified
         {
-            get { return this.axisFieldSpecified; }
-            set { this.axisFieldSpecified = value; }
+            get
+            {
+                return this.axisFieldSpecified;
+            }
+            set
+            {
+                this.axisFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public OperationType Operation
         {
-            get { return this.operationField; }
-            set { this.operationField = value; }
+            get
+            {
+                return this.operationField;
+            }
+            set
+            {
+                this.operationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool OperationSpecified
         {
-            get { return this.operationFieldSpecified; }
-            set { this.operationFieldSpecified = value; }
+            get
+            {
+                return this.operationFieldSpecified;
+            }
+            set
+            {
+                this.operationFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -2642,16 +3291,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Point")]
         public Point[] Point
         {
-            get { return this.pointField; }
-            set { this.pointField = value; }
+            get
+            {
+                return this.pointField;
+            }
+            set
+            {
+                this.pointField = value;
+            }
         }
 
         /// <remarks/>
@@ -2662,8 +3323,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public AngularSpeed[] Items
         {
-            get { return this.itemsField; }
-            set { this.itemsField = value; }
+            get
+            {
+                return this.itemsField;
+            }
+            set
+            {
+                this.itemsField = value;
+            }
         }
 
         /// <remarks/>
@@ -2671,8 +3338,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemsChoiceType[] ItemsElementName
         {
-            get { return this.itemsElementNameField; }
-            set { this.itemsElementNameField = value; }
+            get
+            {
+                return this.itemsElementNameField;
+            }
+            set
+            {
+                this.itemsElementNameField = value;
+            }
         }
     }
 
@@ -2722,38 +3395,68 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public OperationType Operation
         {
-            get { return this.operationField; }
-            set { this.operationField = value; }
+            get
+            {
+                return this.operationField;
+            }
+            set
+            {
+                this.operationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool OperationSpecified
         {
-            get { return this.operationFieldSpecified; }
-            set { this.operationFieldSpecified = value; }
+            get
+            {
+                return this.operationFieldSpecified;
+            }
+            set
+            {
+                this.operationFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public ControlType Control
         {
-            get { return this.controlField; }
-            set { this.controlField = value; }
+            get
+            {
+                return this.controlField;
+            }
+            set
+            {
+                this.controlField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ControlSpecified
         {
-            get { return this.controlFieldSpecified; }
-            set { this.controlFieldSpecified = value; }
+            get
+            {
+                return this.controlFieldSpecified;
+            }
+            set
+            {
+                this.controlFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
@@ -2761,26 +3464,36 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("FieldOfViewValue", typeof(AzimuthType))]
         [System.Xml.Serialization.XmlElementAttribute("FilterNumber", typeof(string), DataType = "nonNegativeInteger")]
         [System.Xml.Serialization.XmlElementAttribute("GammaNumber", typeof(string), DataType = "nonNegativeInteger")]
-        [System.Xml.Serialization.XmlElementAttribute("ImageImprovementNumber", typeof(string),
-            DataType = "nonNegativeInteger")]
+        [System.Xml.Serialization.XmlElementAttribute("ImageImprovementNumber", typeof(string), DataType = "nonNegativeInteger")]
         [System.Xml.Serialization.XmlElementAttribute("NUCNumber", typeof(string), DataType = "nonNegativeInteger")]
-        [System.Xml.Serialization.XmlElementAttribute("PolarityHotColorDescription",
-            typeof(PolarityHotColorDescriptionType))]
+        [System.Xml.Serialization.XmlElementAttribute("PolarityHotColorDescription", typeof(PolarityHotColorDescriptionType))]
         [System.Xml.Serialization.XmlElementAttribute("Value", typeof(string), DataType = "nonNegativeInteger")]
         [System.Xml.Serialization.XmlElementAttribute("eZoomEnable", typeof(StatusType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceType1 ItemElementName
         {
-            get { return this.itemElementNameField; }
-            set { this.itemElementNameField = value; }
+            get
+            {
+                return this.itemElementNameField;
+            }
+            set
+            {
+                this.itemElementNameField = value;
+            }
         }
     }
 
@@ -2902,6 +3615,18 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         No,
+
+        /// <remarks/>
+        Activated,
+
+        /// <remarks/>
+        DeActivated,
+
+        /// <remarks/>
+        Undertreatment,
+
+        /// <remarks/>
+        Done,
     }
 
     /// <remarks/>
@@ -2965,53 +3690,95 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public ReceiverModeType ReceiverMode
         {
-            get { return this.receiverModeField; }
-            set { this.receiverModeField = value; }
+            get
+            {
+                return this.receiverModeField;
+            }
+            set
+            {
+                this.receiverModeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ReceiverModeSpecified
         {
-            get { return this.receiverModeFieldSpecified; }
-            set { this.receiverModeFieldSpecified = value; }
+            get
+            {
+                return this.receiverModeFieldSpecified;
+            }
+            set
+            {
+                this.receiverModeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public FrequencyCategory Band
         {
-            get { return this.bandField; }
-            set { this.bandField = value; }
+            get
+            {
+                return this.bandField;
+            }
+            set
+            {
+                this.bandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool BandSpecified
         {
-            get { return this.bandFieldSpecified; }
-            set { this.bandFieldSpecified = value; }
+            get
+            {
+                return this.bandFieldSpecified;
+            }
+            set
+            {
+                this.bandFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Frequency SpecificFrequency
         {
-            get { return this.specificFrequencyField; }
-            set { this.specificFrequencyField = value; }
+            get
+            {
+                return this.specificFrequencyField;
+            }
+            set
+            {
+                this.specificFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("FrequencyRange")]
         public ReceiverCommandTypeFrequencyRange[] FrequencyRange
         {
-            get { return this.frequencyRangeField; }
-            set { this.frequencyRangeField = value; }
+            get
+            {
+                return this.frequencyRangeField;
+            }
+            set
+            {
+                this.frequencyRangeField = value;
+            }
         }
     }
 
@@ -3063,15 +3830,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Frequency LowFrequency
         {
-            get { return this.lowFrequencyField; }
-            set { this.lowFrequencyField = value; }
+            get
+            {
+                return this.lowFrequencyField;
+            }
+            set
+            {
+                this.lowFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency HighFrequency
         {
-            get { return this.highFrequencyField; }
-            set { this.highFrequencyField = value; }
+            get
+            {
+                return this.highFrequencyField;
+            }
+            set
+            {
+                this.highFrequencyField = value;
+            }
         }
     }
 
@@ -3103,61 +3882,109 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SensorIdentificationType PedestalSensorIdentification
         {
-            get { return this.pedestalSensorIdentificationField; }
-            set { this.pedestalSensorIdentificationField = value; }
+            get
+            {
+                return this.pedestalSensorIdentificationField;
+            }
+            set
+            {
+                this.pedestalSensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public SensorIdentificationType OpticalSensorIdentification
         {
-            get { return this.opticalSensorIdentificationField; }
-            set { this.opticalSensorIdentificationField = value; }
+            get
+            {
+                return this.opticalSensorIdentificationField;
+            }
+            set
+            {
+                this.opticalSensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public SensorIdentificationType DroneSensorIdentification
         {
-            get { return this.droneSensorIdentificationField; }
-            set { this.droneSensorIdentificationField = value; }
+            get
+            {
+                return this.droneSensorIdentificationField;
+            }
+            set
+            {
+                this.droneSensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("GoTo-Command")]
         public LocationCommandType GoToCommand
         {
-            get { return this.goToCommandField; }
-            set { this.goToCommandField = value; }
+            get
+            {
+                return this.goToCommandField;
+            }
+            set
+            {
+                this.goToCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("GEO-GoTo-Command")]
         public LocationCommandType GEOGoToCommand
         {
-            get { return this.gEOGoToCommandField; }
-            set { this.gEOGoToCommandField = value; }
+            get
+            {
+                return this.gEOGoToCommandField;
+            }
+            set
+            {
+                this.gEOGoToCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("FOV-Zoom-Command")]
         public OpticalCommandType FOVZoomCommand
         {
-            get { return this.fOVZoomCommandField; }
-            set { this.fOVZoomCommandField = value; }
+            get
+            {
+                return this.fOVZoomCommandField;
+            }
+            set
+            {
+                this.fOVZoomCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Focus-Command")]
         public OpticalCommandType FocusCommand
         {
-            get { return this.focusCommandField; }
-            set { this.focusCommandField = value; }
+            get
+            {
+                return this.focusCommandField;
+            }
+            set
+            {
+                this.focusCommandField = value;
+            }
         }
 
         /// <remarks/>
         public DebriefCommandType DebriefCommand
         {
-            get { return this.debriefCommandField; }
-            set { this.debriefCommandField = value; }
+            get
+            {
+                return this.debriefCommandField;
+            }
+            set
+            {
+                this.debriefCommandField = value;
+            }
         }
     }
 
@@ -3179,22 +4006,40 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public DebriefOperationType DebriefOperation
         {
-            get { return this.debriefOperationField; }
-            set { this.debriefOperationField = value; }
+            get
+            {
+                return this.debriefOperationField;
+            }
+            set
+            {
+                this.debriefOperationField = value;
+            }
         }
 
         /// <remarks/>
         public DeltaTime DebriefDeltaTime
         {
-            get { return this.debriefDeltaTimeField; }
-            set { this.debriefDeltaTimeField = value; }
+            get
+            {
+                return this.debriefDeltaTimeField;
+            }
+            set
+            {
+                this.debriefDeltaTimeField = value;
+            }
         }
     }
 
@@ -3299,16 +4144,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public TimeUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -3353,14 +4210,19 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AlertResetType", typeof(AlertResetType))]
-        [System.Xml.Serialization.XmlElementAttribute("FreeCommandNumber", typeof(string),
-            DataType = "nonNegativeInteger")]
+        [System.Xml.Serialization.XmlElementAttribute("FreeCommandNumber", typeof(string), DataType = "nonNegativeInteger")]
         [System.Xml.Serialization.XmlElementAttribute("LasingMode", typeof(LasingModeType))]
         [System.Xml.Serialization.XmlElementAttribute("OperationProfile", typeof(OperationProfile))]
         [System.Xml.Serialization.XmlElementAttribute("SamplingRate", typeof(Frequency))]
@@ -3369,16 +4231,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceType ItemElementName
         {
-            get { return this.itemElementNameField; }
-            set { this.itemElementNameField = value; }
+            get
+            {
+                return this.itemElementNameField;
+            }
+            set
+            {
+                this.itemElementNameField = value;
+            }
         }
     }
 
@@ -3576,16 +4450,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("VideoChannel")]
         public VideoChannelType[] VideoChannel
         {
-            get { return this.videoChannelField; }
-            set { this.videoChannelField = value; }
+            get
+            {
+                return this.videoChannelField;
+            }
+            set
+            {
+                this.videoChannelField = value;
+            }
         }
     }
 
@@ -3605,8 +4491,14 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public VideoChannelIDType VideoChannelID
         {
-            get { return this.videoChannelIDField; }
-            set { this.videoChannelIDField = value; }
+            get
+            {
+                return this.videoChannelIDField;
+            }
+            set
+            {
+                this.videoChannelIDField = value;
+            }
         }
 
         /// <remarks/>
@@ -3614,8 +4506,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("SensorType", typeof(SensorTypeType))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
     }
 
@@ -3707,8 +4605,14 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DeviceIdentificationType DeviceIdentification
         {
-            get { return this.deviceIdentificationField; }
-            set { this.deviceIdentificationField = value; }
+            get
+            {
+                return this.deviceIdentificationField;
+            }
+            set
+            {
+                this.deviceIdentificationField = value;
+            }
         }
 
         /// <remarks/>
@@ -3716,16 +4620,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("SensorIndicationReport", typeof(SensorIndicationReport))]
         public object[] Items
         {
-            get { return this.itemsField; }
-            set { this.itemsField = value; }
+            get
+            {
+                return this.itemsField;
+            }
+            set
+            {
+                this.itemsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ProtocolVersionType ProtocolVersion
         {
-            get { return this.protocolVersionField; }
-            set { this.protocolVersionField = value; }
+            get
+            {
+                return this.protocolVersionField;
+            }
+            set
+            {
+                this.protocolVersionField = value;
+            }
         }
     }
 
@@ -3746,16 +4662,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SensorIdentificationType SensorIdentification
         {
-            get { return this.sensorIdentificationField; }
-            set { this.sensorIdentificationField = value; }
+            get
+            {
+                return this.sensorIdentificationField;
+            }
+            set
+            {
+                this.sensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("IndicationType")]
         public IndicationType[] IndicationType
         {
-            get { return this.indicationTypeField; }
-            set { this.indicationTypeField = value; }
+            get
+            {
+                return this.indicationTypeField;
+            }
+            set
+            {
+                this.indicationTypeField = value;
+            }
         }
     }
 
@@ -3785,40 +4713,71 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string ID
         {
-            get { return this.idField; }
-            set { this.idField = value; }
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+            }
         }
 
         /// <remarks/>
         public TimeType CreationTime
         {
-            get { return this.creationTimeField; }
-            set { this.creationTimeField = value; }
+            get
+            {
+                return this.creationTimeField;
+            }
+            set
+            {
+                this.creationTimeField = value;
+            }
         }
 
         /// <remarks/>
         public string Description
         {
-            get { return this.descriptionField; }
-            set { this.descriptionField = value; }
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Quantity
         {
-            get { return this.quantityField; }
-            set { this.quantityField = value; }
+            get
+            {
+                return this.quantityField;
+            }
+            set
+            {
+                this.quantityField = value;
+            }
         }
 
         /// <remarks/>
         public Percent Reliability
         {
-            get { return this.reliabilityField; }
-            set { this.reliabilityField = value; }
+            get
+            {
+                return this.reliabilityField;
+            }
+            set
+            {
+                this.reliabilityField = value;
+            }
         }
 
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("AcousticDetectionType", typeof(AcousticDetectionType))]
         [System.Xml.Serialization.XmlElementAttribute("AerialSingleDetectionType", typeof(AerialSingleDetectionType))]
         [System.Xml.Serialization.XmlElementAttribute("AerialTrackDetectionType", typeof(AerialTrackDetectionType))]
         [System.Xml.Serialization.XmlElementAttribute("AlertIndicationType", typeof(AlertIndicationType))]
@@ -3828,11 +4787,18 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("IntelligenceDetectionType", typeof(IntelligenceDetectionType))]
         [System.Xml.Serialization.XmlElementAttribute("RadarSingleDetectionType", typeof(RadarSingleDetectionType))]
         [System.Xml.Serialization.XmlElementAttribute("RadarTrackDetectionType", typeof(RadarTrackDetectionType))]
+        [System.Xml.Serialization.XmlElementAttribute("VideoAnalyticDetectionType", typeof(VideoAnalyticDetectionType))]
         [System.Xml.Serialization.XmlElementAttribute("VideoMotionDetectionType", typeof(VideoMotionDetectionType))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
     }
 
@@ -3853,16 +4819,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public TimezoneType Zone
         {
-            get { return this.zoneField; }
-            set { this.zoneField = value; }
+            get
+            {
+                return this.zoneField;
+            }
+            set
+            {
+                this.zoneField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public System.DateTime Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -3897,16 +4875,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public PercentUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -3922,6 +4912,448 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         Percent,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    public partial class AcousticDetectionType
+    {
+
+        private Point locationField;
+
+        private string burstIDField;
+
+        private DetectionType detectionTypeField;
+
+        private bool detectionTypeFieldSpecified;
+
+        private VelocityType detectionSpeedField;
+
+        private FireType fireTypeField;
+
+        private bool fireTypeFieldSpecified;
+
+        private AzimuthType fireAzimuthField;
+
+        private Percent acousticTypeReliabilityField;
+
+        private AccuracyType accuracyField;
+
+        private double cEP90Field;
+
+        private bool cEP90FieldSpecified;
+
+        private File audioFileField;
+
+        /// <remarks/>
+        public Point Location
+        {
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
+        public string BurstID
+        {
+            get
+            {
+                return this.burstIDField;
+            }
+            set
+            {
+                this.burstIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public DetectionType DetectionType
+        {
+            get
+            {
+                return this.detectionTypeField;
+            }
+            set
+            {
+                this.detectionTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DetectionTypeSpecified
+        {
+            get
+            {
+                return this.detectionTypeFieldSpecified;
+            }
+            set
+            {
+                this.detectionTypeFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public VelocityType DetectionSpeed
+        {
+            get
+            {
+                return this.detectionSpeedField;
+            }
+            set
+            {
+                this.detectionSpeedField = value;
+            }
+        }
+
+        /// <remarks/>
+        public FireType FireType
+        {
+            get
+            {
+                return this.fireTypeField;
+            }
+            set
+            {
+                this.fireTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool FireTypeSpecified
+        {
+            get
+            {
+                return this.fireTypeFieldSpecified;
+            }
+            set
+            {
+                this.fireTypeFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public AzimuthType FireAzimuth
+        {
+            get
+            {
+                return this.fireAzimuthField;
+            }
+            set
+            {
+                this.fireAzimuthField = value;
+            }
+        }
+
+        /// <remarks/>
+        public Percent AcousticTypeReliability
+        {
+            get
+            {
+                return this.acousticTypeReliabilityField;
+            }
+            set
+            {
+                this.acousticTypeReliabilityField = value;
+            }
+        }
+
+        /// <remarks/>
+        public AccuracyType Accuracy
+        {
+            get
+            {
+                return this.accuracyField;
+            }
+            set
+            {
+                this.accuracyField = value;
+            }
+        }
+
+        /// <remarks/>
+        public double CEP90
+        {
+            get
+            {
+                return this.cEP90Field;
+            }
+            set
+            {
+                this.cEP90Field = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CEP90Specified
+        {
+            get
+            {
+                return this.cEP90FieldSpecified;
+            }
+            set
+            {
+                this.cEP90FieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public File AudioFile
+        {
+            get
+            {
+                return this.audioFileField;
+            }
+            set
+            {
+                this.audioFileField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public partial class VelocityType
+    {
+
+        private object itemField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("AngularSpeed", typeof(AngularSpeed))]
+        [System.Xml.Serialization.XmlElementAttribute("Speed", typeof(Speed))]
+        public object Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public enum FireType
+    {
+
+        /// <remarks/>
+        Undefined,
+
+        /// <remarks/>
+        AT,
+
+        /// <remarks/>
+        SmallArm,
+
+        /// <remarks/>
+        Artillery,
+
+        /// <remarks/>
+        Mortar,
+
+        /// <remarks/>
+        Explosion,
+
+        /// <remarks/>
+        TBD1,
+
+        /// <remarks/>
+        TBD2,
+
+        /// <remarks/>
+        TBD3,
+
+        /// <remarks/>
+        TBD4,
+
+        /// <remarks/>
+        TBD5,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public partial class AccuracyType
+    {
+
+        private DeltaTime timeRangeField;
+
+        private GeometricElement locationField;
+
+        /// <remarks/>
+        public DeltaTime TimeRange
+        {
+            get
+            {
+                return this.timeRangeField;
+            }
+            set
+            {
+                this.timeRangeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public GeometricElement Location
+        {
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public partial class File
+    {
+
+        private TimeType creationTimeField;
+
+        private string idField;
+
+        private byte[] file1Field;
+
+        private string itemField;
+
+        private ItemChoiceType3 itemElementNameField;
+
+        private Point locationField;
+
+        /// <remarks/>
+        public TimeType CreationTime
+        {
+            get
+            {
+                return this.creationTimeField;
+            }
+            set
+            {
+                this.creationTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
+        public string ID
+        {
+            get
+            {
+                return this.idField;
+            }
+            set
+            {
+                this.idField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("File", DataType = "base64Binary")]
+        public byte[] File1
+        {
+            get
+            {
+                return this.file1Field;
+            }
+            set
+            {
+                this.file1Field = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("NameJPEG", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("NameMP4", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("NameWAV", typeof(string))]
+        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
+        public string Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ItemChoiceType3 ItemElementName
+        {
+            get
+            {
+                return this.itemElementNameField;
+            }
+            set
+            {
+                this.itemElementNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public Point Location
+        {
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD", IncludeInSchema = false)]
+    public enum ItemChoiceType3
+    {
+
+        /// <remarks/>
+        NameJPEG,
+
+        /// <remarks/>
+        NameMP4,
+
+        /// <remarks/>
+        NameWAV,
     }
 
     /// <remarks/>
@@ -3972,132 +5404,240 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Point Location
         {
-            get { return this.locationField; }
-            set { this.locationField = value; }
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
         }
 
         /// <remarks/>
         public VarianceLocation VarianceLocation
         {
-            get { return this.varianceLocationField; }
-            set { this.varianceLocationField = value; }
+            get
+            {
+                return this.varianceLocationField;
+            }
+            set
+            {
+                this.varianceLocationField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionType DetectionType
         {
-            get { return this.detectionTypeField; }
-            set { this.detectionTypeField = value; }
+            get
+            {
+                return this.detectionTypeField;
+            }
+            set
+            {
+                this.detectionTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DetectionTypeSpecified
         {
-            get { return this.detectionTypeFieldSpecified; }
-            set { this.detectionTypeFieldSpecified = value; }
+            get
+            {
+                return this.detectionTypeFieldSpecified;
+            }
+            set
+            {
+                this.detectionTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent DetectionTypeReliability
         {
-            get { return this.detectionTypeReliabilityField; }
-            set { this.detectionTypeReliabilityField = value; }
+            get
+            {
+                return this.detectionTypeReliabilityField;
+            }
+            set
+            {
+                this.detectionTypeReliabilityField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityType DetectionSpeed
         {
-            get { return this.detectionSpeedField; }
-            set { this.detectionSpeedField = value; }
+            get
+            {
+                return this.detectionSpeedField;
+            }
+            set
+            {
+                this.detectionSpeedField = value;
+            }
         }
 
         /// <remarks/>
         public VectorDetectionSpeed VectorDetectionSpeed
         {
-            get { return this.vectorDetectionSpeedField; }
-            set { this.vectorDetectionSpeedField = value; }
+            get
+            {
+                return this.vectorDetectionSpeedField;
+            }
+            set
+            {
+                this.vectorDetectionSpeedField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionActivityType ActivityType
         {
-            get { return this.activityTypeField; }
-            set { this.activityTypeField = value; }
+            get
+            {
+                return this.activityTypeField;
+            }
+            set
+            {
+                this.activityTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ActivityTypeSpecified
         {
-            get { return this.activityTypeFieldSpecified; }
-            set { this.activityTypeFieldSpecified = value; }
+            get
+            {
+                return this.activityTypeFieldSpecified;
+            }
+            set
+            {
+                this.activityTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent ActivityTypeReliability
         {
-            get { return this.activityTypeReliabilityField; }
-            set { this.activityTypeReliabilityField = value; }
+            get
+            {
+                return this.activityTypeReliabilityField;
+            }
+            set
+            {
+                this.activityTypeReliabilityField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string GroupID
         {
-            get { return this.groupIDField; }
-            set { this.groupIDField = value; }
+            get
+            {
+                return this.groupIDField;
+            }
+            set
+            {
+                this.groupIDField = value;
+            }
         }
 
         /// <remarks/>
         public IdentificationFriendFoe IdentificationFriendFoe
         {
-            get { return this.identificationFriendFoeField; }
-            set { this.identificationFriendFoeField = value; }
+            get
+            {
+                return this.identificationFriendFoeField;
+            }
+            set
+            {
+                this.identificationFriendFoeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IdentificationFriendFoeSpecified
         {
-            get { return this.identificationFriendFoeFieldSpecified; }
-            set { this.identificationFriendFoeFieldSpecified = value; }
+            get
+            {
+                return this.identificationFriendFoeFieldSpecified;
+            }
+            set
+            {
+                this.identificationFriendFoeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public string IdentificationDetectionSerial
         {
-            get { return this.identificationDetectionSerialField; }
-            set { this.identificationDetectionSerialField = value; }
+            get
+            {
+                return this.identificationDetectionSerialField;
+            }
+            set
+            {
+                this.identificationDetectionSerialField = value;
+            }
         }
 
         /// <remarks/>
         public string IdentificationDetectionType
         {
-            get { return this.identificationDetectionTypeField; }
-            set { this.identificationDetectionTypeField = value; }
+            get
+            {
+                return this.identificationDetectionTypeField;
+            }
+            set
+            {
+                this.identificationDetectionTypeField = value;
+            }
         }
 
         /// <remarks/>
         public AreaMeasuring RadarCrossSection
         {
-            get { return this.radarCrossSectionField; }
-            set { this.radarCrossSectionField = value; }
+            get
+            {
+                return this.radarCrossSectionField;
+            }
+            set
+            {
+                this.radarCrossSectionField = value;
+            }
         }
 
         /// <remarks/>
         public Ellipse Accuracy
         {
-            get { return this.accuracyField; }
-            set { this.accuracyField = value; }
+            get
+            {
+                return this.accuracyField;
+            }
+            set
+            {
+                this.accuracyField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
         public string SNR
         {
-            get { return this.sNRField; }
-            set { this.sNRField = value; }
+            get
+            {
+                return this.sNRField;
+            }
+            set
+            {
+                this.sNRField = value;
+            }
         }
     }
 
@@ -4132,64 +5672,118 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Variance Xx
         {
-            get { return this.xxField; }
-            set { this.xxField = value; }
+            get
+            {
+                return this.xxField;
+            }
+            set
+            {
+                this.xxField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Xy
         {
-            get { return this.xyField; }
-            set { this.xyField = value; }
+            get
+            {
+                return this.xyField;
+            }
+            set
+            {
+                this.xyField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Xz
         {
-            get { return this.xzField; }
-            set { this.xzField = value; }
+            get
+            {
+                return this.xzField;
+            }
+            set
+            {
+                this.xzField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Yx
         {
-            get { return this.yxField; }
-            set { this.yxField = value; }
+            get
+            {
+                return this.yxField;
+            }
+            set
+            {
+                this.yxField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Yy
         {
-            get { return this.yyField; }
-            set { this.yyField = value; }
+            get
+            {
+                return this.yyField;
+            }
+            set
+            {
+                this.yyField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Yz
         {
-            get { return this.yzField; }
-            set { this.yzField = value; }
+            get
+            {
+                return this.yzField;
+            }
+            set
+            {
+                this.yzField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Zx
         {
-            get { return this.zxField; }
-            set { this.zxField = value; }
+            get
+            {
+                return this.zxField;
+            }
+            set
+            {
+                this.zxField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Zy
         {
-            get { return this.zyField; }
-            set { this.zyField = value; }
+            get
+            {
+                return this.zyField;
+            }
+            set
+            {
+                this.zyField = value;
+            }
         }
 
         /// <remarks/>
         public Variance Zz
         {
-            get { return this.zzField; }
-            set { this.zzField = value; }
+            get
+            {
+                return this.zzField;
+            }
+            set
+            {
+                this.zzField = value;
+            }
         }
     }
 
@@ -4210,16 +5804,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public VarianceUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -4243,27 +5849,6 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public partial class VelocityType
-    {
-
-        private object itemField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AngularSpeed", typeof(AngularSpeed))]
-        [System.Xml.Serialization.XmlElementAttribute("Speed", typeof(Speed))]
-        public object Item
-        {
-            get { return this.itemField; }
-            set { this.itemField = value; }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VectorDetectionSpeed
@@ -4278,22 +5863,40 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public VelocityType Vx
         {
-            get { return this.vxField; }
-            set { this.vxField = value; }
+            get
+            {
+                return this.vxField;
+            }
+            set
+            {
+                this.vxField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityType Vy
         {
-            get { return this.vyField; }
-            set { this.vyField = value; }
+            get
+            {
+                return this.vyField;
+            }
+            set
+            {
+                this.vyField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityType Vz
         {
-            get { return this.vzField; }
-            set { this.vzField = value; }
+            get
+            {
+                return this.vzField;
+            }
+            set
+            {
+                this.vzField = value;
+            }
         }
     }
 
@@ -4445,24 +6048,42 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public AreaMeasuringUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool UnitsSpecified
         {
-            get { return this.unitsFieldSpecified; }
-            set { this.unitsFieldSpecified = value; }
+            get
+            {
+                return this.unitsFieldSpecified;
+            }
+            set
+            {
+                this.unitsFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -4514,60 +6135,108 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public TimeType LastUpdatedDetectionTime
         {
-            get { return this.lastUpdatedDetectionTimeField; }
-            set { this.lastUpdatedDetectionTimeField = value; }
+            get
+            {
+                return this.lastUpdatedDetectionTimeField;
+            }
+            set
+            {
+                this.lastUpdatedDetectionTimeField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Direction
         {
-            get { return this.directionField; }
-            set { this.directionField = value; }
+            get
+            {
+                return this.directionField;
+            }
+            set
+            {
+                this.directionField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityType VelocityType
         {
-            get { return this.velocityTypeField; }
-            set { this.velocityTypeField = value; }
+            get
+            {
+                return this.velocityTypeField;
+            }
+            set
+            {
+                this.velocityTypeField = value;
+            }
         }
 
         /// <remarks/>
         public bool IsFusedTrack
         {
-            get { return this.isFusedTrackField; }
-            set { this.isFusedTrackField = value; }
+            get
+            {
+                return this.isFusedTrackField;
+            }
+            set
+            {
+                this.isFusedTrackField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IsFusedTrackSpecified
         {
-            get { return this.isFusedTrackFieldSpecified; }
-            set { this.isFusedTrackFieldSpecified = value; }
+            get
+            {
+                return this.isFusedTrackFieldSpecified;
+            }
+            set
+            {
+                this.isFusedTrackFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("LinkedIndication", DataType = "nonNegativeInteger")]
         public string[] LinkedIndication
         {
-            get { return this.linkedIndicationField; }
-            set { this.linkedIndicationField = value; }
+            get
+            {
+                return this.linkedIndicationField;
+            }
+            set
+            {
+                this.linkedIndicationField = value;
+            }
         }
 
         /// <remarks/>
         public TrackingStatusType TrackingStatus
         {
-            get { return this.trackingStatusField; }
-            set { this.trackingStatusField = value; }
+            get
+            {
+                return this.trackingStatusField;
+            }
+            set
+            {
+                this.trackingStatusField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool TrackingStatusSpecified
         {
-            get { return this.trackingStatusFieldSpecified; }
-            set { this.trackingStatusFieldSpecified = value; }
+            get
+            {
+                return this.trackingStatusFieldSpecified;
+            }
+            set
+            {
+                this.trackingStatusFieldSpecified = value;
+            }
         }
     }
 
@@ -4629,16 +6298,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceType4 ItemElementName
         {
-            get { return this.itemElementNameField; }
-            set { this.itemElementNameField = value; }
+            get
+            {
+                return this.itemElementNameField;
+            }
+            set
+            {
+                this.itemElementNameField = value;
+            }
         }
     }
 
@@ -4735,103 +6416,187 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public GeometricElement Location
         {
-            get { return this.locationField; }
-            set { this.locationField = value; }
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
         }
 
         /// <remarks/>
         public string FenceAlertType
         {
-            get { return this.fenceAlertTypeField; }
-            set { this.fenceAlertTypeField = value; }
+            get
+            {
+                return this.fenceAlertTypeField;
+            }
+            set
+            {
+                this.fenceAlertTypeField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Direction
         {
-            get { return this.directionField; }
-            set { this.directionField = value; }
+            get
+            {
+                return this.directionField;
+            }
+            set
+            {
+                this.directionField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityType VelocityType
         {
-            get { return this.velocityTypeField; }
-            set { this.velocityTypeField = value; }
+            get
+            {
+                return this.velocityTypeField;
+            }
+            set
+            {
+                this.velocityTypeField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionType DetectionType
         {
-            get { return this.detectionTypeField; }
-            set { this.detectionTypeField = value; }
+            get
+            {
+                return this.detectionTypeField;
+            }
+            set
+            {
+                this.detectionTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DetectionTypeSpecified
         {
-            get { return this.detectionTypeFieldSpecified; }
-            set { this.detectionTypeFieldSpecified = value; }
+            get
+            {
+                return this.detectionTypeFieldSpecified;
+            }
+            set
+            {
+                this.detectionTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent DetectionTypeReliability
         {
-            get { return this.detectionTypeReliabilityField; }
-            set { this.detectionTypeReliabilityField = value; }
+            get
+            {
+                return this.detectionTypeReliabilityField;
+            }
+            set
+            {
+                this.detectionTypeReliabilityField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionActivityType ActivityType
         {
-            get { return this.activityTypeField; }
-            set { this.activityTypeField = value; }
+            get
+            {
+                return this.activityTypeField;
+            }
+            set
+            {
+                this.activityTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ActivityTypeSpecified
         {
-            get { return this.activityTypeFieldSpecified; }
-            set { this.activityTypeFieldSpecified = value; }
+            get
+            {
+                return this.activityTypeFieldSpecified;
+            }
+            set
+            {
+                this.activityTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent ActivityTypeReliability
         {
-            get { return this.activityTypeReliabilityField; }
-            set { this.activityTypeReliabilityField = value; }
+            get
+            {
+                return this.activityTypeReliabilityField;
+            }
+            set
+            {
+                this.activityTypeReliabilityField = value;
+            }
         }
 
         /// <remarks/>
         public IdentificationFriendFoe IdentificationFriendFoe
         {
-            get { return this.identificationFriendFoeField; }
-            set { this.identificationFriendFoeField = value; }
+            get
+            {
+                return this.identificationFriendFoeField;
+            }
+            set
+            {
+                this.identificationFriendFoeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IdentificationFriendFoeSpecified
         {
-            get { return this.identificationFriendFoeFieldSpecified; }
-            set { this.identificationFriendFoeFieldSpecified = value; }
+            get
+            {
+                return this.identificationFriendFoeFieldSpecified;
+            }
+            set
+            {
+                this.identificationFriendFoeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string IdentificationFriendFoeCode
         {
-            get { return this.identificationFriendFoeCodeField; }
-            set { this.identificationFriendFoeCodeField = value; }
+            get
+            {
+                return this.identificationFriendFoeCodeField;
+            }
+            set
+            {
+                this.identificationFriendFoeCodeField = value;
+            }
         }
 
         /// <remarks/>
         public Ellipse Accuracy
         {
-            get { return this.accuracyField; }
-            set { this.accuracyField = value; }
+            get
+            {
+                return this.accuracyField;
+            }
+            set
+            {
+                this.accuracyField = value;
+            }
         }
     }
 
@@ -4868,108 +6633,133 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Point LaunchingPoint
         {
-            get { return this.launchingPointField; }
-            set { this.launchingPointField = value; }
+            get
+            {
+                return this.launchingPointField;
+            }
+            set
+            {
+                this.launchingPointField = value;
+            }
         }
 
         /// <remarks/>
         public Point ImpactPoint
         {
-            get { return this.impactPointField; }
-            set { this.impactPointField = value; }
+            get
+            {
+                return this.impactPointField;
+            }
+            set
+            {
+                this.impactPointField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType FireAzimuth
         {
-            get { return this.fireAzimuthField; }
-            set { this.fireAzimuthField = value; }
+            get
+            {
+                return this.fireAzimuthField;
+            }
+            set
+            {
+                this.fireAzimuthField = value;
+            }
         }
 
         /// <remarks/>
         public FireType FireType
         {
-            get { return this.fireTypeField; }
-            set { this.fireTypeField = value; }
+            get
+            {
+                return this.fireTypeField;
+            }
+            set
+            {
+                this.fireTypeField = value;
+            }
         }
 
         /// <remarks/>
         public Percent FireTypeReliability
         {
-            get { return this.fireTypeReliabilityField; }
-            set { this.fireTypeReliabilityField = value; }
+            get
+            {
+                return this.fireTypeReliabilityField;
+            }
+            set
+            {
+                this.fireTypeReliabilityField = value;
+            }
         }
 
         /// <remarks/>
         public ProjectileType ProjectileType
         {
-            get { return this.projectileTypeField; }
-            set { this.projectileTypeField = value; }
+            get
+            {
+                return this.projectileTypeField;
+            }
+            set
+            {
+                this.projectileTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ProjectileTypeSpecified
         {
-            get { return this.projectileTypeFieldSpecified; }
-            set { this.projectileTypeFieldSpecified = value; }
+            get
+            {
+                return this.projectileTypeFieldSpecified;
+            }
+            set
+            {
+                this.projectileTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public TimeType LaunchTime
         {
-            get { return this.launchTimeField; }
-            set { this.launchTimeField = value; }
+            get
+            {
+                return this.launchTimeField;
+            }
+            set
+            {
+                this.launchTimeField = value;
+            }
         }
 
         /// <remarks/>
         public TimeType ImpactTime
         {
-            get { return this.impactTimeField; }
-            set { this.impactTimeField = value; }
+            get
+            {
+                return this.impactTimeField;
+            }
+            set
+            {
+                this.impactTimeField = value;
+            }
         }
 
         /// <remarks/>
         public Ellipse Accuracy
         {
-            get { return this.accuracyField; }
-            set { this.accuracyField = value; }
+            get
+            {
+                return this.accuracyField;
+            }
+            set
+            {
+                this.accuracyField = value;
+            }
         }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public enum FireType
-    {
-
-        /// <remarks/>
-        Undefined,
-
-        /// <remarks/>
-        AT,
-
-        /// <remarks/>
-        SmallArm,
-
-        /// <remarks/>
-        Artillery,
-
-        /// <remarks/>
-        TBD1,
-
-        /// <remarks/>
-        TBD2,
-
-        /// <remarks/>
-        TBD3,
-
-        /// <remarks/>
-        TBD4,
-
-        /// <remarks/>
-        TBD5,
     }
 
     /// <remarks/>
@@ -5036,37 +6826,67 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public GeometricElement Location
         {
-            get { return this.locationField; }
-            set { this.locationField = value; }
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
         }
 
         /// <remarks/>
         public Ellipse Accuracy
         {
-            get { return this.accuracyField; }
-            set { this.accuracyField = value; }
+            get
+            {
+                return this.accuracyField;
+            }
+            set
+            {
+                this.accuracyField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionType DetectionType
         {
-            get { return this.detectionTypeField; }
-            set { this.detectionTypeField = value; }
+            get
+            {
+                return this.detectionTypeField;
+            }
+            set
+            {
+                this.detectionTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DetectionTypeSpecified
         {
-            get { return this.detectionTypeFieldSpecified; }
-            set { this.detectionTypeFieldSpecified = value; }
+            get
+            {
+                return this.detectionTypeFieldSpecified;
+            }
+            set
+            {
+                this.detectionTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent DetectionTypeReliability
         {
-            get { return this.detectionTypeReliabilityField; }
-            set { this.detectionTypeReliabilityField = value; }
+            get
+            {
+                return this.detectionTypeReliabilityField;
+            }
+            set
+            {
+                this.detectionTypeReliabilityField = value;
+            }
         }
     }
 
@@ -5152,254 +6972,458 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string TerminalID
         {
-            get { return this.terminalIDField; }
-            set { this.terminalIDField = value; }
+            get
+            {
+                return this.terminalIDField;
+            }
+            set
+            {
+                this.terminalIDField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType Commander
         {
-            get { return this.commanderField; }
-            set { this.commanderField = value; }
+            get
+            {
+                return this.commanderField;
+            }
+            set
+            {
+                this.commanderField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CommanderSpecified
         {
-            get { return this.commanderFieldSpecified; }
-            set { this.commanderFieldSpecified = value; }
+            get
+            {
+                return this.commanderFieldSpecified;
+            }
+            set
+            {
+                this.commanderFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string PostID
         {
-            get { return this.postIDField; }
-            set { this.postIDField = value; }
+            get
+            {
+                return this.postIDField;
+            }
+            set
+            {
+                this.postIDField = value;
+            }
         }
 
         /// <remarks/>
         public string PostName
         {
-            get { return this.postNameField; }
-            set { this.postNameField = value; }
+            get
+            {
+                return this.postNameField;
+            }
+            set
+            {
+                this.postNameField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string NetworkID
         {
-            get { return this.networkIDField; }
-            set { this.networkIDField = value; }
+            get
+            {
+                return this.networkIDField;
+            }
+            set
+            {
+                this.networkIDField = value;
+            }
         }
 
         /// <remarks/>
         public NetworkCategory NetworkCategory
         {
-            get { return this.networkCategoryField; }
-            set { this.networkCategoryField = value; }
+            get
+            {
+                return this.networkCategoryField;
+            }
+            set
+            {
+                this.networkCategoryField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool NetworkCategorySpecified
         {
-            get { return this.networkCategoryFieldSpecified; }
-            set { this.networkCategoryFieldSpecified = value; }
+            get
+            {
+                return this.networkCategoryFieldSpecified;
+            }
+            set
+            {
+                this.networkCategoryFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public IdentificationFriendFoe IdentificationFriendFoe
         {
-            get { return this.identificationFriendFoeField; }
-            set { this.identificationFriendFoeField = value; }
+            get
+            {
+                return this.identificationFriendFoeField;
+            }
+            set
+            {
+                this.identificationFriendFoeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IdentificationFriendFoeSpecified
         {
-            get { return this.identificationFriendFoeFieldSpecified; }
-            set { this.identificationFriendFoeFieldSpecified = value; }
+            get
+            {
+                return this.identificationFriendFoeFieldSpecified;
+            }
+            set
+            {
+                this.identificationFriendFoeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public CommunicationCategory CommunicationCategory
         {
-            get { return this.communicationCategoryField; }
-            set { this.communicationCategoryField = value; }
+            get
+            {
+                return this.communicationCategoryField;
+            }
+            set
+            {
+                this.communicationCategoryField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CommunicationCategorySpecified
         {
-            get { return this.communicationCategoryFieldSpecified; }
-            set { this.communicationCategoryFieldSpecified = value; }
+            get
+            {
+                return this.communicationCategoryFieldSpecified;
+            }
+            set
+            {
+                this.communicationCategoryFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Priority
         {
-            get { return this.priorityField; }
-            set { this.priorityField = value; }
+            get
+            {
+                return this.priorityField;
+            }
+            set
+            {
+                this.priorityField = value;
+            }
         }
 
         /// <remarks/>
         public FrequencyPIRType FrequencyPIRType
         {
-            get { return this.frequencyPIRTypeField; }
-            set { this.frequencyPIRTypeField = value; }
+            get
+            {
+                return this.frequencyPIRTypeField;
+            }
+            set
+            {
+                this.frequencyPIRTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool FrequencyPIRTypeSpecified
         {
-            get { return this.frequencyPIRTypeFieldSpecified; }
-            set { this.frequencyPIRTypeFieldSpecified = value; }
+            get
+            {
+                return this.frequencyPIRTypeFieldSpecified;
+            }
+            set
+            {
+                this.frequencyPIRTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public FrequencyCategory Band
         {
-            get { return this.bandField; }
-            set { this.bandField = value; }
+            get
+            {
+                return this.bandField;
+            }
+            set
+            {
+                this.bandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool BandSpecified
         {
-            get { return this.bandFieldSpecified; }
-            set { this.bandFieldSpecified = value; }
+            get
+            {
+                return this.bandFieldSpecified;
+            }
+            set
+            {
+                this.bandFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public EmitterTypeType SignalType
         {
-            get { return this.signalTypeField; }
-            set { this.signalTypeField = value; }
+            get
+            {
+                return this.signalTypeField;
+            }
+            set
+            {
+                this.signalTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool SignalTypeSpecified
         {
-            get { return this.signalTypeFieldSpecified; }
-            set { this.signalTypeFieldSpecified = value; }
+            get
+            {
+                return this.signalTypeFieldSpecified;
+            }
+            set
+            {
+                this.signalTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Frequency SignalFrequency
         {
-            get { return this.signalFrequencyField; }
-            set { this.signalFrequencyField = value; }
+            get
+            {
+                return this.signalFrequencyField;
+            }
+            set
+            {
+                this.signalFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         public string PhoneNumber
         {
-            get { return this.phoneNumberField; }
-            set { this.phoneNumberField = value; }
+            get
+            {
+                return this.phoneNumberField;
+            }
+            set
+            {
+                this.phoneNumberField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency FixFrequency
         {
-            get { return this.fixFrequencyField; }
-            set { this.fixFrequencyField = value; }
+            get
+            {
+                return this.fixFrequencyField;
+            }
+            set
+            {
+                this.fixFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         public HopperParametersType HopperParameters
         {
-            get { return this.hopperParametersField; }
-            set { this.hopperParametersField = value; }
+            get
+            {
+                return this.hopperParametersField;
+            }
+            set
+            {
+                this.hopperParametersField = value;
+            }
         }
 
         /// <remarks/>
         public Bandwidth Bandwidth
         {
-            get { return this.bandwidthField; }
-            set { this.bandwidthField = value; }
+            get
+            {
+                return this.bandwidthField;
+            }
+            set
+            {
+                this.bandwidthField = value;
+            }
         }
 
         /// <remarks/>
         public TransmissionTechnology Modulation
         {
-            get { return this.modulationField; }
-            set { this.modulationField = value; }
+            get
+            {
+                return this.modulationField;
+            }
+            set
+            {
+                this.modulationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ModulationSpecified
         {
-            get { return this.modulationFieldSpecified; }
-            set { this.modulationFieldSpecified = value; }
+            get
+            {
+                return this.modulationFieldSpecified;
+            }
+            set
+            {
+                this.modulationFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public TransmissionTechnology Technology
         {
-            get { return this.technologyField; }
-            set { this.technologyField = value; }
+            get
+            {
+                return this.technologyField;
+            }
+            set
+            {
+                this.technologyField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool TechnologySpecified
         {
-            get { return this.technologyFieldSpecified; }
-            set { this.technologyFieldSpecified = value; }
+            get
+            {
+                return this.technologyFieldSpecified;
+            }
+            set
+            {
+                this.technologyFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
         public string SNR
         {
-            get { return this.sNRField; }
-            set { this.sNRField = value; }
+            get
+            {
+                return this.sNRField;
+            }
+            set
+            {
+                this.sNRField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string MultipathLevel
         {
-            get { return this.multipathLevelField; }
-            set { this.multipathLevelField = value; }
+            get
+            {
+                return this.multipathLevelField;
+            }
+            set
+            {
+                this.multipathLevelField = value;
+            }
         }
 
         /// <remarks/>
         public TimeType DetectionStartTime
         {
-            get { return this.detectionStartTimeField; }
-            set { this.detectionStartTimeField = value; }
+            get
+            {
+                return this.detectionStartTimeField;
+            }
+            set
+            {
+                this.detectionStartTimeField = value;
+            }
         }
 
         /// <remarks/>
         public DeltaTime Duration
         {
-            get { return this.durationField; }
-            set { this.durationField = value; }
+            get
+            {
+                return this.durationField;
+            }
+            set
+            {
+                this.durationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Location")]
         public GeometricElement[] Location
         {
-            get { return this.locationField; }
-            set { this.locationField = value; }
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
         }
 
         /// <remarks/>
         public Ellipse Accuracy
         {
-            get { return this.accuracyField; }
-            set { this.accuracyField = value; }
+            get
+            {
+                return this.accuracyField;
+            }
+            set
+            {
+                this.accuracyField = value;
+            }
         }
     }
 
@@ -5629,52 +7653,94 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public HopperParametersTypeHopRate HopRate
         {
-            get { return this.hopRateField; }
-            set { this.hopRateField = value; }
+            get
+            {
+                return this.hopRateField;
+            }
+            set
+            {
+                this.hopRateField = value;
+            }
         }
 
         /// <remarks/>
         public HopperParametersTypeHopPhase HopPhase
         {
-            get { return this.hopPhaseField; }
-            set { this.hopPhaseField = value; }
+            get
+            {
+                return this.hopPhaseField;
+            }
+            set
+            {
+                this.hopPhaseField = value;
+            }
         }
 
         /// <remarks/>
         public HopperParametersTypeHopDuration HopDuration
         {
-            get { return this.hopDurationField; }
-            set { this.hopDurationField = value; }
+            get
+            {
+                return this.hopDurationField;
+            }
+            set
+            {
+                this.hopDurationField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency HopHighestFrequency
         {
-            get { return this.hopHighestFrequencyField; }
-            set { this.hopHighestFrequencyField = value; }
+            get
+            {
+                return this.hopHighestFrequencyField;
+            }
+            set
+            {
+                this.hopHighestFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency HopLowestFrequency
         {
-            get { return this.hopLowestFrequencyField; }
-            set { this.hopLowestFrequencyField = value; }
+            get
+            {
+                return this.hopLowestFrequencyField;
+            }
+            set
+            {
+                this.hopLowestFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
         public string HopSetSize
         {
-            get { return this.hopSetSizeField; }
-            set { this.hopSetSizeField = value; }
+            get
+            {
+                return this.hopSetSizeField;
+            }
+            set
+            {
+                this.hopSetSizeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable = false)]
         public Frequency[] HopSetList
         {
-            get { return this.hopSetListField; }
-            set { this.hopSetListField = value; }
+            get
+            {
+                return this.hopSetListField;
+            }
+            set
+            {
+                this.hopSetListField = value;
+            }
         }
     }
 
@@ -5695,16 +7761,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public TimeUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "nonNegativeInteger")]
         public string Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -5725,16 +7803,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public TimeUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "nonNegativeInteger")]
         public string Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -5755,16 +7845,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public TimeUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "nonNegativeInteger")]
         public string Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -5787,24 +7889,42 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public BandwidthUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool UnitsSpecified
         {
-            get { return this.unitsFieldSpecified; }
-            set { this.unitsFieldSpecified = value; }
+            get
+            {
+                return this.unitsFieldSpecified;
+            }
+            set
+            {
+                this.unitsFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -5954,104 +8074,188 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Point Location
         {
-            get { return this.locationField; }
-            set { this.locationField = value; }
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionType DetectionType
         {
-            get { return this.detectionTypeField; }
-            set { this.detectionTypeField = value; }
+            get
+            {
+                return this.detectionTypeField;
+            }
+            set
+            {
+                this.detectionTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DetectionTypeSpecified
         {
-            get { return this.detectionTypeFieldSpecified; }
-            set { this.detectionTypeFieldSpecified = value; }
+            get
+            {
+                return this.detectionTypeFieldSpecified;
+            }
+            set
+            {
+                this.detectionTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent DetectionTypeReliability
         {
-            get { return this.detectionTypeReliabilityField; }
-            set { this.detectionTypeReliabilityField = value; }
+            get
+            {
+                return this.detectionTypeReliabilityField;
+            }
+            set
+            {
+                this.detectionTypeReliabilityField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityType DetectionSpeed
         {
-            get { return this.detectionSpeedField; }
-            set { this.detectionSpeedField = value; }
+            get
+            {
+                return this.detectionSpeedField;
+            }
+            set
+            {
+                this.detectionSpeedField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionActivityType ActivityType
         {
-            get { return this.activityTypeField; }
-            set { this.activityTypeField = value; }
+            get
+            {
+                return this.activityTypeField;
+            }
+            set
+            {
+                this.activityTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ActivityTypeSpecified
         {
-            get { return this.activityTypeFieldSpecified; }
-            set { this.activityTypeFieldSpecified = value; }
+            get
+            {
+                return this.activityTypeFieldSpecified;
+            }
+            set
+            {
+                this.activityTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent ActivityTypeReliability
         {
-            get { return this.activityTypeReliabilityField; }
-            set { this.activityTypeReliabilityField = value; }
+            get
+            {
+                return this.activityTypeReliabilityField;
+            }
+            set
+            {
+                this.activityTypeReliabilityField = value;
+            }
         }
 
         /// <remarks/>
         public IdentificationFriendFoe IdentificationFriendFoe
         {
-            get { return this.identificationFriendFoeField; }
-            set { this.identificationFriendFoeField = value; }
+            get
+            {
+                return this.identificationFriendFoeField;
+            }
+            set
+            {
+                this.identificationFriendFoeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IdentificationFriendFoeSpecified
         {
-            get { return this.identificationFriendFoeFieldSpecified; }
-            set { this.identificationFriendFoeFieldSpecified = value; }
+            get
+            {
+                return this.identificationFriendFoeFieldSpecified;
+            }
+            set
+            {
+                this.identificationFriendFoeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string IdentificationFriendFoeCode
         {
-            get { return this.identificationFriendFoeCodeField; }
-            set { this.identificationFriendFoeCodeField = value; }
+            get
+            {
+                return this.identificationFriendFoeCodeField;
+            }
+            set
+            {
+                this.identificationFriendFoeCodeField = value;
+            }
         }
 
         /// <remarks/>
         public AreaMeasuring RadarCrossSection
         {
-            get { return this.radarCrossSectionField; }
-            set { this.radarCrossSectionField = value; }
+            get
+            {
+                return this.radarCrossSectionField;
+            }
+            set
+            {
+                this.radarCrossSectionField = value;
+            }
         }
 
         /// <remarks/>
         public Ellipse Accuracy
         {
-            get { return this.accuracyField; }
-            set { this.accuracyField = value; }
+            get
+            {
+                return this.accuracyField;
+            }
+            set
+            {
+                this.accuracyField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
         public string SNR
         {
-            get { return this.sNRField; }
-            set { this.sNRField = value; }
+            get
+            {
+                return this.sNRField;
+            }
+            set
+            {
+                this.sNRField = value;
+            }
         }
     }
 
@@ -6084,60 +8288,108 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public TimeType LastUpdatedDetectionTime
         {
-            get { return this.lastUpdatedDetectionTimeField; }
-            set { this.lastUpdatedDetectionTimeField = value; }
+            get
+            {
+                return this.lastUpdatedDetectionTimeField;
+            }
+            set
+            {
+                this.lastUpdatedDetectionTimeField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Direction
         {
-            get { return this.directionField; }
-            set { this.directionField = value; }
+            get
+            {
+                return this.directionField;
+            }
+            set
+            {
+                this.directionField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityType VelocityType
         {
-            get { return this.velocityTypeField; }
-            set { this.velocityTypeField = value; }
+            get
+            {
+                return this.velocityTypeField;
+            }
+            set
+            {
+                this.velocityTypeField = value;
+            }
         }
 
         /// <remarks/>
         public bool IsFusedTrack
         {
-            get { return this.isFusedTrackField; }
-            set { this.isFusedTrackField = value; }
+            get
+            {
+                return this.isFusedTrackField;
+            }
+            set
+            {
+                this.isFusedTrackField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IsFusedTrackSpecified
         {
-            get { return this.isFusedTrackFieldSpecified; }
-            set { this.isFusedTrackFieldSpecified = value; }
+            get
+            {
+                return this.isFusedTrackFieldSpecified;
+            }
+            set
+            {
+                this.isFusedTrackFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("LinkedIndication", DataType = "nonNegativeInteger")]
         public string[] LinkedIndication
         {
-            get { return this.linkedIndicationField; }
-            set { this.linkedIndicationField = value; }
+            get
+            {
+                return this.linkedIndicationField;
+            }
+            set
+            {
+                this.linkedIndicationField = value;
+            }
         }
 
         /// <remarks/>
         public TrackingStatusType TrackingStatus
         {
-            get { return this.trackingStatusField; }
-            set { this.trackingStatusField = value; }
+            get
+            {
+                return this.trackingStatusField;
+            }
+            set
+            {
+                this.trackingStatusField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool TrackingStatusSpecified
         {
-            get { return this.trackingStatusFieldSpecified; }
-            set { this.trackingStatusFieldSpecified = value; }
+            get
+            {
+                return this.trackingStatusFieldSpecified;
+            }
+            set
+            {
+                this.trackingStatusFieldSpecified = value;
+            }
         }
     }
 
@@ -6148,137 +8400,1167 @@ namespace SensorStandard.MrsTypes
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
-    public partial class VideoMotionDetectionType
+    public partial class VideoAnalyticDetectionType
     {
 
-        private GeometricElement locationOnVideoField;
-
-        private GeometricElement geographicLocationField;
+        private Point locationField;
 
         private DetectionType detectionTypeField;
 
         private bool detectionTypeFieldSpecified;
 
-        private Percent detectionTypeReliabilityField;
-
-        private VelocityType detectionSpeedField;
-
-        private AzimuthType detectionDirectionField;
-
-        private ColorType detectionColorField;
-
         private DetectionActivityType activityTypeField;
 
         private bool activityTypeFieldSpecified;
 
-        private Percent activityTypeReliabilityField;
+        private SeverityLevelsType severityLevelField;
 
-        private TimeType lastUpdatedDetectionTimeField;
+        private bool severityLevelFieldSpecified;
 
-        private AreaMeasuring sizeField;
+        private VelocityType detectionSpeedField;
 
-        private File[] mediaFileField;
+        private string messageField;
+
+        private string ruleDescriptionField;
+
+        private string stallTimeField;
+
+        private string evidenceSquareField;
+
+        private Percent confidenceField;
+
+        private TimeType distributionTimeField;
+
+        private string sourceSystemField;
+
+        private string analyticAlertTimeoutField;
+
+        private string collateIDField;
+
+        private string sensorGroupIDField;
+
+        private string sensorGroupNameField;
+
+        private string suspectGroupField;
+
+        private string coordinatesField;
+
+        private SystemIdentification systemIdentificationField;
+
+        private AlertIdentification alertIdentificationField;
+
+        private PersonIdentification personIdentificationField;
+
+        private VehicleIdentification vehicleIdentificationField;
+
+        private evidences[] evidencesField;
+
+        private File[] pictureField;
+
+        private File[] videoField;
 
         /// <remarks/>
-        public GeometricElement LocationOnVideo
+        public Point Location
         {
-            get { return this.locationOnVideoField; }
-            set { this.locationOnVideoField = value; }
-        }
-
-        /// <remarks/>
-        public GeometricElement GeographicLocation
-        {
-            get { return this.geographicLocationField; }
-            set { this.geographicLocationField = value; }
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
         }
 
         /// <remarks/>
         public DetectionType DetectionType
         {
-            get { return this.detectionTypeField; }
-            set { this.detectionTypeField = value; }
+            get
+            {
+                return this.detectionTypeField;
+            }
+            set
+            {
+                this.detectionTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DetectionTypeSpecified
         {
-            get { return this.detectionTypeFieldSpecified; }
-            set { this.detectionTypeFieldSpecified = value; }
-        }
-
-        /// <remarks/>
-        public Percent DetectionTypeReliability
-        {
-            get { return this.detectionTypeReliabilityField; }
-            set { this.detectionTypeReliabilityField = value; }
-        }
-
-        /// <remarks/>
-        public VelocityType DetectionSpeed
-        {
-            get { return this.detectionSpeedField; }
-            set { this.detectionSpeedField = value; }
-        }
-
-        /// <remarks/>
-        public AzimuthType DetectionDirection
-        {
-            get { return this.detectionDirectionField; }
-            set { this.detectionDirectionField = value; }
-        }
-
-        /// <remarks/>
-        public ColorType DetectionColor
-        {
-            get { return this.detectionColorField; }
-            set { this.detectionColorField = value; }
+            get
+            {
+                return this.detectionTypeFieldSpecified;
+            }
+            set
+            {
+                this.detectionTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public DetectionActivityType ActivityType
         {
-            get { return this.activityTypeField; }
-            set { this.activityTypeField = value; }
+            get
+            {
+                return this.activityTypeField;
+            }
+            set
+            {
+                this.activityTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ActivityTypeSpecified
         {
-            get { return this.activityTypeFieldSpecified; }
-            set { this.activityTypeFieldSpecified = value; }
+            get
+            {
+                return this.activityTypeFieldSpecified;
+            }
+            set
+            {
+                this.activityTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
-        public Percent ActivityTypeReliability
+        public SeverityLevelsType SeverityLevel
         {
-            get { return this.activityTypeReliabilityField; }
-            set { this.activityTypeReliabilityField = value; }
+            get
+            {
+                return this.severityLevelField;
+            }
+            set
+            {
+                this.severityLevelField = value;
+            }
         }
 
         /// <remarks/>
-        public TimeType LastUpdatedDetectionTime
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SeverityLevelSpecified
         {
-            get { return this.lastUpdatedDetectionTimeField; }
-            set { this.lastUpdatedDetectionTimeField = value; }
+            get
+            {
+                return this.severityLevelFieldSpecified;
+            }
+            set
+            {
+                this.severityLevelFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
-        public AreaMeasuring Size
+        public VelocityType DetectionSpeed
         {
-            get { return this.sizeField; }
-            set { this.sizeField = value; }
+            get
+            {
+                return this.detectionSpeedField;
+            }
+            set
+            {
+                this.detectionSpeedField = value;
+            }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("MediaFile")]
-        public File[] MediaFile
+        public string Message
         {
-            get { return this.mediaFileField; }
-            set { this.mediaFileField = value; }
+            get
+            {
+                return this.messageField;
+            }
+            set
+            {
+                this.messageField = value;
+            }
         }
+
+        /// <remarks/>
+        public string RuleDescription
+        {
+            get
+            {
+                return this.ruleDescriptionField;
+            }
+            set
+            {
+                this.ruleDescriptionField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
+        public string StallTime
+        {
+            get
+            {
+                return this.stallTimeField;
+            }
+            set
+            {
+                this.stallTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string evidenceSquare
+        {
+            get
+            {
+                return this.evidenceSquareField;
+            }
+            set
+            {
+                this.evidenceSquareField = value;
+            }
+        }
+
+        /// <remarks/>
+        public Percent confidence
+        {
+            get
+            {
+                return this.confidenceField;
+            }
+            set
+            {
+                this.confidenceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public TimeType distributionTime
+        {
+            get
+            {
+                return this.distributionTimeField;
+            }
+            set
+            {
+                this.distributionTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string sourceSystem
+        {
+            get
+            {
+                return this.sourceSystemField;
+            }
+            set
+            {
+                this.sourceSystemField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
+        public string analyticAlertTimeout
+        {
+            get
+            {
+                return this.analyticAlertTimeoutField;
+            }
+            set
+            {
+                this.analyticAlertTimeoutField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string collateID
+        {
+            get
+            {
+                return this.collateIDField;
+            }
+            set
+            {
+                this.collateIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string sensorGroupID
+        {
+            get
+            {
+                return this.sensorGroupIDField;
+            }
+            set
+            {
+                this.sensorGroupIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string sensorGroupName
+        {
+            get
+            {
+                return this.sensorGroupNameField;
+            }
+            set
+            {
+                this.sensorGroupNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string suspectGroup
+        {
+            get
+            {
+                return this.suspectGroupField;
+            }
+            set
+            {
+                this.suspectGroupField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string coordinates
+        {
+            get
+            {
+                return this.coordinatesField;
+            }
+            set
+            {
+                this.coordinatesField = value;
+            }
+        }
+
+        /// <remarks/>
+        public SystemIdentification SystemIdentification
+        {
+            get
+            {
+                return this.systemIdentificationField;
+            }
+            set
+            {
+                this.systemIdentificationField = value;
+            }
+        }
+
+        /// <remarks/>
+        public AlertIdentification AlertIdentification
+        {
+            get
+            {
+                return this.alertIdentificationField;
+            }
+            set
+            {
+                this.alertIdentificationField = value;
+            }
+        }
+
+        /// <remarks/>
+        public PersonIdentification PersonIdentification
+        {
+            get
+            {
+                return this.personIdentificationField;
+            }
+            set
+            {
+                this.personIdentificationField = value;
+            }
+        }
+
+        /// <remarks/>
+        public VehicleIdentification VehicleIdentification
+        {
+            get
+            {
+                return this.vehicleIdentificationField;
+            }
+            set
+            {
+                this.vehicleIdentificationField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("evidences")]
+        public evidences[] evidences
+        {
+            get
+            {
+                return this.evidencesField;
+            }
+            set
+            {
+                this.evidencesField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Picture")]
+        public File[] Picture
+        {
+            get
+            {
+                return this.pictureField;
+            }
+            set
+            {
+                this.pictureField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Video")]
+        public File[] Video
+        {
+            get
+            {
+                return this.videoField;
+            }
+            set
+            {
+                this.videoField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public enum SeverityLevelsType
+    {
+
+        /// <remarks/>
+        Undefined,
+
+        /// <remarks/>
+        Critical,
+
+        /// <remarks/>
+        High,
+
+        /// <remarks/>
+        Medium,
+
+        /// <remarks/>
+        Low,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    public partial class SystemIdentification
+    {
+
+        private SensorTypeType systemTypeField;
+
+        private string locationNameField;
+
+        private string watchDirectionField;
+
+        private string cameraNameField;
+
+        private string cameraIDField;
+
+        private TimeType systemAlertTimeField;
+
+        private TimeType sensorAlertTimeField;
+
+        /// <remarks/>
+        public SensorTypeType SystemType
+        {
+            get
+            {
+                return this.systemTypeField;
+            }
+            set
+            {
+                this.systemTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string LocationName
+        {
+            get
+            {
+                return this.locationNameField;
+            }
+            set
+            {
+                this.locationNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string WatchDirection
+        {
+            get
+            {
+                return this.watchDirectionField;
+            }
+            set
+            {
+                this.watchDirectionField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string CameraName
+        {
+            get
+            {
+                return this.cameraNameField;
+            }
+            set
+            {
+                this.cameraNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string CameraID
+        {
+            get
+            {
+                return this.cameraIDField;
+            }
+            set
+            {
+                this.cameraIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public TimeType systemAlertTime
+        {
+            get
+            {
+                return this.systemAlertTimeField;
+            }
+            set
+            {
+                this.systemAlertTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public TimeType sensorAlertTime
+        {
+            get
+            {
+                return this.sensorAlertTimeField;
+            }
+            set
+            {
+                this.sensorAlertTimeField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    public partial class AlertIdentification
+    {
+
+        private AnalyticAlertType alertTypeField;
+
+        private string alertSubTypeField;
+
+        private string alertTextField;
+
+        private StatusType alertStatusField;
+
+        private bool alertStatusFieldSpecified;
+
+        private string alertRealityField;
+
+        private string alertRelevanceTimeField;
+
+        private string alertDescriptionField;
+
+        /// <remarks/>
+        public AnalyticAlertType AlertType
+        {
+            get
+            {
+                return this.alertTypeField;
+            }
+            set
+            {
+                this.alertTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string AlertSubType
+        {
+            get
+            {
+                return this.alertSubTypeField;
+            }
+            set
+            {
+                this.alertSubTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string AlertText
+        {
+            get
+            {
+                return this.alertTextField;
+            }
+            set
+            {
+                this.alertTextField = value;
+            }
+        }
+
+        /// <remarks/>
+        public StatusType AlertStatus
+        {
+            get
+            {
+                return this.alertStatusField;
+            }
+            set
+            {
+                this.alertStatusField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AlertStatusSpecified
+        {
+            get
+            {
+                return this.alertStatusFieldSpecified;
+            }
+            set
+            {
+                this.alertStatusFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public string AlertReality
+        {
+            get
+            {
+                return this.alertRealityField;
+            }
+            set
+            {
+                this.alertRealityField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
+        public string AlertRelevanceTime
+        {
+            get
+            {
+                return this.alertRelevanceTimeField;
+            }
+            set
+            {
+                this.alertRelevanceTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string AlertDescription
+        {
+            get
+            {
+                return this.alertDescriptionField;
+            }
+            set
+            {
+                this.alertDescriptionField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public enum AnalyticAlertType
+    {
+
+        /// <remarks/>
+        Undefined,
+
+        /// <remarks/>
+        Blacklist,
+
+        /// <remarks/>
+        Rule,
+
+        /// <remarks/>
+        VideoAnalytic,
+
+        /// <remarks/>
+        FaceRecognition,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 1")]
+        Reserved1,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 2")]
+        Reserved2,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 3")]
+        Reserved3,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 4")]
+        Reserved4,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 5")]
+        Reserved5,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    public partial class PersonIdentification
+    {
+
+        private string nameField;
+
+        private string addressField;
+
+        private string phoneNumberField;
+
+        private string personIDField;
+
+        private string ageField;
+
+        private Percent reliabilityField;
+
+        private GenderType genderField;
+
+        private bool genderFieldSpecified;
+
+        private string birthDateField;
+
+        private string[] permitsField;
+
+        private string[] preventsField;
+
+        /// <remarks/>
+        public string Name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Address
+        {
+            get
+            {
+                return this.addressField;
+            }
+            set
+            {
+                this.addressField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PhoneNumber
+        {
+            get
+            {
+                return this.phoneNumberField;
+            }
+            set
+            {
+                this.phoneNumberField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string personID
+        {
+            get
+            {
+                return this.personIDField;
+            }
+            set
+            {
+                this.personIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
+        public string Age
+        {
+            get
+            {
+                return this.ageField;
+            }
+            set
+            {
+                this.ageField = value;
+            }
+        }
+
+        /// <remarks/>
+        public Percent Reliability
+        {
+            get
+            {
+                return this.reliabilityField;
+            }
+            set
+            {
+                this.reliabilityField = value;
+            }
+        }
+
+        /// <remarks/>
+        public GenderType Gender
+        {
+            get
+            {
+                return this.genderField;
+            }
+            set
+            {
+                this.genderField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool GenderSpecified
+        {
+            get
+            {
+                return this.genderFieldSpecified;
+            }
+            set
+            {
+                this.genderFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public string BirthDate
+        {
+            get
+            {
+                return this.birthDateField;
+            }
+            set
+            {
+                this.birthDateField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Permits")]
+        public string[] Permits
+        {
+            get
+            {
+                return this.permitsField;
+            }
+            set
+            {
+                this.permitsField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Prevents")]
+        public string[] Prevents
+        {
+            get
+            {
+                return this.preventsField;
+            }
+            set
+            {
+                this.preventsField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public enum GenderType
+    {
+
+        /// <remarks/>
+        Undefined,
+
+        /// <remarks/>
+        Male,
+
+        /// <remarks/>
+        Female,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    public partial class VehicleIdentification
+    {
+
+        private StatusType isLicensePlateField;
+
+        private bool isLicensePlateFieldSpecified;
+
+        private VehicleType vehicleTypeField;
+
+        private bool vehicleTypeFieldSpecified;
+
+        private ColorType colorField;
+
+        private string vehicleMakerNameField;
+
+        private string vehicleModelNameField;
+
+        private LicenseType licenseTypeField;
+
+        private bool licenseTypeFieldSpecified;
+
+        private string licenseNumberField;
+
+        /// <remarks/>
+        public StatusType IsLicensePlate
+        {
+            get
+            {
+                return this.isLicensePlateField;
+            }
+            set
+            {
+                this.isLicensePlateField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsLicensePlateSpecified
+        {
+            get
+            {
+                return this.isLicensePlateFieldSpecified;
+            }
+            set
+            {
+                this.isLicensePlateFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public VehicleType VehicleType
+        {
+            get
+            {
+                return this.vehicleTypeField;
+            }
+            set
+            {
+                this.vehicleTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VehicleTypeSpecified
+        {
+            get
+            {
+                return this.vehicleTypeFieldSpecified;
+            }
+            set
+            {
+                this.vehicleTypeFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public ColorType Color
+        {
+            get
+            {
+                return this.colorField;
+            }
+            set
+            {
+                this.colorField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string VehicleMakerName
+        {
+            get
+            {
+                return this.vehicleMakerNameField;
+            }
+            set
+            {
+                this.vehicleMakerNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string VehicleModelName
+        {
+            get
+            {
+                return this.vehicleModelNameField;
+            }
+            set
+            {
+                this.vehicleModelNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public LicenseType LicenseType
+        {
+            get
+            {
+                return this.licenseTypeField;
+            }
+            set
+            {
+                this.licenseTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LicenseTypeSpecified
+        {
+            get
+            {
+                return this.licenseTypeFieldSpecified;
+            }
+            set
+            {
+                this.licenseTypeFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public string LicenseNumber
+        {
+            get
+            {
+                return this.licenseNumberField;
+            }
+            set
+            {
+                this.licenseNumberField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public enum VehicleType
+    {
+
+        /// <remarks/>
+        Undefined,
+
+        /// <remarks/>
+        Car,
+
+        /// <remarks/>
+        Taxi,
+
+        /// <remarks/>
+        Truck,
+
+        /// <remarks/>
+        Tank,
+
+        /// <remarks/>
+        Bike,
+
+        /// <remarks/>
+        Bicycle,
+
+        /// <remarks/>
+        Scooter,
+
+        /// <remarks/>
+        Van,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 1")]
+        Reserved1,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 2")]
+        Reserved2,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 3")]
+        Reserved3,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 4")]
+        Reserved4,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 5")]
+        Reserved5,
     }
 
     /// <remarks/>
@@ -6297,8 +9579,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("GrayScale", typeof(string), DataType = "nonNegativeInteger")]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
     }
 
@@ -6367,89 +9655,47 @@ namespace SensorStandard.MrsTypes
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public partial class File
-    {
-
-        private TimeType creationTimeField;
-
-        private string idField;
-
-        private byte[] file1Field;
-
-        private string itemField;
-
-        private ItemChoiceType3 itemElementNameField;
-
-        private Point locationField;
-
-        /// <remarks/>
-        public TimeType CreationTime
-        {
-            get { return this.creationTimeField; }
-            set { this.creationTimeField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
-        public string ID
-        {
-            get { return this.idField; }
-            set { this.idField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("File", DataType = "base64Binary")]
-        public byte[] File1
-        {
-            get { return this.file1Field; }
-            set { this.file1Field = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("NameJPEG", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("NameMP4", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("NameMPEG", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
-        public string Item
-        {
-            get { return this.itemField; }
-            set { this.itemField = value; }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceType3 ItemElementName
-        {
-            get { return this.itemElementNameField; }
-            set { this.itemElementNameField = value; }
-        }
-
-        /// <remarks/>
-        public Point Location
-        {
-            get { return this.locationField; }
-            set { this.locationField = value; }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD", IncludeInSchema = false)]
-    public enum ItemChoiceType3
+    public enum LicenseType
     {
 
         /// <remarks/>
-        NameJPEG,
+        Undefined,
 
         /// <remarks/>
-        NameMP4,
+        Israeli,
 
         /// <remarks/>
-        NameMPEG,
+        Palestinian,
+
+        /// <remarks/>
+        Diplomat,
+
+        /// <remarks/>
+        Military,
+
+        /// <remarks/>
+        Police,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 1")]
+        Reserved1,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 2")]
+        Reserved2,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 3")]
+        Reserved3,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 4")]
+        Reserved4,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Reserved 5")]
+        Reserved5,
     }
 
     /// <remarks/>
@@ -6458,6 +9704,302 @@ namespace SensorStandard.MrsTypes
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    public partial class evidences
+    {
+
+        private string evidenceIdField;
+
+        private string evidenceTypeField;
+
+        private TimeType evidenceLocalTimeField;
+
+        private Point evidenceLocationField;
+
+        /// <remarks/>
+        public string evidenceId
+        {
+            get
+            {
+                return this.evidenceIdField;
+            }
+            set
+            {
+                this.evidenceIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string evidenceType
+        {
+            get
+            {
+                return this.evidenceTypeField;
+            }
+            set
+            {
+                this.evidenceTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public TimeType evidenceLocalTime
+        {
+            get
+            {
+                return this.evidenceLocalTimeField;
+            }
+            set
+            {
+                this.evidenceLocalTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public Point evidenceLocation
+        {
+            get
+            {
+                return this.evidenceLocationField;
+            }
+            set
+            {
+                this.evidenceLocationField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    public partial class VideoMotionDetectionType
+    {
+
+        private GeometricElement locationOnVideoField;
+
+        private GeometricElement geographicLocationField;
+
+        private DetectionType detectionTypeField;
+
+        private bool detectionTypeFieldSpecified;
+
+        private Percent detectionTypeReliabilityField;
+
+        private VelocityType detectionSpeedField;
+
+        private AzimuthType detectionDirectionField;
+
+        private ColorType detectionColorField;
+
+        private DetectionActivityType activityTypeField;
+
+        private bool activityTypeFieldSpecified;
+
+        private Percent activityTypeReliabilityField;
+
+        private TimeType lastUpdatedDetectionTimeField;
+
+        private AreaMeasuring sizeField;
+
+        private File[] mediaFileField;
+
+        /// <remarks/>
+        public GeometricElement LocationOnVideo
+        {
+            get
+            {
+                return this.locationOnVideoField;
+            }
+            set
+            {
+                this.locationOnVideoField = value;
+            }
+        }
+
+        /// <remarks/>
+        public GeometricElement GeographicLocation
+        {
+            get
+            {
+                return this.geographicLocationField;
+            }
+            set
+            {
+                this.geographicLocationField = value;
+            }
+        }
+
+        /// <remarks/>
+        public DetectionType DetectionType
+        {
+            get
+            {
+                return this.detectionTypeField;
+            }
+            set
+            {
+                this.detectionTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DetectionTypeSpecified
+        {
+            get
+            {
+                return this.detectionTypeFieldSpecified;
+            }
+            set
+            {
+                this.detectionTypeFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public Percent DetectionTypeReliability
+        {
+            get
+            {
+                return this.detectionTypeReliabilityField;
+            }
+            set
+            {
+                this.detectionTypeReliabilityField = value;
+            }
+        }
+
+        /// <remarks/>
+        public VelocityType DetectionSpeed
+        {
+            get
+            {
+                return this.detectionSpeedField;
+            }
+            set
+            {
+                this.detectionSpeedField = value;
+            }
+        }
+
+        /// <remarks/>
+        public AzimuthType DetectionDirection
+        {
+            get
+            {
+                return this.detectionDirectionField;
+            }
+            set
+            {
+                this.detectionDirectionField = value;
+            }
+        }
+
+        /// <remarks/>
+        public ColorType DetectionColor
+        {
+            get
+            {
+                return this.detectionColorField;
+            }
+            set
+            {
+                this.detectionColorField = value;
+            }
+        }
+
+        /// <remarks/>
+        public DetectionActivityType ActivityType
+        {
+            get
+            {
+                return this.activityTypeField;
+            }
+            set
+            {
+                this.activityTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ActivityTypeSpecified
+        {
+            get
+            {
+                return this.activityTypeFieldSpecified;
+            }
+            set
+            {
+                this.activityTypeFieldSpecified = value;
+            }
+        }
+
+        /// <remarks/>
+        public Percent ActivityTypeReliability
+        {
+            get
+            {
+                return this.activityTypeReliabilityField;
+            }
+            set
+            {
+                this.activityTypeReliabilityField = value;
+            }
+        }
+
+        /// <remarks/>
+        public TimeType LastUpdatedDetectionTime
+        {
+            get
+            {
+                return this.lastUpdatedDetectionTimeField;
+            }
+            set
+            {
+                this.lastUpdatedDetectionTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public AreaMeasuring Size
+        {
+            get
+            {
+                return this.sizeField;
+            }
+            set
+            {
+                this.sizeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("MediaFile")]
+        public File[] MediaFile
+        {
+            get
+            {
+                return this.mediaFileField;
+            }
+            set
+            {
+                this.mediaFileField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceStatusReport
     {
 
@@ -6478,15 +10020,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DeviceIdentificationType DeviceIdentification
         {
-            get { return this.deviceIdentificationField; }
-            set { this.deviceIdentificationField = value; }
+            get
+            {
+                return this.deviceIdentificationField;
+            }
+            set
+            {
+                this.deviceIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public LocationType LocationType
         {
-            get { return this.locationTypeField; }
-            set { this.locationTypeField = value; }
+            get
+            {
+                return this.locationTypeField;
+            }
+            set
+            {
+                this.locationTypeField = value;
+            }
         }
 
         /// <remarks/>
@@ -6497,40 +10051,70 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("SensorStatusReport", typeof(SensorStatusReport))]
         public object[] Items
         {
-            get { return this.itemsField; }
-            set { this.itemsField = value; }
+            get
+            {
+                return this.itemsField;
+            }
+            set
+            {
+                this.itemsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public MessageType MessageType
         {
-            get { return this.messageTypeField; }
-            set { this.messageTypeField = value; }
+            get
+            {
+                return this.messageTypeField;
+            }
+            set
+            {
+                this.messageTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ExecutionStatusType ExecutionStatus
         {
-            get { return this.executionStatusField; }
-            set { this.executionStatusField = value; }
+            get
+            {
+                return this.executionStatusField;
+            }
+            set
+            {
+                this.executionStatusField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ExecutionStatusSpecified
         {
-            get { return this.executionStatusFieldSpecified; }
-            set { this.executionStatusFieldSpecified = value; }
+            get
+            {
+                return this.executionStatusFieldSpecified;
+            }
+            set
+            {
+                this.executionStatusFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ProtocolVersionType ProtocolVersion
         {
-            get { return this.protocolVersionField; }
-            set { this.protocolVersionField = value; }
+            get
+            {
+                return this.protocolVersionField;
+            }
+            set
+            {
+                this.protocolVersionField = value;
+            }
         }
     }
 
@@ -6551,16 +10135,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DeviceIdentificationType DeviceIdentification
         {
-            get { return this.deviceIdentificationField; }
-            set { this.deviceIdentificationField = value; }
+            get
+            {
+                return this.deviceIdentificationField;
+            }
+            set
+            {
+                this.deviceIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DetailedSensorBIT")]
         public DetailedSensorBITType[] DetailedSensorBIT
         {
-            get { return this.detailedSensorBITField; }
-            set { this.detailedSensorBITField = value; }
+            get
+            {
+                return this.detailedSensorBITField;
+            }
+            set
+            {
+                this.detailedSensorBITField = value;
+            }
         }
     }
 
@@ -6581,42 +10177,88 @@ namespace SensorStandard.MrsTypes
 
         private string faultDescriptionStringField;
 
-        private string severityLevelField;
+        private SeverityLevelsType severityLevelField;
+
+        private bool severityLevelFieldSpecified;
 
         /// <remarks/>
         public SensorIdentificationType SensorIdentification
         {
-            get { return this.sensorIdentificationField; }
-            set { this.sensorIdentificationField = value; }
+            get
+            {
+                return this.sensorIdentificationField;
+            }
+            set
+            {
+                this.sensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("FaultCode", DataType = "nonNegativeInteger")]
         public string[] FaultCode
         {
-            get { return this.faultCodeField; }
-            set { this.faultCodeField = value; }
+            get
+            {
+                return this.faultCodeField;
+            }
+            set
+            {
+                this.faultCodeField = value;
+            }
         }
 
         /// <remarks/>
         public LocationType LocationType
         {
-            get { return this.locationTypeField; }
-            set { this.locationTypeField = value; }
+            get
+            {
+                return this.locationTypeField;
+            }
+            set
+            {
+                this.locationTypeField = value;
+            }
         }
 
         /// <remarks/>
         public string FaultDescriptionString
         {
-            get { return this.faultDescriptionStringField; }
-            set { this.faultDescriptionStringField = value; }
+            get
+            {
+                return this.faultDescriptionStringField;
+            }
+            set
+            {
+                this.faultDescriptionStringField = value;
+            }
         }
 
         /// <remarks/>
-        public string SeverityLevel
+        public SeverityLevelsType SeverityLevel
         {
-            get { return this.severityLevelField; }
-            set { this.severityLevelField = value; }
+            get
+            {
+                return this.severityLevelField;
+            }
+            set
+            {
+                this.severityLevelField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SeverityLevelSpecified
+        {
+            get
+            {
+                return this.severityLevelFieldSpecified;
+            }
+            set
+            {
+                this.severityLevelFieldSpecified = value;
+            }
         }
     }
 
@@ -6644,43 +10286,79 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public string AreaID
         {
-            get { return this.areaIDField; }
-            set { this.areaIDField = value; }
+            get
+            {
+                return this.areaIDField;
+            }
+            set
+            {
+                this.areaIDField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType IsActive
         {
-            get { return this.isActiveField; }
-            set { this.isActiveField = value; }
+            get
+            {
+                return this.isActiveField;
+            }
+            set
+            {
+                this.isActiveField = value;
+            }
         }
 
         /// <remarks/>
         public GeometricElement Location
         {
-            get { return this.locationField; }
-            set { this.locationField = value; }
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
         }
 
         /// <remarks/>
         public DeviceAreaType AreaType
         {
-            get { return this.areaTypeField; }
-            set { this.areaTypeField = value; }
+            get
+            {
+                return this.areaTypeField;
+            }
+            set
+            {
+                this.areaTypeField = value;
+            }
         }
 
         /// <remarks/>
         public AltitudeType MinAltitude
         {
-            get { return this.minAltitudeField; }
-            set { this.minAltitudeField = value; }
+            get
+            {
+                return this.minAltitudeField;
+            }
+            set
+            {
+                this.minAltitudeField = value;
+            }
         }
 
         /// <remarks/>
         public AltitudeType MaxAltitude
         {
-            get { return this.maxAltitudeField; }
-            set { this.maxAltitudeField = value; }
+            get
+            {
+                return this.maxAltitudeField;
+            }
+            set
+            {
+                this.maxAltitudeField = value;
+            }
         }
     }
 
@@ -6761,58 +10439,106 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SensorIdentificationType SensorIdentification
         {
-            get { return this.sensorIdentificationField; }
-            set { this.sensorIdentificationField = value; }
+            get
+            {
+                return this.sensorIdentificationField;
+            }
+            set
+            {
+                this.sensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public BITResultType SensorTechnicalState
         {
-            get { return this.sensorTechnicalStateField; }
-            set { this.sensorTechnicalStateField = value; }
+            get
+            {
+                return this.sensorTechnicalStateField;
+            }
+            set
+            {
+                this.sensorTechnicalStateField = value;
+            }
         }
 
         /// <remarks/>
         public BITResultType CommunicationState
         {
-            get { return this.communicationStateField; }
-            set { this.communicationStateField = value; }
+            get
+            {
+                return this.communicationStateField;
+            }
+            set
+            {
+                this.communicationStateField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType PowerState
         {
-            get { return this.powerStateField; }
-            set { this.powerStateField = value; }
+            get
+            {
+                return this.powerStateField;
+            }
+            set
+            {
+                this.powerStateField = value;
+            }
         }
 
         /// <remarks/>
         public SensorModeType SensorMode
         {
-            get { return this.sensorModeField; }
-            set { this.sensorModeField = value; }
+            get
+            {
+                return this.sensorModeField;
+            }
+            set
+            {
+                this.sensorModeField = value;
+            }
         }
 
         /// <remarks/>
         public BITResultType CalibrationState
         {
-            get { return this.calibrationStateField; }
-            set { this.calibrationStateField = value; }
+            get
+            {
+                return this.calibrationStateField;
+            }
+            set
+            {
+                this.calibrationStateField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CalibrationStateSpecified
         {
-            get { return this.calibrationStateFieldSpecified; }
-            set { this.calibrationStateFieldSpecified = value; }
+            get
+            {
+                return this.calibrationStateFieldSpecified;
+            }
+            set
+            {
+                this.calibrationStateFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public EnergyStatus EnergyStatus
         {
-            get { return this.energyStatusField; }
-            set { this.energyStatusField = value; }
+            get
+            {
+                return this.energyStatusField;
+            }
+            set
+            {
+                this.energyStatusField = value;
+            }
         }
 
         /// <remarks/>
@@ -6829,60 +10555,108 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("VideoSwitchStatus", typeof(VideoSwitchStatus))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         public DebriefStatus DebriefStatus
         {
-            get { return this.debriefStatusField; }
-            set { this.debriefStatusField = value; }
+            get
+            {
+                return this.debriefStatusField;
+            }
+            set
+            {
+                this.debriefStatusField = value;
+            }
         }
 
         /// <remarks/>
         public PictureStatus PictureStatus
         {
-            get { return this.pictureStatusField; }
-            set { this.pictureStatusField = value; }
+            get
+            {
+                return this.pictureStatusField;
+            }
+            set
+            {
+                this.pictureStatusField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency SamplingRate
         {
-            get { return this.samplingRateField; }
-            set { this.samplingRateField = value; }
+            get
+            {
+                return this.samplingRateField;
+            }
+            set
+            {
+                this.samplingRateField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType ShakeStatus
         {
-            get { return this.shakeStatusField; }
-            set { this.shakeStatusField = value; }
+            get
+            {
+                return this.shakeStatusField;
+            }
+            set
+            {
+                this.shakeStatusField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ShakeStatusSpecified
         {
-            get { return this.shakeStatusFieldSpecified; }
-            set { this.shakeStatusFieldSpecified = value; }
+            get
+            {
+                return this.shakeStatusFieldSpecified;
+            }
+            set
+            {
+                this.shakeStatusFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ExecutionStatusType ExecutionStatus
         {
-            get { return this.executionStatusField; }
-            set { this.executionStatusField = value; }
+            get
+            {
+                return this.executionStatusField;
+            }
+            set
+            {
+                this.executionStatusField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ExecutionStatusSpecified
         {
-            get { return this.executionStatusFieldSpecified; }
-            set { this.executionStatusFieldSpecified = value; }
+            get
+            {
+                return this.executionStatusFieldSpecified;
+            }
+            set
+            {
+                this.executionStatusFieldSpecified = value;
+            }
         }
     }
 
@@ -6979,38 +10753,68 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public BITResultType EnergyState
         {
-            get { return this.energyStateField; }
-            set { this.energyStateField = value; }
+            get
+            {
+                return this.energyStateField;
+            }
+            set
+            {
+                this.energyStateField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool EnergyStateSpecified
         {
-            get { return this.energyStateFieldSpecified; }
-            set { this.energyStateFieldSpecified = value; }
+            get
+            {
+                return this.energyStateFieldSpecified;
+            }
+            set
+            {
+                this.energyStateFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Percent RemainingEnergy
         {
-            get { return this.remainingEnergyField; }
-            set { this.remainingEnergyField = value; }
+            get
+            {
+                return this.remainingEnergyField;
+            }
+            set
+            {
+                this.remainingEnergyField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType IsCharging
         {
-            get { return this.isChargingField; }
-            set { this.isChargingField = value; }
+            get
+            {
+                return this.isChargingField;
+            }
+            set
+            {
+                this.isChargingField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IsChargingSpecified
         {
-            get { return this.isChargingFieldSpecified; }
-            set { this.isChargingFieldSpecified = value; }
+            get
+            {
+                return this.isChargingFieldSpecified;
+            }
+            set
+            {
+                this.isChargingFieldSpecified = value;
+            }
         }
     }
 
@@ -7031,15 +10835,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleDetectorOperationalState SimpleDetectorOperationalState
         {
-            get { return this.simpleDetectorOperationalStateField; }
-            set { this.simpleDetectorOperationalStateField = value; }
+            get
+            {
+                return this.simpleDetectorOperationalStateField;
+            }
+            set
+            {
+                this.simpleDetectorOperationalStateField = value;
+            }
         }
 
         /// <remarks/>
         public Percent RemainingEnergy
         {
-            get { return this.remainingEnergyField; }
-            set { this.remainingEnergyField = value; }
+            get
+            {
+                return this.remainingEnergyField;
+            }
+            set
+            {
+                this.remainingEnergyField = value;
+            }
         }
     }
 
@@ -7109,75 +10925,135 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public bool Scanning
         {
-            get { return this.scanningField; }
-            set { this.scanningField = value; }
+            get
+            {
+                return this.scanningField;
+            }
+            set
+            {
+                this.scanningField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ScanningSpecified
         {
-            get { return this.scanningFieldSpecified; }
-            set { this.scanningFieldSpecified = value; }
+            get
+            {
+                return this.scanningFieldSpecified;
+            }
+            set
+            {
+                this.scanningFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public bool IsTransmitting
         {
-            get { return this.isTransmittingField; }
-            set { this.isTransmittingField = value; }
+            get
+            {
+                return this.isTransmittingField;
+            }
+            set
+            {
+                this.isTransmittingField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IsTransmittingSpecified
         {
-            get { return this.isTransmittingFieldSpecified; }
-            set { this.isTransmittingFieldSpecified = value; }
+            get
+            {
+                return this.isTransmittingFieldSpecified;
+            }
+            set
+            {
+                this.isTransmittingFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public bool IsCoverageCalculating
         {
-            get { return this.isCoverageCalculatingField; }
-            set { this.isCoverageCalculatingField = value; }
+            get
+            {
+                return this.isCoverageCalculatingField;
+            }
+            set
+            {
+                this.isCoverageCalculatingField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IsCoverageCalculatingSpecified
         {
-            get { return this.isCoverageCalculatingFieldSpecified; }
-            set { this.isCoverageCalculatingFieldSpecified = value; }
+            get
+            {
+                return this.isCoverageCalculatingFieldSpecified;
+            }
+            set
+            {
+                this.isCoverageCalculatingFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public Sector Sector
         {
-            get { return this.sectorField; }
-            set { this.sectorField = value; }
+            get
+            {
+                return this.sectorField;
+            }
+            set
+            {
+                this.sectorField = value;
+            }
         }
 
         /// <remarks/>
         public AngularSpeed Speed
         {
-            get { return this.speedField; }
-            set { this.speedField = value; }
+            get
+            {
+                return this.speedField;
+            }
+            set
+            {
+                this.speedField = value;
+            }
         }
 
         /// <remarks/>
         public Distance Range
         {
-            get { return this.rangeField; }
-            set { this.rangeField = value; }
+            get
+            {
+                return this.rangeField;
+            }
+            set
+            {
+                this.rangeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("CoverageArea")]
         public GeometricElement[] CoverageArea
         {
-            get { return this.coverageAreaField; }
-            set { this.coverageAreaField = value; }
+            get
+            {
+                return this.coverageAreaField;
+            }
+            set
+            {
+                this.coverageAreaField = value;
+            }
         }
     }
 
@@ -7202,22 +11078,40 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("ExplorePoint", typeof(Point))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         public OperationProfile OperationProfile
         {
-            get { return this.operationProfileField; }
-            set { this.operationProfileField = value; }
+            get
+            {
+                return this.operationProfileField;
+            }
+            set
+            {
+                this.operationProfileField = value;
+            }
         }
 
         /// <remarks/>
         public SimpleDetectorOperationalState OperationalState
         {
-            get { return this.operationalStateField; }
-            set { this.operationalStateField = value; }
+            get
+            {
+                return this.operationalStateField;
+            }
+            set
+            {
+                this.operationalStateField = value;
+            }
         }
     }
 
@@ -7242,29 +11136,53 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public LocationType LocationType
         {
-            get { return this.locationTypeField; }
-            set { this.locationTypeField = value; }
+            get
+            {
+                return this.locationTypeField;
+            }
+            set
+            {
+                this.locationTypeField = value;
+            }
         }
 
         /// <remarks/>
         public DroneModeType DroneMode
         {
-            get { return this.droneModeField; }
-            set { this.droneModeField = value; }
+            get
+            {
+                return this.droneModeField;
+            }
+            set
+            {
+                this.droneModeField = value;
+            }
         }
 
         /// <remarks/>
         public DeltaTime RemainingTime
         {
-            get { return this.remainingTimeField; }
-            set { this.remainingTimeField = value; }
+            get
+            {
+                return this.remainingTimeField;
+            }
+            set
+            {
+                this.remainingTimeField = value;
+            }
         }
 
         /// <remarks/>
         public DeltaTime RemainingMissionTime
         {
-            get { return this.remainingMissionTimeField; }
-            set { this.remainingMissionTimeField = value; }
+            get
+            {
+                return this.remainingMissionTimeField;
+            }
+            set
+            {
+                this.remainingMissionTimeField = value;
+            }
         }
     }
 
@@ -7348,23 +11266,41 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public LRFMeasureResultPhrase LRFMeasureResultPhrase
         {
-            get { return this.lRFMeasureResultPhraseField; }
-            set { this.lRFMeasureResultPhraseField = value; }
+            get
+            {
+                return this.lRFMeasureResultPhraseField;
+            }
+            set
+            {
+                this.lRFMeasureResultPhraseField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Range")]
         public Distance[] Range
         {
-            get { return this.rangeField; }
-            set { this.rangeField = value; }
+            get
+            {
+                return this.rangeField;
+            }
+            set
+            {
+                this.rangeField = value;
+            }
         }
 
         /// <remarks/>
         public AnnotationPosition CrossHair
         {
-            get { return this.crossHairField; }
-            set { this.crossHairField = value; }
+            get
+            {
+                return this.crossHairField;
+            }
+            set
+            {
+                this.crossHairField = value;
+            }
         }
     }
 
@@ -7449,114 +11385,204 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public FieldOfViewStatusType FieldOfViewStatusType
         {
-            get { return this.fieldOfViewStatusTypeField; }
-            set { this.fieldOfViewStatusTypeField = value; }
+            get
+            {
+                return this.fieldOfViewStatusTypeField;
+            }
+            set
+            {
+                this.fieldOfViewStatusTypeField = value;
+            }
         }
 
         /// <remarks/>
         public ZoomStatusType ZoomStatusType
         {
-            get { return this.zoomStatusTypeField; }
-            set { this.zoomStatusTypeField = value; }
+            get
+            {
+                return this.zoomStatusTypeField;
+            }
+            set
+            {
+                this.zoomStatusTypeField = value;
+            }
         }
 
         /// <remarks/>
         public FocusStatusType FocusStatusType
         {
-            get { return this.focusStatusTypeField; }
-            set { this.focusStatusTypeField = value; }
+            get
+            {
+                return this.focusStatusTypeField;
+            }
+            set
+            {
+                this.focusStatusTypeField = value;
+            }
         }
 
         /// <remarks/>
         public GainLevelStatusType GainLevelStatusType
         {
-            get { return this.gainLevelStatusTypeField; }
-            set { this.gainLevelStatusTypeField = value; }
+            get
+            {
+                return this.gainLevelStatusTypeField;
+            }
+            set
+            {
+                this.gainLevelStatusTypeField = value;
+            }
         }
 
         /// <remarks/>
         public ControlType IrisControlType
         {
-            get { return this.irisControlTypeField; }
-            set { this.irisControlTypeField = value; }
+            get
+            {
+                return this.irisControlTypeField;
+            }
+            set
+            {
+                this.irisControlTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool IrisControlTypeSpecified
         {
-            get { return this.irisControlTypeFieldSpecified; }
-            set { this.irisControlTypeFieldSpecified = value; }
+            get
+            {
+                return this.irisControlTypeFieldSpecified;
+            }
+            set
+            {
+                this.irisControlTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public PolarityHotColorDescriptionType PolarityHotColorDescription
         {
-            get { return this.polarityHotColorDescriptionField; }
-            set { this.polarityHotColorDescriptionField = value; }
+            get
+            {
+                return this.polarityHotColorDescriptionField;
+            }
+            set
+            {
+                this.polarityHotColorDescriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool PolarityHotColorDescriptionSpecified
         {
-            get { return this.polarityHotColorDescriptionFieldSpecified; }
-            set { this.polarityHotColorDescriptionFieldSpecified = value; }
+            get
+            {
+                return this.polarityHotColorDescriptionFieldSpecified;
+            }
+            set
+            {
+                this.polarityHotColorDescriptionFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string NUCNumber
         {
-            get { return this.nUCNumberField; }
-            set { this.nUCNumberField = value; }
+            get
+            {
+                return this.nUCNumberField;
+            }
+            set
+            {
+                this.nUCNumberField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string FilterNumber
         {
-            get { return this.filterNumberField; }
-            set { this.filterNumberField = value; }
+            get
+            {
+                return this.filterNumberField;
+            }
+            set
+            {
+                this.filterNumberField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string ImageImprovementNumber
         {
-            get { return this.imageImprovementNumberField; }
-            set { this.imageImprovementNumberField = value; }
+            get
+            {
+                return this.imageImprovementNumberField;
+            }
+            set
+            {
+                this.imageImprovementNumberField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string GammaNumber
         {
-            get { return this.gammaNumberField; }
-            set { this.gammaNumberField = value; }
+            get
+            {
+                return this.gammaNumberField;
+            }
+            set
+            {
+                this.gammaNumberField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Brightness
         {
-            get { return this.brightnessField; }
-            set { this.brightnessField = value; }
+            get
+            {
+                return this.brightnessField;
+            }
+            set
+            {
+                this.brightnessField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Contrast
         {
-            get { return this.contrastField; }
-            set { this.contrastField = value; }
+            get
+            {
+                return this.contrastField;
+            }
+            set
+            {
+                this.contrastField = value;
+            }
         }
 
         /// <remarks/>
         public AnnotationPosition CrossHair
         {
-            get { return this.crossHairField; }
-            set { this.crossHairField = value; }
+            get
+            {
+                return this.crossHairField;
+            }
+            set
+            {
+                this.crossHairField = value;
+            }
         }
     }
 
@@ -7579,23 +11605,41 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public FieldOfViewDescriptionType Description
         {
-            get { return this.descriptionField; }
-            set { this.descriptionField = value; }
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DescriptionSpecified
         {
-            get { return this.descriptionFieldSpecified; }
-            set { this.descriptionFieldSpecified = value; }
+            get
+            {
+                return this.descriptionFieldSpecified;
+            }
+            set
+            {
+                this.descriptionFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -7618,23 +11662,41 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public OpticalLimitType Limit
         {
-            get { return this.limitField; }
-            set { this.limitField = value; }
+            get
+            {
+                return this.limitField;
+            }
+            set
+            {
+                this.limitField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool LimitSpecified
         {
-            get { return this.limitFieldSpecified; }
-            set { this.limitFieldSpecified = value; }
+            get
+            {
+                return this.limitFieldSpecified;
+            }
+            set
+            {
+                this.limitFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public StatusType eZoomEnabled
         {
-            get { return this.eZoomEnabledField; }
-            set { this.eZoomEnabledField = value; }
+            get
+            {
+                return this.eZoomEnabledField;
+            }
+            set
+            {
+                this.eZoomEnabledField = value;
+            }
         }
     }
 
@@ -7693,39 +11755,69 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public ControlType Control
         {
-            get { return this.controlField; }
-            set { this.controlField = value; }
+            get
+            {
+                return this.controlField;
+            }
+            set
+            {
+                this.controlField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ControlSpecified
         {
-            get { return this.controlFieldSpecified; }
-            set { this.controlFieldSpecified = value; }
+            get
+            {
+                return this.controlFieldSpecified;
+            }
+            set
+            {
+                this.controlFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
 
         /// <remarks/>
         public OpticalLimitType Limit
         {
-            get { return this.limitField; }
-            set { this.limitField = value; }
+            get
+            {
+                return this.limitField;
+            }
+            set
+            {
+                this.limitField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool LimitSpecified
         {
-            get { return this.limitFieldSpecified; }
-            set { this.limitFieldSpecified = value; }
+            get
+            {
+                return this.limitFieldSpecified;
+            }
+            set
+            {
+                this.limitFieldSpecified = value;
+            }
         }
     }
 
@@ -7750,32 +11842,56 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public ControlType Control
         {
-            get { return this.controlField; }
-            set { this.controlField = value; }
+            get
+            {
+                return this.controlField;
+            }
+            set
+            {
+                this.controlField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ControlSpecified
         {
-            get { return this.controlFieldSpecified; }
-            set { this.controlFieldSpecified = value; }
+            get
+            {
+                return this.controlFieldSpecified;
+            }
+            set
+            {
+                this.controlFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string GainValue
         {
-            get { return this.gainValueField; }
-            set { this.gainValueField = value; }
+            get
+            {
+                return this.gainValueField;
+            }
+            set
+            {
+                this.gainValueField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string LevelValue
         {
-            get { return this.levelValueField; }
-            set { this.levelValueField = value; }
+            get
+            {
+                return this.levelValueField;
+            }
+            set
+            {
+                this.levelValueField = value;
+            }
         }
     }
 
@@ -7798,22 +11914,40 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public PedestalStatus PedestalStatus
         {
-            get { return this.pedestalStatusField; }
-            set { this.pedestalStatusField = value; }
+            get
+            {
+                return this.pedestalStatusField;
+            }
+            set
+            {
+                this.pedestalStatusField = value;
+            }
         }
 
         /// <remarks/>
         public VideoChannelType PayloadChannel
         {
-            get { return this.payloadChannelField; }
-            set { this.payloadChannelField = value; }
+            get
+            {
+                return this.payloadChannelField;
+            }
+            set
+            {
+                this.payloadChannelField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType IsActive
         {
-            get { return this.isActiveField; }
-            set { this.isActiveField = value; }
+            get
+            {
+                return this.isActiveField;
+            }
+            set
+            {
+                this.isActiveField = value;
+            }
         }
     }
 
@@ -7844,50 +11978,92 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public ElevationAngle Elevation
         {
-            get { return this.elevationField; }
-            set { this.elevationField = value; }
+            get
+            {
+                return this.elevationField;
+            }
+            set
+            {
+                this.elevationField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Azimuth
         {
-            get { return this.azimuthField; }
-            set { this.azimuthField = value; }
+            get
+            {
+                return this.azimuthField;
+            }
+            set
+            {
+                this.azimuthField = value;
+            }
         }
 
         /// <remarks/>
         public AngularSpeed HorizontalVelocity
         {
-            get { return this.horizontalVelocityField; }
-            set { this.horizontalVelocityField = value; }
+            get
+            {
+                return this.horizontalVelocityField;
+            }
+            set
+            {
+                this.horizontalVelocityField = value;
+            }
         }
 
         /// <remarks/>
         public AngularSpeed VerticalVelocity
         {
-            get { return this.verticalVelocityField; }
-            set { this.verticalVelocityField = value; }
+            get
+            {
+                return this.verticalVelocityField;
+            }
+            set
+            {
+                this.verticalVelocityField = value;
+            }
         }
 
         /// <remarks/>
         public TimeType LastNorthingTime
         {
-            get { return this.lastNorthingTimeField; }
-            set { this.lastNorthingTimeField = value; }
+            get
+            {
+                return this.lastNorthingTimeField;
+            }
+            set
+            {
+                this.lastNorthingTimeField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType HorizontalMovementState
         {
-            get { return this.horizontalMovementStateField; }
-            set { this.horizontalMovementStateField = value; }
+            get
+            {
+                return this.horizontalMovementStateField;
+            }
+            set
+            {
+                this.horizontalMovementStateField = value;
+            }
         }
 
         /// <remarks/>
         public StatusType VerticalMovementState
         {
-            get { return this.verticalMovementStateField; }
-            set { this.verticalMovementStateField = value; }
+            get
+            {
+                return this.verticalMovementStateField;
+            }
+            set
+            {
+                this.verticalMovementStateField = value;
+            }
         }
     }
 
@@ -7910,23 +12086,41 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public StatusType LasingState
         {
-            get { return this.lasingStateField; }
-            set { this.lasingStateField = value; }
+            get
+            {
+                return this.lasingStateField;
+            }
+            set
+            {
+                this.lasingStateField = value;
+            }
         }
 
         /// <remarks/>
         public LasingModeType LasingMode
         {
-            get { return this.lasingModeField; }
-            set { this.lasingModeField = value; }
+            get
+            {
+                return this.lasingModeField;
+            }
+            set
+            {
+                this.lasingModeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool LasingModeSpecified
         {
-            get { return this.lasingModeFieldSpecified; }
-            set { this.lasingModeFieldSpecified = value; }
+            get
+            {
+                return this.lasingModeFieldSpecified;
+            }
+            set
+            {
+                this.lasingModeFieldSpecified = value;
+            }
         }
     }
 
@@ -7947,16 +12141,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Intensity Intensity
         {
-            get { return this.intensityField; }
-            set { this.intensityField = value; }
+            get
+            {
+                return this.intensityField;
+            }
+            set
+            {
+                this.intensityField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("FrequencySet")]
         public FrequencySetType[] FrequencySet
         {
-            get { return this.frequencySetField; }
-            set { this.frequencySetField = value; }
+            get
+            {
+                return this.frequencySetField;
+            }
+            set
+            {
+                this.frequencySetField = value;
+            }
         }
     }
 
@@ -7977,16 +12183,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public IntensityUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -8022,23 +12240,41 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Frequency LowFrequency
         {
-            get { return this.lowFrequencyField; }
-            set { this.lowFrequencyField = value; }
+            get
+            {
+                return this.lowFrequencyField;
+            }
+            set
+            {
+                this.lowFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency HighFrequency
         {
-            get { return this.highFrequencyField; }
-            set { this.highFrequencyField = value; }
+            get
+            {
+                return this.highFrequencyField;
+            }
+            set
+            {
+                this.highFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string FrequencyPriority
         {
-            get { return this.frequencyPriorityField; }
-            set { this.frequencyPriorityField = value; }
+            get
+            {
+                return this.frequencyPriorityField;
+            }
+            set
+            {
+                this.frequencyPriorityField = value;
+            }
         }
     }
 
@@ -8058,8 +12294,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("VideoChannel")]
         public VideoChannelType[] VideoChannel
         {
-            get { return this.videoChannelField; }
-            set { this.videoChannelField = value; }
+            get
+            {
+                return this.videoChannelField;
+            }
+            set
+            {
+                this.videoChannelField = value;
+            }
         }
     }
 
@@ -8080,15 +12322,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DebriefState DebriefState
         {
-            get { return this.debriefStateField; }
-            set { this.debriefStateField = value; }
+            get
+            {
+                return this.debriefStateField;
+            }
+            set
+            {
+                this.debriefStateField = value;
+            }
         }
 
         /// <remarks/>
         public DeltaTime DebriefDeltaTime
         {
-            get { return this.debriefDeltaTimeField; }
-            set { this.debriefDeltaTimeField = value; }
+            get
+            {
+                return this.debriefDeltaTimeField;
+            }
+            set
+            {
+                this.debriefDeltaTimeField = value;
+            }
         }
     }
 
@@ -8187,24 +12441,42 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public PictureState PictureState
         {
-            get { return this.pictureStateField; }
-            set { this.pictureStateField = value; }
+            get
+            {
+                return this.pictureStateField;
+            }
+            set
+            {
+                this.pictureStateField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string IndicationID
         {
-            get { return this.indicationIDField; }
-            set { this.indicationIDField = value; }
+            get
+            {
+                return this.indicationIDField;
+            }
+            set
+            {
+                this.indicationIDField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("MediaFile")]
         public File[] MediaFile
         {
-            get { return this.mediaFileField; }
-            set { this.mediaFileField = value; }
+            get
+            {
+                return this.mediaFileField;
+            }
+            set
+            {
+                this.mediaFileField = value;
+            }
         }
     }
 
@@ -8355,26 +12627,36 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SensorIdentificationType SensorIdentification
         {
-            get { return this.sensorIdentificationField; }
-            set { this.sensorIdentificationField = value; }
+            get
+            {
+                return this.sensorIdentificationField;
+            }
+            set
+            {
+                this.sensorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public LocationType LocationType
         {
-            get { return this.locationTypeField; }
-            set { this.locationTypeField = value; }
+            get
+            {
+                return this.locationTypeField;
+            }
+            set
+            {
+                this.locationTypeField = value;
+            }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AlertIndicatorConfiguration",
-            typeof(AlertIndicatorConfiguration))]
+        [System.Xml.Serialization.XmlElementAttribute("AlertIndicatorConfiguration", typeof(AlertIndicatorConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("AntennaConfiguration", typeof(AntennaConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("DebriefConfiguration", typeof(DebriefConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("DetectionControllerConfiguration", typeof(OperationProfile[]))]
         [System.Xml.Serialization.XmlElementAttribute("DroneConfiguration", typeof(DroneConfiguration))]
-        [System.Xml.Serialization.XmlElementAttribute("GyroStabilizationConfiguration",
-            typeof(GyroStabilizationConfiguration))]
+        [System.Xml.Serialization.XmlElementAttribute("GyroStabilizationConfiguration", typeof(GyroStabilizationConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("OpticalConfiguration", typeof(OpticalConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("PayloadConfiguration", typeof(PayloadConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("PedestalConfiguration", typeof(PedestalConfiguration))]
@@ -8382,36 +12664,59 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("ReceiverConfiguration", typeof(ReceiverConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("TrackerConfiguration", typeof(TrackerConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("VideoEncoderConfiguration", typeof(VideoEncoderConfiguration))]
-        [System.Xml.Serialization.XmlElementAttribute("VideoMotionDetectorConfiguration",
-            typeof(VideoMotionDetectorConfiguration))]
+        [System.Xml.Serialization.XmlElementAttribute("VideoMotionDetectorConfiguration", typeof(VideoMotionDetectorConfiguration))]
         [System.Xml.Serialization.XmlElementAttribute("VideoSwitchConfiguration", typeof(VideoSwitchConfiguration))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SimpleCommandConfiguration")]
         public SimpleCommandType[] SimpleCommandConfiguration
         {
-            get { return this.simpleCommandConfigurationField; }
-            set { this.simpleCommandConfigurationField = value; }
+            get
+            {
+                return this.simpleCommandConfigurationField;
+            }
+            set
+            {
+                this.simpleCommandConfigurationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SingleValueRangeCommandConfiguration")]
         public SingleValueRangeCommandConfigurationType[] SingleValueRangeCommandConfiguration
         {
-            get { return this.singleValueRangeCommandConfigurationField; }
-            set { this.singleValueRangeCommandConfigurationField = value; }
+            get
+            {
+                return this.singleValueRangeCommandConfigurationField;
+            }
+            set
+            {
+                this.singleValueRangeCommandConfigurationField = value;
+            }
         }
 
         /// <remarks/>
         public GeometricElement ExpandedLocationType
         {
-            get { return this.expandedLocationTypeField; }
-            set { this.expandedLocationTypeField = value; }
+            get
+            {
+                return this.expandedLocationTypeField;
+            }
+            set
+            {
+                this.expandedLocationTypeField = value;
+            }
         }
     }
 
@@ -8448,8 +12753,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items
         {
-            get { return this.itemsField; }
-            set { this.itemsField = value; }
+            get
+            {
+                return this.itemsField;
+            }
+            set
+            {
+                this.itemsField = value;
+            }
         }
 
         /// <remarks/>
@@ -8457,53 +12768,95 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemsChoiceType1[] ItemsElementName
         {
-            get { return this.itemsElementNameField; }
-            set { this.itemsElementNameField = value; }
+            get
+            {
+                return this.itemsElementNameField;
+            }
+            set
+            {
+                this.itemsElementNameField = value;
+            }
         }
 
         /// <remarks/>
         public bool NormallyOpen
         {
-            get { return this.normallyOpenField; }
-            set { this.normallyOpenField = value; }
+            get
+            {
+                return this.normallyOpenField;
+            }
+            set
+            {
+                this.normallyOpenField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool NormallyOpenSpecified
         {
-            get { return this.normallyOpenFieldSpecified; }
-            set { this.normallyOpenFieldSpecified = value; }
+            get
+            {
+                return this.normallyOpenFieldSpecified;
+            }
+            set
+            {
+                this.normallyOpenFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public double Threshold
         {
-            get { return this.thresholdField; }
-            set { this.thresholdField = value; }
+            get
+            {
+                return this.thresholdField;
+            }
+            set
+            {
+                this.thresholdField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ThresholdSpecified
         {
-            get { return this.thresholdFieldSpecified; }
-            set { this.thresholdFieldSpecified = value; }
+            get
+            {
+                return this.thresholdFieldSpecified;
+            }
+            set
+            {
+                this.thresholdFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public OperationType ThresholdTriggerOperation
         {
-            get { return this.thresholdTriggerOperationField; }
-            set { this.thresholdTriggerOperationField = value; }
+            get
+            {
+                return this.thresholdTriggerOperationField;
+            }
+            set
+            {
+                this.thresholdTriggerOperationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ThresholdTriggerOperationSpecified
         {
-            get { return this.thresholdTriggerOperationFieldSpecified; }
-            set { this.thresholdTriggerOperationFieldSpecified = value; }
+            get
+            {
+                return this.thresholdTriggerOperationFieldSpecified;
+            }
+            set
+            {
+                this.thresholdTriggerOperationFieldSpecified = value;
+            }
         }
     }
 
@@ -8557,74 +12910,134 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public bool CoverageCalculationSupported
         {
-            get { return this.coverageCalculationSupportedField; }
-            set { this.coverageCalculationSupportedField = value; }
+            get
+            {
+                return this.coverageCalculationSupportedField;
+            }
+            set
+            {
+                this.coverageCalculationSupportedField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CoverageCalculationSupportedSpecified
         {
-            get { return this.coverageCalculationSupportedFieldSpecified; }
-            set { this.coverageCalculationSupportedFieldSpecified = value; }
+            get
+            {
+                return this.coverageCalculationSupportedFieldSpecified;
+            }
+            set
+            {
+                this.coverageCalculationSupportedFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         public bool MechanicalScanningSupported
         {
-            get { return this.mechanicalScanningSupportedField; }
-            set { this.mechanicalScanningSupportedField = value; }
+            get
+            {
+                return this.mechanicalScanningSupportedField;
+            }
+            set
+            {
+                this.mechanicalScanningSupportedField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityRangeType HorizontalVelocityRange
         {
-            get { return this.horizontalVelocityRangeField; }
-            set { this.horizontalVelocityRangeField = value; }
+            get
+            {
+                return this.horizontalVelocityRangeField;
+            }
+            set
+            {
+                this.horizontalVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityRangeType VerticalVelocityRange
         {
-            get { return this.verticalVelocityRangeField; }
-            set { this.verticalVelocityRangeField = value; }
+            get
+            {
+                return this.verticalVelocityRangeField;
+            }
+            set
+            {
+                this.verticalVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthRangeType AzimuthRange
         {
-            get { return this.azimuthRangeField; }
-            set { this.azimuthRangeField = value; }
+            get
+            {
+                return this.azimuthRangeField;
+            }
+            set
+            {
+                this.azimuthRangeField = value;
+            }
         }
 
         /// <remarks/>
         public ElevationAngleRangeType ElevationAngleRange
         {
-            get { return this.elevationAngleRangeField; }
-            set { this.elevationAngleRangeField = value; }
+            get
+            {
+                return this.elevationAngleRangeField;
+            }
+            set
+            {
+                this.elevationAngleRangeField = value;
+            }
         }
 
         /// <remarks/>
         public ValueRangeType RangeRange
         {
-            get { return this.rangeRangeField; }
-            set { this.rangeRangeField = value; }
+            get
+            {
+                return this.rangeRangeField;
+            }
+            set
+            {
+                this.rangeRangeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AntennaScanCommand")]
         public AntennaScanCommandType[] AntennaScanCommand
         {
-            get { return this.antennaScanCommandField; }
-            set { this.antennaScanCommandField = value; }
+            get
+            {
+                return this.antennaScanCommandField;
+            }
+            set
+            {
+                this.antennaScanCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AntennaCommandConfiguration")]
         public AntennaCommandConfiguration[] AntennaCommandConfiguration
         {
-            get { return this.antennaCommandConfigurationField; }
-            set { this.antennaCommandConfigurationField = value; }
+            get
+            {
+                return this.antennaCommandConfigurationField;
+            }
+            set
+            {
+                this.antennaCommandConfigurationField = value;
+            }
         }
     }
 
@@ -8644,15 +13057,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public AngularSpeed Min
         {
-            get { return this.minField; }
-            set { this.minField = value; }
+            get
+            {
+                return this.minField;
+            }
+            set
+            {
+                this.minField = value;
+            }
         }
 
         /// <remarks/>
         public AngularSpeed Max
         {
-            get { return this.maxField; }
-            set { this.maxField = value; }
+            get
+            {
+                return this.maxField;
+            }
+            set
+            {
+                this.maxField = value;
+            }
         }
     }
 
@@ -8672,15 +13097,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public AzimuthType Min
         {
-            get { return this.minField; }
-            set { this.minField = value; }
+            get
+            {
+                return this.minField;
+            }
+            set
+            {
+                this.minField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthType Max
         {
-            get { return this.maxField; }
-            set { this.maxField = value; }
+            get
+            {
+                return this.maxField;
+            }
+            set
+            {
+                this.maxField = value;
+            }
         }
     }
 
@@ -8700,15 +13137,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public ElevationAngle Min
         {
-            get { return this.minField; }
-            set { this.minField = value; }
+            get
+            {
+                return this.minField;
+            }
+            set
+            {
+                this.minField = value;
+            }
         }
 
         /// <remarks/>
         public ElevationAngle Max
         {
-            get { return this.maxField; }
-            set { this.maxField = value; }
+            get
+            {
+                return this.maxField;
+            }
+            set
+            {
+                this.maxField = value;
+            }
         }
     }
 
@@ -8728,15 +13177,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public double Min
         {
-            get { return this.minField; }
-            set { this.minField = value; }
+            get
+            {
+                return this.minField;
+            }
+            set
+            {
+                this.minField = value;
+            }
         }
 
         /// <remarks/>
         public double Max
         {
-            get { return this.maxField; }
-            set { this.maxField = value; }
+            get
+            {
+                return this.maxField;
+            }
+            set
+            {
+                this.maxField = value;
+            }
         }
     }
 
@@ -8759,24 +13220,42 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Operation")]
         public OperationType[] Operation
         {
-            get { return this.operationField; }
-            set { this.operationField = value; }
+            get
+            {
+                return this.operationField;
+            }
+            set
+            {
+                this.operationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Control")]
         public ControlType[] Control
         {
-            get { return this.controlField; }
-            set { this.controlField = value; }
+            get
+            {
+                return this.controlField;
+            }
+            set
+            {
+                this.controlField = value;
+            }
         }
     }
 
@@ -8797,16 +13276,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DebriefOperation")]
         public DebriefOperationType[] DebriefOperation
         {
-            get { return this.debriefOperationField; }
-            set { this.debriefOperationField = value; }
+            get
+            {
+                return this.debriefOperationField;
+            }
+            set
+            {
+                this.debriefOperationField = value;
+            }
         }
     }
 
@@ -8837,50 +13328,92 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public VelocityRangeType VerticalVelocityRange
         {
-            get { return this.verticalVelocityRangeField; }
-            set { this.verticalVelocityRangeField = value; }
+            get
+            {
+                return this.verticalVelocityRangeField;
+            }
+            set
+            {
+                this.verticalVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityRangeType HorizontalVelocityRange
         {
-            get { return this.horizontalVelocityRangeField; }
-            set { this.horizontalVelocityRangeField = value; }
+            get
+            {
+                return this.horizontalVelocityRangeField;
+            }
+            set
+            {
+                this.horizontalVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityRangeType AltitudeVelocityRange
         {
-            get { return this.altitudeVelocityRangeField; }
-            set { this.altitudeVelocityRangeField = value; }
+            get
+            {
+                return this.altitudeVelocityRangeField;
+            }
+            set
+            {
+                this.altitudeVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public DeltaTime MaxAirTime
         {
-            get { return this.maxAirTimeField; }
-            set { this.maxAirTimeField = value; }
+            get
+            {
+                return this.maxAirTimeField;
+            }
+            set
+            {
+                this.maxAirTimeField = value;
+            }
         }
 
         /// <remarks/>
         public Distance MaxRange
         {
-            get { return this.maxRangeField; }
-            set { this.maxRangeField = value; }
+            get
+            {
+                return this.maxRangeField;
+            }
+            set
+            {
+                this.maxRangeField = value;
+            }
         }
 
         /// <remarks/>
         public AltitudeType MinAltitude
         {
-            get { return this.minAltitudeField; }
-            set { this.minAltitudeField = value; }
+            get
+            {
+                return this.minAltitudeField;
+            }
+            set
+            {
+                this.minAltitudeField = value;
+            }
         }
 
         /// <remarks/>
         public AltitudeType MaxAltitude
         {
-            get { return this.maxAltitudeField; }
-            set { this.maxAltitudeField = value; }
+            get
+            {
+                return this.maxAltitudeField;
+            }
+            set
+            {
+                this.maxAltitudeField = value;
+            }
         }
     }
 
@@ -8900,8 +13433,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("GyroStabilizationCommandConfiguration")]
         public GyroStabilizationCommandConfiguration[] GyroStabilizationCommandConfiguration
         {
-            get { return this.gyroStabilizationCommandConfigurationField; }
-            set { this.gyroStabilizationCommandConfigurationField = value; }
+            get
+            {
+                return this.gyroStabilizationCommandConfigurationField;
+            }
+            set
+            {
+                this.gyroStabilizationCommandConfigurationField = value;
+            }
         }
     }
 
@@ -8926,31 +13465,55 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Operation")]
         public OperationType[] Operation
         {
-            get { return this.operationField; }
-            set { this.operationField = value; }
+            get
+            {
+                return this.operationField;
+            }
+            set
+            {
+                this.operationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Axis")]
         public AxisType[] Axis
         {
-            get { return this.axisField; }
-            set { this.axisField = value; }
+            get
+            {
+                return this.axisField;
+            }
+            set
+            {
+                this.axisField = value;
+            }
         }
 
         /// <remarks/>
         public ValueRangeType ValueRange
         {
-            get { return this.valueRangeField; }
-            set { this.valueRangeField = value; }
+            get
+            {
+                return this.valueRangeField;
+            }
+            set
+            {
+                this.valueRangeField = value;
+            }
         }
     }
 
@@ -8975,31 +13538,55 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public bool MechanicalScanningSupported
         {
-            get { return this.mechanicalScanningSupportedField; }
-            set { this.mechanicalScanningSupportedField = value; }
+            get
+            {
+                return this.mechanicalScanningSupportedField;
+            }
+            set
+            {
+                this.mechanicalScanningSupportedField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MechanicalScanningSupportedSpecified
         {
-            get { return this.mechanicalScanningSupportedFieldSpecified; }
-            set { this.mechanicalScanningSupportedFieldSpecified = value; }
+            get
+            {
+                return this.mechanicalScanningSupportedFieldSpecified;
+            }
+            set
+            {
+                this.mechanicalScanningSupportedFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("OpticalCommandConfiguration")]
         public OpticalCommandConfiguration[] OpticalCommandConfiguration
         {
-            get { return this.opticalCommandConfigurationField; }
-            set { this.opticalCommandConfigurationField = value; }
+            get
+            {
+                return this.opticalCommandConfigurationField;
+            }
+            set
+            {
+                this.opticalCommandConfigurationField = value;
+            }
         }
 
         /// <remarks/>
         public OpticalConfigurationOpticalCapabilities OpticalCapabilities
         {
-            get { return this.opticalCapabilitiesField; }
-            set { this.opticalCapabilitiesField = value; }
+            get
+            {
+                return this.opticalCapabilitiesField;
+            }
+            set
+            {
+                this.opticalCapabilitiesField = value;
+            }
         }
     }
 
@@ -9026,49 +13613,76 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Operation")]
         public OperationType[] Operation
         {
-            get { return this.operationField; }
-            set { this.operationField = value; }
+            get
+            {
+                return this.operationField;
+            }
+            set
+            {
+                this.operationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Control")]
         public ControlType[] Control
         {
-            get { return this.controlField; }
-            set { this.controlField = value; }
+            get
+            {
+                return this.controlField;
+            }
+            set
+            {
+                this.controlField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Limit")]
         public OpticalLimitType[] Limit
         {
-            get { return this.limitField; }
-            set { this.limitField = value; }
+            get
+            {
+                return this.limitField;
+            }
+            set
+            {
+                this.limitField = value;
+            }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("FieldOfViewConfigurationType",
-            typeof(FieldOfViewConfigurationType))]
+        [System.Xml.Serialization.XmlElementAttribute("FieldOfViewConfigurationType", typeof(FieldOfViewConfigurationType))]
         [System.Xml.Serialization.XmlElementAttribute("FilterDescriptionType", typeof(FilterDescriptionType))]
         [System.Xml.Serialization.XmlElementAttribute("GammaNumber", typeof(string), DataType = "nonNegativeInteger")]
-        [System.Xml.Serialization.XmlElementAttribute("ImageImprovementDescriptionType",
-            typeof(ImageImprovementDescriptionType))]
+        [System.Xml.Serialization.XmlElementAttribute("ImageImprovementDescriptionType", typeof(ImageImprovementDescriptionType))]
         [System.Xml.Serialization.XmlElementAttribute("NUCDescriptionType", typeof(NUCDescriptionType))]
-        [System.Xml.Serialization.XmlElementAttribute("PolarityHotColorDescription",
-            typeof(PolarityHotColorDescriptionType))]
+        [System.Xml.Serialization.XmlElementAttribute("PolarityHotColorDescription", typeof(PolarityHotColorDescriptionType))]
         [System.Xml.Serialization.XmlElementAttribute("ValueRange", typeof(ValueRangeType))]
         public object[] Items
         {
-            get { return this.itemsField; }
-            set { this.itemsField = value; }
+            get
+            {
+                return this.itemsField;
+            }
+            set
+            {
+                this.itemsField = value;
+            }
         }
     }
 
@@ -9095,16 +13709,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public FieldOfViewDescriptionType Description
         {
-            get { return this.descriptionField; }
-            set { this.descriptionField = value; }
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DescriptionSpecified
         {
-            get { return this.descriptionFieldSpecified; }
-            set { this.descriptionFieldSpecified = value; }
+            get
+            {
+                return this.descriptionFieldSpecified;
+            }
+            set
+            {
+                this.descriptionFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
@@ -9112,22 +13738,40 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("ValueRange", typeof(AzimuthRangeType))]
         public object Item
         {
-            get { return this.itemField; }
-            set { this.itemField = value; }
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
         }
 
         /// <remarks/>
         public ValueRangeType CrossHairHorizontalValueRange
         {
-            get { return this.crossHairHorizontalValueRangeField; }
-            set { this.crossHairHorizontalValueRangeField = value; }
+            get
+            {
+                return this.crossHairHorizontalValueRangeField;
+            }
+            set
+            {
+                this.crossHairHorizontalValueRangeField = value;
+            }
         }
 
         /// <remarks/>
         public ValueRangeType CrossHairVerticalValueRange
         {
-            get { return this.crossHairVerticalValueRangeField; }
-            set { this.crossHairVerticalValueRangeField = value; }
+            get
+            {
+                return this.crossHairVerticalValueRangeField;
+            }
+            set
+            {
+                this.crossHairVerticalValueRangeField = value;
+            }
         }
     }
 
@@ -9147,16 +13791,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public string FilterDescription
         {
-            get { return this.filterDescriptionField; }
-            set { this.filterDescriptionField = value; }
+            get
+            {
+                return this.filterDescriptionField;
+            }
+            set
+            {
+                this.filterDescriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string FilterNumber
         {
-            get { return this.filterNumberField; }
-            set { this.filterNumberField = value; }
+            get
+            {
+                return this.filterNumberField;
+            }
+            set
+            {
+                this.filterNumberField = value;
+            }
         }
     }
 
@@ -9176,16 +13832,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public string ImageImprovementDescription
         {
-            get { return this.imageImprovementDescriptionField; }
-            set { this.imageImprovementDescriptionField = value; }
+            get
+            {
+                return this.imageImprovementDescriptionField;
+            }
+            set
+            {
+                this.imageImprovementDescriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string ImageImprovementNumber
         {
-            get { return this.imageImprovementNumberField; }
-            set { this.imageImprovementNumberField = value; }
+            get
+            {
+                return this.imageImprovementNumberField;
+            }
+            set
+            {
+                this.imageImprovementNumberField = value;
+            }
         }
     }
 
@@ -9205,16 +13873,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public string NUCDescription
         {
-            get { return this.nUCDescriptionField; }
-            set { this.nUCDescriptionField = value; }
+            get
+            {
+                return this.nUCDescriptionField;
+            }
+            set
+            {
+                this.nUCDescriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string NUCNumber
         {
-            get { return this.nUCNumberField; }
-            set { this.nUCNumberField = value; }
+            get
+            {
+                return this.nUCNumberField;
+            }
+            set
+            {
+                this.nUCNumberField = value;
+            }
         }
     }
 
@@ -9234,15 +13914,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public OpticalCapabilitiesRanges RecognitionRanges
         {
-            get { return this.recognitionRangesField; }
-            set { this.recognitionRangesField = value; }
+            get
+            {
+                return this.recognitionRangesField;
+            }
+            set
+            {
+                this.recognitionRangesField = value;
+            }
         }
 
         /// <remarks/>
         public OpticalCapabilitiesRanges IdentificationRanges
         {
-            get { return this.identificationRangesField; }
-            set { this.identificationRangesField = value; }
+            get
+            {
+                return this.identificationRangesField;
+            }
+            set
+            {
+                this.identificationRangesField = value;
+            }
         }
     }
 
@@ -9262,15 +13954,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Distance PersonRange
         {
-            get { return this.personRangeField; }
-            set { this.personRangeField = value; }
+            get
+            {
+                return this.personRangeField;
+            }
+            set
+            {
+                this.personRangeField = value;
+            }
         }
 
         /// <remarks/>
         public Distance VehicleRange
         {
-            get { return this.vehicleRangeField; }
-            set { this.vehicleRangeField = value; }
+            get
+            {
+                return this.vehicleRangeField;
+            }
+            set
+            {
+                this.vehicleRangeField = value;
+            }
         }
     }
 
@@ -9291,15 +13995,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public PedestalConfiguration PedestalConfiguration
         {
-            get { return this.pedestalConfigurationField; }
-            set { this.pedestalConfigurationField = value; }
+            get
+            {
+                return this.pedestalConfigurationField;
+            }
+            set
+            {
+                this.pedestalConfigurationField = value;
+            }
         }
 
         /// <remarks/>
         public VideoSwitchConfiguration VideoSwitchConfiguration
         {
-            get { return this.videoSwitchConfigurationField; }
-            set { this.videoSwitchConfigurationField = value; }
+            get
+            {
+                return this.videoSwitchConfigurationField;
+            }
+            set
+            {
+                this.videoSwitchConfigurationField = value;
+            }
         }
     }
 
@@ -9332,57 +14048,105 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DeltaAngleType LocationPrecision
         {
-            get { return this.locationPrecisionField; }
-            set { this.locationPrecisionField = value; }
+            get
+            {
+                return this.locationPrecisionField;
+            }
+            set
+            {
+                this.locationPrecisionField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityRangeType HorizontalVelocityRange
         {
-            get { return this.horizontalVelocityRangeField; }
-            set { this.horizontalVelocityRangeField = value; }
+            get
+            {
+                return this.horizontalVelocityRangeField;
+            }
+            set
+            {
+                this.horizontalVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityRangeType VerticalVelocityRange
         {
-            get { return this.verticalVelocityRangeField; }
-            set { this.verticalVelocityRangeField = value; }
+            get
+            {
+                return this.verticalVelocityRangeField;
+            }
+            set
+            {
+                this.verticalVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public VelocityRangeType VectorVelocityRange
         {
-            get { return this.vectorVelocityRangeField; }
-            set { this.vectorVelocityRangeField = value; }
+            get
+            {
+                return this.vectorVelocityRangeField;
+            }
+            set
+            {
+                this.vectorVelocityRangeField = value;
+            }
         }
 
         /// <remarks/>
         public AzimuthRangeType AzimuthRange
         {
-            get { return this.azimuthRangeField; }
-            set { this.azimuthRangeField = value; }
+            get
+            {
+                return this.azimuthRangeField;
+            }
+            set
+            {
+                this.azimuthRangeField = value;
+            }
         }
 
         /// <remarks/>
         public ElevationAngleRangeType ElevationAngleRange
         {
-            get { return this.elevationAngleRangeField; }
-            set { this.elevationAngleRangeField = value; }
+            get
+            {
+                return this.elevationAngleRangeField;
+            }
+            set
+            {
+                this.elevationAngleRangeField = value;
+            }
         }
 
         /// <remarks/>
         public PedestalMovementTypeCapabilitiesType PedestalMovementTypeCapabilities
         {
-            get { return this.pedestalMovementTypeCapabilitiesField; }
-            set { this.pedestalMovementTypeCapabilitiesField = value; }
+            get
+            {
+                return this.pedestalMovementTypeCapabilitiesField;
+            }
+            set
+            {
+                this.pedestalMovementTypeCapabilitiesField = value;
+            }
         }
 
         /// <remarks/>
         public PedestalVelocityControlType PedestalVelocityControl
         {
-            get { return this.pedestalVelocityControlField; }
-            set { this.pedestalVelocityControlField = value; }
+            get
+            {
+                return this.pedestalVelocityControlField;
+            }
+            set
+            {
+                this.pedestalVelocityControlField = value;
+            }
         }
     }
 
@@ -9403,16 +14167,28 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public AngularUnitsType Units
         {
-            get { return this.unitsField; }
-            set { this.unitsField = value; }
+            get
+            {
+                return this.unitsField;
+            }
+            set
+            {
+                this.unitsField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
         public double Value
         {
-            get { return this.valueField; }
-            set { this.valueField = value; }
+            get
+            {
+                return this.valueField;
+            }
+            set
+            {
+                this.valueField = value;
+            }
         }
     }
 
@@ -9507,15 +14283,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public VideoChannelIDType PrimaryVideoChannelID
         {
-            get { return this.primaryVideoChannelIDField; }
-            set { this.primaryVideoChannelIDField = value; }
+            get
+            {
+                return this.primaryVideoChannelIDField;
+            }
+            set
+            {
+                this.primaryVideoChannelIDField = value;
+            }
         }
 
         /// <remarks/>
         public VideoSwitchCommandConfiguration VideoSwitchCommandConfiguration
         {
-            get { return this.videoSwitchCommandConfigurationField; }
-            set { this.videoSwitchCommandConfigurationField = value; }
+            get
+            {
+                return this.videoSwitchCommandConfigurationField;
+            }
+            set
+            {
+                this.videoSwitchCommandConfigurationField = value;
+            }
         }
     }
 
@@ -9536,16 +14324,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("VideoChannelConfiguration")]
         public VideoChannelConfigurationType[] VideoChannelConfiguration
         {
-            get { return this.videoChannelConfigurationField; }
-            set { this.videoChannelConfigurationField = value; }
+            get
+            {
+                return this.videoChannelConfigurationField;
+            }
+            set
+            {
+                this.videoChannelConfigurationField = value;
+            }
         }
     }
 
@@ -9565,16 +14365,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public VideoChannelIDType VideoChannelID
         {
-            get { return this.videoChannelIDField; }
-            set { this.videoChannelIDField = value; }
+            get
+            {
+                return this.videoChannelIDField;
+            }
+            set
+            {
+                this.videoChannelIDField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SensorIdentification")]
         public SensorIdentificationType[] SensorIdentification
         {
-            get { return this.sensorIdentificationField; }
-            set { this.sensorIdentificationField = value; }
+            get
+            {
+                return this.sensorIdentificationField;
+            }
+            set
+            {
+                this.sensorIdentificationField = value;
+            }
         }
     }
 
@@ -9594,8 +14406,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("PointerCommandConfiguration")]
         public PointerCommandConfiguration[] PointerCommandConfiguration
         {
-            get { return this.pointerCommandConfigurationField; }
-            set { this.pointerCommandConfigurationField = value; }
+            get
+            {
+                return this.pointerCommandConfigurationField;
+            }
+            set
+            {
+                this.pointerCommandConfigurationField = value;
+            }
         }
     }
 
@@ -9616,16 +14434,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("LasingMode")]
         public LasingModeType[] LasingMode
         {
-            get { return this.lasingModeField; }
-            set { this.lasingModeField = value; }
+            get
+            {
+                return this.lasingModeField;
+            }
+            set
+            {
+                this.lasingModeField = value;
+            }
         }
     }
 
@@ -9654,46 +14484,82 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("ReceiverMode")]
         public ReceiverModeType[] ReceiverMode
         {
-            get { return this.receiverModeField; }
-            set { this.receiverModeField = value; }
+            get
+            {
+                return this.receiverModeField;
+            }
+            set
+            {
+                this.receiverModeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Band")]
         public FrequencyCategory[] Band
         {
-            get { return this.bandField; }
-            set { this.bandField = value; }
+            get
+            {
+                return this.bandField;
+            }
+            set
+            {
+                this.bandField = value;
+            }
         }
 
         /// <remarks/>
         public ReceiverConfigurationFrequencyRange FrequencyRange
         {
-            get { return this.frequencyRangeField; }
-            set { this.frequencyRangeField = value; }
+            get
+            {
+                return this.frequencyRangeField;
+            }
+            set
+            {
+                this.frequencyRangeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string FrequencyRangeAmountSupported
         {
-            get { return this.frequencyRangeAmountSupportedField; }
-            set { this.frequencyRangeAmountSupportedField = value; }
+            get
+            {
+                return this.frequencyRangeAmountSupportedField;
+            }
+            set
+            {
+                this.frequencyRangeAmountSupportedField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency MaxFrequencyRangeSize
         {
-            get { return this.maxFrequencyRangeSizeField; }
-            set { this.maxFrequencyRangeSizeField = value; }
+            get
+            {
+                return this.maxFrequencyRangeSizeField;
+            }
+            set
+            {
+                this.maxFrequencyRangeSizeField = value;
+            }
         }
     }
 
@@ -9713,15 +14579,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Frequency LowFrequency
         {
-            get { return this.lowFrequencyField; }
-            set { this.lowFrequencyField = value; }
+            get
+            {
+                return this.lowFrequencyField;
+            }
+            set
+            {
+                this.lowFrequencyField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency HighFrequency
         {
-            get { return this.highFrequencyField; }
-            set { this.highFrequencyField = value; }
+            get
+            {
+                return this.highFrequencyField;
+            }
+            set
+            {
+                this.highFrequencyField = value;
+            }
         }
     }
 
@@ -9741,8 +14619,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("TrackerCommandConfiguration")]
         public TrackerCommandConfiguration[] TrackerCommandConfiguration
         {
-            get { return this.trackerCommandConfigurationField; }
-            set { this.trackerCommandConfigurationField = value; }
+            get
+            {
+                return this.trackerCommandConfigurationField;
+            }
+            set
+            {
+                this.trackerCommandConfigurationField = value;
+            }
         }
     }
 
@@ -9763,15 +14647,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
         public TrackModeType TrackMode
         {
-            get { return this.trackModeField; }
-            set { this.trackModeField = value; }
+            get
+            {
+                return this.trackModeField;
+            }
+            set
+            {
+                this.trackModeField = value;
+            }
         }
     }
 
@@ -9831,30 +14727,54 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public VideoChannelIDType VideoChannelID
         {
-            get { return this.videoChannelIDField; }
-            set { this.videoChannelIDField = value; }
+            get
+            {
+                return this.videoChannelIDField;
+            }
+            set
+            {
+                this.videoChannelIDField = value;
+            }
         }
 
         /// <remarks/>
         public string MulticastAddress
         {
-            get { return this.multicastAddressField; }
-            set { this.multicastAddressField = value; }
+            get
+            {
+                return this.multicastAddressField;
+            }
+            set
+            {
+                this.multicastAddressField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string MulticastPort
         {
-            get { return this.multicastPortField; }
-            set { this.multicastPortField = value; }
+            get
+            {
+                return this.multicastPortField;
+            }
+            set
+            {
+                this.multicastPortField = value;
+            }
         }
 
         /// <remarks/>
         public string VideoEncoderAddress
         {
-            get { return this.videoEncoderAddressField; }
-            set { this.videoEncoderAddressField = value; }
+            get
+            {
+                return this.videoEncoderAddressField;
+            }
+            set
+            {
+                this.videoEncoderAddressField = value;
+            }
         }
     }
 
@@ -9879,31 +14799,55 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public bool MechanicalScanningSupported
         {
-            get { return this.mechanicalScanningSupportedField; }
-            set { this.mechanicalScanningSupportedField = value; }
+            get
+            {
+                return this.mechanicalScanningSupportedField;
+            }
+            set
+            {
+                this.mechanicalScanningSupportedField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MechanicalScanningSupportedSpecified
         {
-            get { return this.mechanicalScanningSupportedFieldSpecified; }
-            set { this.mechanicalScanningSupportedFieldSpecified = value; }
+            get
+            {
+                return this.mechanicalScanningSupportedFieldSpecified;
+            }
+            set
+            {
+                this.mechanicalScanningSupportedFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("OpticalCommandConfiguration")]
         public OpticalCommandConfiguration[] OpticalCommandConfiguration
         {
-            get { return this.opticalCommandConfigurationField; }
-            set { this.opticalCommandConfigurationField = value; }
+            get
+            {
+                return this.opticalCommandConfigurationField;
+            }
+            set
+            {
+                this.opticalCommandConfigurationField = value;
+            }
         }
 
         /// <remarks/>
         public VideoMotionDetectorConfigurationOpticalCapabilities OpticalCapabilities
         {
-            get { return this.opticalCapabilitiesField; }
-            set { this.opticalCapabilitiesField = value; }
+            get
+            {
+                return this.opticalCapabilitiesField;
+            }
+            set
+            {
+                this.opticalCapabilitiesField = value;
+            }
         }
     }
 
@@ -9923,15 +14867,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public OpticalCapabilitiesRanges RecognitionRanges
         {
-            get { return this.recognitionRangesField; }
-            set { this.recognitionRangesField = value; }
+            get
+            {
+                return this.recognitionRangesField;
+            }
+            set
+            {
+                this.recognitionRangesField = value;
+            }
         }
 
         /// <remarks/>
         public OpticalCapabilitiesRanges IdentificationRanges
         {
-            get { return this.identificationRangesField; }
-            set { this.identificationRangesField = value; }
+            get
+            {
+                return this.identificationRangesField;
+            }
+            set
+            {
+                this.identificationRangesField = value;
+            }
         }
     }
 
@@ -9951,8 +14907,14 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public SimpleCommandType SimpleCommand
         {
-            get { return this.simpleCommandField; }
-            set { this.simpleCommandField = value; }
+            get
+            {
+                return this.simpleCommandField;
+            }
+            set
+            {
+                this.simpleCommandField = value;
+            }
         }
 
         /// <remarks/>
@@ -9965,8 +14927,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("ValueRange", typeof(ValueRangeType))]
         public object[] Items
         {
-            get { return this.itemsField; }
-            set { this.itemsField = value; }
+            get
+            {
+                return this.itemsField;
+            }
+            set
+            {
+                this.itemsField = value;
+            }
         }
     }
 
@@ -9986,16 +14954,28 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public string Description
         {
-            get { return this.descriptionField; }
-            set { this.descriptionField = value; }
+            get
+            {
+                return this.descriptionField;
+            }
+            set
+            {
+                this.descriptionField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string Number
         {
-            get { return this.numberField; }
-            set { this.numberField = value; }
+            get
+            {
+                return this.numberField;
+            }
+            set
+            {
+                this.numberField = value;
+            }
         }
     }
 
@@ -10015,15 +14995,27 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public Frequency MinSamplingRate
         {
-            get { return this.minSamplingRateField; }
-            set { this.minSamplingRateField = value; }
+            get
+            {
+                return this.minSamplingRateField;
+            }
+            set
+            {
+                this.minSamplingRateField = value;
+            }
         }
 
         /// <remarks/>
         public Frequency MaxSamplingRate
         {
-            get { return this.maxSamplingRateField; }
-            set { this.maxSamplingRateField = value; }
+            get
+            {
+                return this.maxSamplingRateField;
+            }
+            set
+            {
+                this.maxSamplingRateField = value;
+            }
         }
     }
 
@@ -10033,6 +15025,7 @@ namespace SensorStandard.MrsTypes
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceConfiguration
     {
 
@@ -10067,108 +15060,192 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DeviceIdentificationType DeviceIdentification
         {
-            get { return this.deviceIdentificationField; }
-            set { this.deviceIdentificationField = value; }
+            get
+            {
+                return this.deviceIdentificationField;
+            }
+            set
+            {
+                this.deviceIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public string RequestorIdentification
         {
-            get { return this.requestorIdentificationField; }
-            set { this.requestorIdentificationField = value; }
+            get
+            {
+                return this.requestorIdentificationField;
+            }
+            set
+            {
+                this.requestorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public string NotificationServiceIPAddress
         {
-            get { return this.notificationServiceIPAddressField; }
-            set { this.notificationServiceIPAddressField = value; }
+            get
+            {
+                return this.notificationServiceIPAddressField;
+            }
+            set
+            {
+                this.notificationServiceIPAddressField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
         public string NotificationServicePort
         {
-            get { return this.notificationServicePortField; }
-            set { this.notificationServicePortField = value; }
+            get
+            {
+                return this.notificationServicePortField;
+            }
+            set
+            {
+                this.notificationServicePortField = value;
+            }
         }
 
         /// <remarks/>
         public LocationType LocationType
         {
-            get { return this.locationTypeField; }
-            set { this.locationTypeField = value; }
+            get
+            {
+                return this.locationTypeField;
+            }
+            set
+            {
+                this.locationTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DeviceConfiguration")]
         public DeviceConfiguration[] DeviceConfiguration1
         {
-            get { return this.deviceConfiguration1Field; }
-            set { this.deviceConfiguration1Field = value; }
+            get
+            {
+                return this.deviceConfiguration1Field;
+            }
+            set
+            {
+                this.deviceConfiguration1Field = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SensorConfiguration")]
         public SensorConfiguration[] SensorConfiguration
         {
-            get { return this.sensorConfigurationField; }
-            set { this.sensorConfigurationField = value; }
+            get
+            {
+                return this.sensorConfigurationField;
+            }
+            set
+            {
+                this.sensorConfigurationField = value;
+            }
         }
 
         /// <remarks/>
         public GeometricElement ExpandedLocationType
         {
-            get { return this.expandedLocationTypeField; }
-            set { this.expandedLocationTypeField = value; }
+            get
+            {
+                return this.expandedLocationTypeField;
+            }
+            set
+            {
+                this.expandedLocationTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DeviceArea")]
         public DeviceArea[] DeviceArea
         {
-            get { return this.deviceAreaField; }
-            set { this.deviceAreaField = value; }
+            get
+            {
+                return this.deviceAreaField;
+            }
+            set
+            {
+                this.deviceAreaField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public MessageType MessageType
         {
-            get { return this.messageTypeField; }
-            set { this.messageTypeField = value; }
+            get
+            {
+                return this.messageTypeField;
+            }
+            set
+            {
+                this.messageTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MessageTypeSpecified
         {
-            get { return this.messageTypeFieldSpecified; }
-            set { this.messageTypeFieldSpecified = value; }
+            get
+            {
+                return this.messageTypeFieldSpecified;
+            }
+            set
+            {
+                this.messageTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ExecutionStatusType ExecutionStatus
         {
-            get { return this.executionStatusField; }
-            set { this.executionStatusField = value; }
+            get
+            {
+                return this.executionStatusField;
+            }
+            set
+            {
+                this.executionStatusField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ExecutionStatusSpecified
         {
-            get { return this.executionStatusFieldSpecified; }
-            set { this.executionStatusFieldSpecified = value; }
+            get
+            {
+                return this.executionStatusFieldSpecified;
+            }
+            set
+            {
+                this.executionStatusFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ProtocolVersionType ProtocolVersion
         {
-            get { return this.protocolVersionField; }
-            set { this.protocolVersionField = value; }
+            get
+            {
+                return this.protocolVersionField;
+            }
+            set
+            {
+                this.protocolVersionField = value;
+            }
         }
     }
 
@@ -10188,8 +15265,14 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlElementAttribute("OperationProfile")]
         public OperationProfile[] OperationProfile
         {
-            get { return this.operationProfileField; }
-            set { this.operationProfileField = value; }
+            get
+            {
+                return this.operationProfileField;
+            }
+            set
+            {
+                this.operationProfileField = value;
+            }
         }
     }
 
@@ -10224,71 +15307,125 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         public DeviceIdentificationType DeviceIdentification
         {
-            get { return this.deviceIdentificationField; }
-            set { this.deviceIdentificationField = value; }
+            get
+            {
+                return this.deviceIdentificationField;
+            }
+            set
+            {
+                this.deviceIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         public string RequestorIdentification
         {
-            get { return this.requestorIdentificationField; }
-            set { this.requestorIdentificationField = value; }
+            get
+            {
+                return this.requestorIdentificationField;
+            }
+            set
+            {
+                this.requestorIdentificationField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SubscriptionType")]
         public SubscriptionTypeType[] SubscriptionType
         {
-            get { return this.subscriptionTypeField; }
-            set { this.subscriptionTypeField = value; }
+            get
+            {
+                return this.subscriptionTypeField;
+            }
+            set
+            {
+                this.subscriptionTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DeviceSubscriptionConfiguration")]
         public DeviceSubscriptionConfiguration[] DeviceSubscriptionConfiguration1
         {
-            get { return this.deviceSubscriptionConfiguration1Field; }
-            set { this.deviceSubscriptionConfiguration1Field = value; }
+            get
+            {
+                return this.deviceSubscriptionConfiguration1Field;
+            }
+            set
+            {
+                this.deviceSubscriptionConfiguration1Field = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public MessageType MessageType
         {
-            get { return this.messageTypeField; }
-            set { this.messageTypeField = value; }
+            get
+            {
+                return this.messageTypeField;
+            }
+            set
+            {
+                this.messageTypeField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MessageTypeSpecified
         {
-            get { return this.messageTypeFieldSpecified; }
-            set { this.messageTypeFieldSpecified = value; }
+            get
+            {
+                return this.messageTypeFieldSpecified;
+            }
+            set
+            {
+                this.messageTypeFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ExecutionStatusType ExecutionStatus
         {
-            get { return this.executionStatusField; }
-            set { this.executionStatusField = value; }
+            get
+            {
+                return this.executionStatusField;
+            }
+            set
+            {
+                this.executionStatusField = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ExecutionStatusSpecified
         {
-            get { return this.executionStatusFieldSpecified; }
-            set { this.executionStatusFieldSpecified = value; }
+            get
+            {
+                return this.executionStatusFieldSpecified;
+            }
+            set
+            {
+                this.executionStatusFieldSpecified = value;
+            }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public ProtocolVersionType ProtocolVersion
         {
-            get { return this.protocolVersionField; }
-            set { this.protocolVersionField = value; }
+            get
+            {
+                return this.protocolVersionField;
+            }
+            set
+            {
+                this.protocolVersionField = value;
+            }
         }
     }
 
@@ -10326,4 +15463,5 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         Reserved5,
     }
+
 }

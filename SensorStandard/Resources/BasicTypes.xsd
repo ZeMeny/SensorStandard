@@ -61,7 +61,7 @@
 	   -->
 	<snsr_std:simpleType name="LimitedLengthString">
 		<snsr_std:restriction base="snsr_std:string">
-			<snsr_std:maxLength value="70"/>
+			<snsr_std:maxLength value="120"/>
 			<snsr_std:pattern value="[a-zA-Zא-ת0-9_()';,*. \\\-/]*"/>
 		</snsr_std:restriction>
 	</snsr_std:simpleType>
@@ -81,6 +81,7 @@
 		<snsr_std:restriction base="snsr_std:string">
 			<snsr_std:enumeration value="Undefined"/>
 			<snsr_std:enumeration value="Device Hub"/>
+			<snsr_std:enumeration value="Acoustic Detection System"/>
 			<snsr_std:enumeration value="EO Device"/>
 			<snsr_std:enumeration value="Fire Locating Device"/>
 			<snsr_std:enumeration value="Artillery Locating Device"/>
@@ -100,6 +101,7 @@
 			<snsr_std:enumeration value="AT Defense Device"/>
 			<snsr_std:enumeration value="Unattended Ground Sensors"/>
 			<snsr_std:enumeration value="Underground Fence Device"/>
+			<snsr_std:enumeration value="Video Analytic System"/>
 			<snsr_std:enumeration value="Reserved1"/>
 			<snsr_std:enumeration value="Reserved2"/>
 			<snsr_std:enumeration value="Reserved3"/>
@@ -159,6 +161,7 @@
 			<snsr_std:enumeration value="Radar"/>
 			<snsr_std:enumeration value="Stills Camera"/>
 			<snsr_std:enumeration value="Staring Camera"/>
+			<snsr_std:enumeration value="LPR"/>
 			<snsr_std:enumeration value="Shake Detector"/>
 			<snsr_std:enumeration value="Stairs Detector"/>
 			<snsr_std:enumeration value="Generator"/>
@@ -177,6 +180,7 @@
 			<snsr_std:enumeration value="Remote Power"/>
 			<snsr_std:enumeration value="Sensor Computer"/>
 			<snsr_std:enumeration value="Recorder"/>
+			<snsr_std:enumeration value="Microphone"/>
 			<snsr_std:enumeration value="Reserved1"/>
 			<snsr_std:enumeration value="Reserved2"/>
 			<snsr_std:enumeration value="Reserved3"/>
@@ -1075,6 +1079,10 @@
 			<snsr_std:enumeration value="Undefined"/>
 			<snsr_std:enumeration value="Yes"/>
 			<snsr_std:enumeration value="No"/>
+			<snsr_std:enumeration value="Activated"/>
+			<snsr_std:enumeration value="DeActivated"/>
+			<snsr_std:enumeration value="Undertreatment"/>
+			<snsr_std:enumeration value="Done"/>
 		</snsr_std:restriction>
 	</snsr_std:simpleType>
 	<!-- 
@@ -1227,8 +1235,16 @@
 		</snsr_std:restriction>
 	</snsr_std:simpleType>
 	<!-- 
-
-	   -->
+	
+	-->
+	<snsr_std:complexType name="AccuracyType">
+		<snsr_std:sequence>
+			<snsr_std:element name="TimeRange" type="DeltaTime" minOccurs="0"/>
+			<snsr_std:element name="Location" type="GeometricElement"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+     <!-- 
+	  -->
 	<snsr_std:complexType name="File">
 		<snsr_std:sequence>
 			<snsr_std:element name="CreationTime" type="TimeType" minOccurs="0"/>
@@ -1236,7 +1252,7 @@
 			<snsr_std:element name="File" type="snsr_std:base64Binary" />
 			<snsr_std:choice>
 				<snsr_std:element name="NameJPEG" type="NameJPEG"/>
-				<snsr_std:element name="NameMPEG" type="NameMPEG"/>
+				<snsr_std:element name="NameWAV" type="NameWAV"/>
 				<snsr_std:element name="NameMP4" type="NameMP4"/>
 			</snsr_std:choice>
 			<snsr_std:element name="Location" type="Point" minOccurs="0"/>
@@ -1253,9 +1269,9 @@
 	<!-- 
 
 	   -->
-	<snsr_std:simpleType name="NameMPEG">
+	<snsr_std:simpleType name="NameWAV">
 		<snsr_std:restriction base="snsr_std:string">
-			<snsr_std:pattern value="[a-zA-Zא-ת0-9_(). -]{1,100}\.(mpeg)"/>
+			<snsr_std:pattern value="[a-zA-Zא-ת0-9_(). -]{1,100}\.(wav)"/>
 		</snsr_std:restriction>
 	</snsr_std:simpleType>
 	<!-- 
@@ -1322,7 +1338,13 @@
 	
 	-->
 	<snsr_std:simpleType name="SeverityLevelsType">
-		<snsr_std:restriction base="snsr_std:string"/>
+		<snsr_std:restriction base="snsr_std:string">
+			<snsr_std:enumeration value="Undefined"/>
+			<snsr_std:enumeration value="Critical"/>
+			<snsr_std:enumeration value="High"/>
+			<snsr_std:enumeration value="Medium"/>
+			<snsr_std:enumeration value="Low"/>
+		</snsr_std:restriction>
 	</snsr_std:simpleType>
 	<!-- 
 	        
@@ -1351,4 +1373,5 @@
 			<snsr_std:enumeration value="AreaOfIntrest"/>
 		</snsr_std:restriction>
 	</snsr_std:simpleType>
+
 </snsr_std:schema>
