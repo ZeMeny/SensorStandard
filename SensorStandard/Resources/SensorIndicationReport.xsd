@@ -82,8 +82,7 @@
 				<snsr_std:element name="SourceSystem" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="AnalyticAlertTimeout" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
 				<snsr_std:element name="CollateID" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="SiteID" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="Coordinates" type="LimitedLengthString" minOccurs="0"/>				
+				<snsr_std:element name="SiteID" type="LimitedLengthString" minOccurs="0"/>		
 				<snsr_std:element ref="SystemIdentification" minOccurs="0"/>
 				<snsr_std:element ref="AlertIdentification" minOccurs="0"/>
 				<snsr_std:element ref="PersonIdentification" minOccurs="0"/>
