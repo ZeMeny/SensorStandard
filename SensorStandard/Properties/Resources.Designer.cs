@@ -22,7 +22,7 @@ namespace SensorStandard.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace SensorStandard.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SensorStandard.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace SensorStandard.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -70,7 +70,7 @@ namespace SensorStandard.Properties {
         ///	&lt;snsr_std:annotation&gt;
         ///		&lt; [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string BasicTypes {
+        public static string BasicTypes {
             get {
                 return ResourceManager.GetString("BasicTypes", resourceCulture);
             }
@@ -85,7 +85,7 @@ namespace SensorStandard.Properties {
         ///&lt;snsr_std:schema xmlns:snsr_std=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns=&quot;urn:SNSR_STD&quot; targetNamespace=&quot;urn:SNSR_STD&quot; elementFormDefault=&quot;qualified&quot;&gt;
         ///	&lt;snsr_std:include schemaLo [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ControlMessage {
+        public static string ControlMessage {
             get {
                 return ResourceManager.GetString("ControlMessage", resourceCulture);
             }
@@ -100,7 +100,7 @@ namespace SensorStandard.Properties {
         ///&lt;snsr_std:schema xmlns=&quot;urn:SNSR_STD&quot; xmlns:snsr_std=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;urn:SNSR_STD&quot; elementFormDefault=&quot;qualified&quot;&gt;
         ///	&lt;snsr_std:include schemaLo [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string SensorConfiguration {
+        public static string SensorConfiguration {
             get {
                 return ResourceManager.GetString("SensorConfiguration", resourceCulture);
             }
@@ -115,7 +115,7 @@ namespace SensorStandard.Properties {
         ///&lt;snsr_std:schema xmlns=&quot;urn:SNSR_STD&quot; xmlns:snsr_std=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;urn:SNSR_STD&quot; elementFormDefault=&quot;qualified&quot;&gt;
         ///	&lt;snsr_std:include schemaLo [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string SensorIndicationReport {
+        public static string SensorIndicationReport {
             get {
                 return ResourceManager.GetString("SensorIndicationReport", resourceCulture);
             }
@@ -130,7 +130,7 @@ namespace SensorStandard.Properties {
         ///&lt;snsr_std:schema xmlns=&quot;urn:SNSR_STD&quot; xmlns:snsr_std=&quot;http://www.w3.org/2001/XMLSchema&quot; targetNamespace=&quot;urn:SNSR_STD&quot; elementFormDefault=&quot;qualified&quot;&gt;
         ///	&lt;snsr_std:include schemaLo [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string SensorStatusReport {
+        public static string SensorStatusReport {
             get {
                 return ResourceManager.GetString("SensorStatusReport", resourceCulture);
             }
@@ -147,7 +147,7 @@ namespace SensorStandard.Properties {
         ///	&lt;!-- 
         ///	    [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string SubscriptionConfiguration {
+        public static string SubscriptionConfiguration {
             get {
                 return ResourceManager.GetString("SubscriptionConfiguration", resourceCulture);
             }

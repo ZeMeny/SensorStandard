@@ -62,29 +62,29 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BasicTypes.xsd">
+    <Resource Include="Resources\BasicTypes.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Resources\ControlMessage.xsd">
+    </Resource>
+    <Resource Include="Resources\ControlMessage.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Resources\SensorConfiguration.xsd">
+    </Resource>
+    <Resource Include="Resources\SensorConfiguration.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Resources\SensorIndicationReport.xsd">
+    </Resource>
+    <Resource Include="Resources\SensorIndicationReport.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Resources\SensorStatusReport.xsd">
+    </Resource>
+    <Resource Include="Resources\SensorStatusReport.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Resources\SubscriptionConfiguration.xsd">
+    </Resource>
+    <Resource Include="Resources\SubscriptionConfiguration.xsd">
       <SubType>Designer</SubType>
-    </None>
+    </Resource>
     <None Include="Tools\GenerateClasses.bat" />
   </ItemGroup>
   <ItemGroup />

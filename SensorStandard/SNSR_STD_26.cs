@@ -670,7 +670,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class CommandMessage
     {
@@ -4591,7 +4591,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceIndicationReport
     {
@@ -9998,7 +9998,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceStatusReport
     {
@@ -15024,8 +15024,9 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
+    [XmlInclude(typeof(DeviceConfiguration))]
     public partial class DeviceConfiguration
     {
 
@@ -15281,7 +15282,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceSubscriptionConfiguration
     {

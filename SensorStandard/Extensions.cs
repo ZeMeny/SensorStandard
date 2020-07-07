@@ -13,7 +13,7 @@ namespace SensorStandard
 		private static bool isValid = true;
 		private static Exception error;
 
-		public static bool IsValid<T>(this T xml, out Exception exception) where T: class
+		public static bool IsValid<T>(this T message, out Exception exception) where T: MrsMessage
 		{
 			isValid = true;
 			XmlDocument asset = new XmlDocument();
@@ -54,31 +54,20 @@ namespace SensorStandard
 			schema = XmlSchema.Read(schemaReader, ValidationCallBack);
 			asset.Schemas.Add(schema);
 
-			XmlSerializer serializer = new XmlSerializer(typeof(T));
-			StringWriter writer = new StringWriter();
-			serializer.Serialize(writer, xml);
-
-			asset.Load(new StringReader(writer.ToString()));
+			asset.Load(new StringReader(message.ToXml()));
 			
 			asset.Validate(ValidationCallBack);
 			exception = error;
 			return isValid;
 		}
 
-		public static string ToXml<T>(this T message) where T: MrsMessage
+		public static string ToXml<T>(this T message) where T : MrsMessage
 		{
-			try
-			{
-				var serializer = new XmlSerializer(typeof(T));
-				var writer = new StringWriter();
-				serializer.Serialize(writer, message);
+			var serializer = new XmlSerializer(message.GetType());
+			var writer = new StringWriter();
+			serializer.Serialize(writer, message);
 
-				return writer.ToString();
-			}
-			catch
-			{
-				return null;
-			}
+			return writer.ToString();
 		}
 
 		private static void ValidationCallBack(object sender, ValidationEventArgs args)
