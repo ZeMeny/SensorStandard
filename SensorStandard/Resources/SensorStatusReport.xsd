@@ -15,7 +15,6 @@
 		<snsr_std:complexType>
 			<snsr_std:sequence>
 				<snsr_std:element name="DeviceIdentification" type="DeviceIdentificationType"/>
-				<snsr_std:element ref="LocationType" minOccurs="0"/>
 				<snsr_std:choice>
 					<snsr_std:sequence>
 						<snsr_std:element name="DetailedSensorBIT" type="DetailedSensorBITType" minOccurs="0" maxOccurs="100"/>
@@ -408,7 +407,6 @@
 			<snsr_std:sequence>
 				<snsr_std:element name="PictureState" type="PictureState"/>
 				<snsr_std:element name="IndicationID" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
-				<snsr_std:element name="MediaFile" type="File" minOccurs="0" maxOccurs="5"/>
 			</snsr_std:sequence>
 		</snsr_std:complexType>
 	</snsr_std:element>

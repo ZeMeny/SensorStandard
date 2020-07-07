@@ -135,7 +135,7 @@
 				</snsr_std:element>
 				<snsr_std:element name="DetectionStartTime" type="TimeType" minOccurs="0"/>
 				<snsr_std:element name="Duration" type="DeltaTime" minOccurs="0"/>
-				<snsr_std:element name="Location" type="GeometricElement" maxOccurs="20"/>
+				<snsr_std:element name="Location" type="GeometricElement"/>
 				<snsr_std:element name="Accuracy" type="Ellipse" minOccurs="0"/>
 			</snsr_std:sequence>
 		</snsr_std:complexType>
@@ -285,7 +285,6 @@
 				<snsr_std:element name="ActivityTypeReliability" type="Percent" minOccurs="0"/>
 				<snsr_std:element name="LastUpdatedDetectionTime" type="TimeType"/>
 				<snsr_std:element name="Size" type="AreaMeasuring" minOccurs="0"/>
-				<snsr_std:element name="MediaFile" type="File" minOccurs="0" maxOccurs="99"/>
 			</snsr_std:sequence>
 		</snsr_std:complexType>
 	</snsr_std:element>

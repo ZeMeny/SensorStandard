@@ -58,7 +58,7 @@
     </Compile>
     <Compile Include="Extensions.cs" />
     <Compile Include="SNSR_STDSOAPService.cs" />
-    <Compile Include="SNSR_STD_26.cs" />
+    <Compile Include="SNSR_STD_23.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
