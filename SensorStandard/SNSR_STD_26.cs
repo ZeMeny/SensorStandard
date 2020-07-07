@@ -17,7 +17,6 @@ using System.Xml.Serialization;
 namespace SensorStandard.MrsTypes
 {
     /// <remarks/>
-    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1407,6 +1406,10 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         Microphone,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Video Analytic Camera")]
+        VideoAnalyticCamera,
 
         /// <remarks/>
         Reserved1,
@@ -5243,15 +5246,11 @@ namespace SensorStandard.MrsTypes
 
         private TimeType creationTimeField;
 
-        private string idField;
-
         private byte[] file1Field;
 
         private string itemField;
 
         private ItemChoiceType3 itemElementNameField;
-
-        private Point locationField;
 
         /// <remarks/>
         public TimeType CreationTime
@@ -5263,20 +5262,6 @@ namespace SensorStandard.MrsTypes
             set
             {
                 this.creationTimeField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
-        public string ID
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
             }
         }
 
@@ -5322,19 +5307,6 @@ namespace SensorStandard.MrsTypes
             set
             {
                 this.itemElementNameField = value;
-            }
-        }
-
-        /// <remarks/>
-        public Point Location
-        {
-            get
-            {
-                return this.locationField;
-            }
-            set
-            {
-                this.locationField = value;
             }
         }
     }
@@ -8437,13 +8409,7 @@ namespace SensorStandard.MrsTypes
 
         private string collateIDField;
 
-        private string sensorGroupIDField;
-
-        private string sensorGroupNameField;
-
-        private string suspectGroupField;
-
-        private string coordinatesField;
+        private string siteIDField;
 
         private SystemIdentification systemIdentificationField;
 
@@ -8453,7 +8419,7 @@ namespace SensorStandard.MrsTypes
 
         private VehicleIdentification vehicleIdentificationField;
 
-        private evidences[] evidencesField;
+        private Evidences[] evidencesField;
 
         private File[] pictureField;
 
@@ -8607,7 +8573,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public string evidenceSquare
+        public string EvidenceSquare
         {
             get
             {
@@ -8620,7 +8586,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public Percent confidence
+        public Percent Confidence
         {
             get
             {
@@ -8633,7 +8599,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public TimeType distributionTime
+        public TimeType DistributionTime
         {
             get
             {
@@ -8646,7 +8612,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public string sourceSystem
+        public string SourceSystem
         {
             get
             {
@@ -8660,7 +8626,7 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "nonNegativeInteger")]
-        public string analyticAlertTimeout
+        public string AnalyticAlertTimeout
         {
             get
             {
@@ -8673,7 +8639,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public string collateID
+        public string CollateID
         {
             get
             {
@@ -8686,54 +8652,15 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public string sensorGroupID
+        public string SiteID
         {
             get
             {
-                return this.sensorGroupIDField;
+                return this.siteIDField;
             }
             set
             {
-                this.sensorGroupIDField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string sensorGroupName
-        {
-            get
-            {
-                return this.sensorGroupNameField;
-            }
-            set
-            {
-                this.sensorGroupNameField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string suspectGroup
-        {
-            get
-            {
-                return this.suspectGroupField;
-            }
-            set
-            {
-                this.suspectGroupField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string coordinates
-        {
-            get
-            {
-                return this.coordinatesField;
-            }
-            set
-            {
-                this.coordinatesField = value;
+                this.siteIDField = value;
             }
         }
 
@@ -8790,8 +8717,8 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("evidences")]
-        public evidences[] evidences
+        [System.Xml.Serialization.XmlElementAttribute("Evidences")]
+        public Evidences[] Evidences
         {
             get
             {
@@ -8945,7 +8872,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public TimeType systemAlertTime
+        public TimeType SystemAlertTime
         {
             get
             {
@@ -8958,7 +8885,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public TimeType sensorAlertTime
+        public TimeType SensorAlertTime
         {
             get
             {
@@ -9173,7 +9100,7 @@ namespace SensorStandard.MrsTypes
 
         private bool genderFieldSpecified;
 
-        private string birthDateField;
+        private TimeType birthDateField;
 
         private string[] permitsField;
 
@@ -9286,7 +9213,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public string BirthDate
+        public TimeType BirthDate
         {
             get
             {
@@ -9362,7 +9289,7 @@ namespace SensorStandard.MrsTypes
 
         private bool vehicleTypeFieldSpecified;
 
-        private ColorType colorField;
+        private string colorField;
 
         private string vehicleMakerNameField;
 
@@ -9429,7 +9356,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public ColorType Color
+        public string Color
         {
             get
             {
@@ -9543,6 +9470,9 @@ namespace SensorStandard.MrsTypes
         Van,
 
         /// <remarks/>
+        Bus,
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Reserved 1")]
         Reserved1,
 
@@ -9561,95 +9491,6 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Reserved 5")]
         Reserved5,
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public partial class ColorType
-    {
-
-        private object itemField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Color", typeof(Color))]
-        [System.Xml.Serialization.XmlElementAttribute("GrayScale", typeof(string), DataType = "nonNegativeInteger")]
-        public object Item
-        {
-            get
-            {
-                return this.itemField;
-            }
-            set
-            {
-                this.itemField = value;
-            }
-        }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public enum Color
-    {
-
-        /// <remarks/>
-        Undefined,
-
-        /// <remarks/>
-        White,
-
-        /// <remarks/>
-        Black,
-
-        /// <remarks/>
-        Red,
-
-        /// <remarks/>
-        Green,
-
-        /// <remarks/>
-        LightGreen,
-
-        /// <remarks/>
-        Blue,
-
-        /// <remarks/>
-        LightBlue,
-
-        /// <remarks/>
-        Yellow,
-
-        /// <remarks/>
-        Orange,
-
-        /// <remarks/>
-        Purple,
-
-        /// <remarks/>
-        Pink,
-
-        /// <remarks/>
-        Cyan,
-
-        /// <remarks/>
-        Brown,
-
-        /// <remarks/>
-        Gray,
-
-        /// <remarks/>
-        Gold,
-
-        /// <remarks/>
-        Silver,
-
-        /// <remarks/>
-        Bronze,
     }
 
     /// <remarks/>
@@ -9705,7 +9546,7 @@ namespace SensorStandard.MrsTypes
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
-    public partial class evidences
+    public partial class Evidences
     {
 
         private string evidenceIdField;
@@ -9717,7 +9558,7 @@ namespace SensorStandard.MrsTypes
         private Point evidenceLocationField;
 
         /// <remarks/>
-        public string evidenceId
+        public string EvidenceId
         {
             get
             {
@@ -9730,7 +9571,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public string evidenceType
+        public string EvidenceType
         {
             get
             {
@@ -9743,7 +9584,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public TimeType evidenceLocalTime
+        public TimeType EvidenceLocalTime
         {
             get
             {
@@ -9756,7 +9597,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public Point evidenceLocation
+        public Point EvidenceLocation
         {
             get
             {
@@ -9991,6 +9832,95 @@ namespace SensorStandard.MrsTypes
                 this.mediaFileField = value;
             }
         }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public partial class ColorType
+    {
+
+        private object itemField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Color", typeof(Color))]
+        [System.Xml.Serialization.XmlElementAttribute("GrayScale", typeof(string), DataType = "nonNegativeInteger")]
+        public object Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public enum Color
+    {
+
+        /// <remarks/>
+        Undefined,
+
+        /// <remarks/>
+        White,
+
+        /// <remarks/>
+        Black,
+
+        /// <remarks/>
+        Red,
+
+        /// <remarks/>
+        Green,
+
+        /// <remarks/>
+        LightGreen,
+
+        /// <remarks/>
+        Blue,
+
+        /// <remarks/>
+        LightBlue,
+
+        /// <remarks/>
+        Yellow,
+
+        /// <remarks/>
+        Orange,
+
+        /// <remarks/>
+        Purple,
+
+        /// <remarks/>
+        Pink,
+
+        /// <remarks/>
+        Cyan,
+
+        /// <remarks/>
+        Brown,
+
+        /// <remarks/>
+        Gray,
+
+        /// <remarks/>
+        Gold,
+
+        /// <remarks/>
+        Silver,
+
+        /// <remarks/>
+        Bronze,
     }
 
     /// <remarks/>
@@ -15026,7 +14956,6 @@ namespace SensorStandard.MrsTypes
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
-    [XmlInclude(typeof(DeviceConfiguration))]
     public partial class DeviceConfiguration
     {
 
@@ -15464,5 +15393,4 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         Reserved5,
     }
-
 }

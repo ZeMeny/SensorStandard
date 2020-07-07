@@ -18,26 +18,14 @@ namespace SensorStandard
 			isValid = true;
 			XmlDocument asset = new XmlDocument();
 
-			// add configuration schema
-			TextReader reader = new StringReader(Resources.SensorConfiguration);
+			// add basic types schema
+			TextReader reader = new StringReader(Resources.BasicTypes);
 			XmlTextReader schemaReader = new XmlTextReader(reader);
 			XmlSchema schema = XmlSchema.Read(schemaReader, ValidationCallBack);
 			asset.Schemas.Add(schema);
 
-			// add basic types schema
-			reader = new StringReader(Resources.BasicTypes);
-			schemaReader = new XmlTextReader(reader);
-			schema = XmlSchema.Read(schemaReader, ValidationCallBack);
-			asset.Schemas.Add(schema);
-
 			// add command message schema
 			reader = new StringReader(Resources.ControlMessage);
-			schemaReader = new XmlTextReader(reader);
-			schema = XmlSchema.Read(schemaReader, ValidationCallBack);
-			asset.Schemas.Add(schema);
-
-			// add subscription schema
-			reader = new StringReader(Resources.SubscriptionConfiguration);
 			schemaReader = new XmlTextReader(reader);
 			schema = XmlSchema.Read(schemaReader, ValidationCallBack);
 			asset.Schemas.Add(schema);
@@ -50,6 +38,18 @@ namespace SensorStandard
 
 			// add status schema
 			reader = new StringReader(Resources.SensorStatusReport);
+			schemaReader = new XmlTextReader(reader);
+			schema = XmlSchema.Read(schemaReader, ValidationCallBack);
+			asset.Schemas.Add(schema);
+
+			// add configuration schema
+			reader = new StringReader(Resources.SensorConfiguration);
+			schemaReader = new XmlTextReader(reader);
+			schema = XmlSchema.Read(schemaReader, ValidationCallBack);
+			asset.Schemas.Add(schema);
+
+			// add subscription schema
+			reader = new StringReader(Resources.SubscriptionConfiguration);
 			schemaReader = new XmlTextReader(reader);
 			schema = XmlSchema.Read(schemaReader, ValidationCallBack);
 			asset.Schemas.Add(schema);

@@ -76,21 +76,19 @@
 				<snsr_std:element name="Message" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="RuleDescription" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="StallTime" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
-				<snsr_std:element name="evidenceSquare" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="confidence" type="Percent" minOccurs="0"/>				
-				<snsr_std:element name="distributionTime" type="TimeType" minOccurs="0"/>				
-				<snsr_std:element name="sourceSystem" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="analyticAlertTimeout" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
-				<snsr_std:element name="collateID" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="sensorGroupID" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="sensorGroupName" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="suspectGroup" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="coordinates" type="LimitedLengthString" minOccurs="0"/>				
+				<snsr_std:element name="EvidenceSquare" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="Confidence" type="Percent" minOccurs="0"/>				
+				<snsr_std:element name="DistributionTime" type="TimeType" minOccurs="0"/>				
+				<snsr_std:element name="SourceSystem" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="AnalyticAlertTimeout" type="LimitedNonNegativeIntegerType" minOccurs="0"/>
+				<snsr_std:element name="CollateID" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="SiteID" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="Coordinates" type="LimitedLengthString" minOccurs="0"/>				
 				<snsr_std:element ref="SystemIdentification" minOccurs="0"/>
 				<snsr_std:element ref="AlertIdentification" minOccurs="0"/>
 				<snsr_std:element ref="PersonIdentification" minOccurs="0"/>
 				<snsr_std:element ref="VehicleIdentification" minOccurs="0"/>	
-				<snsr_std:element ref="evidences" minOccurs="0" maxOccurs="50"/>
+				<snsr_std:element ref="Evidences" minOccurs="0" maxOccurs="50"/>
 				<snsr_std:element name="Picture" type="File" minOccurs="0" maxOccurs="3"/>
 				<snsr_std:element name="Video" type="File" minOccurs="0" maxOccurs="3"/>
 			</snsr_std:sequence>
@@ -99,13 +97,13 @@
 	<!--	
 	
 	   -->
-	<snsr_std:element name="evidences">
+	<snsr_std:element name="Evidences">
 		<snsr_std:complexType>
 			<snsr_std:sequence>
-				<snsr_std:element name="evidenceId" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="evidenceType" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="evidenceLocalTime" type="TimeType" minOccurs="0"/>
-				<snsr_std:element name="evidenceLocation" type="Point" minOccurs="0"/>
+				<snsr_std:element name="EvidenceId" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="EvidenceType" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="EvidenceLocalTime" type="TimeType" minOccurs="0"/>
+				<snsr_std:element name="EvidenceLocation" type="Point" minOccurs="0"/>
 			</snsr_std:sequence>
 		</snsr_std:complexType>
 	</snsr_std:element>
@@ -120,8 +118,8 @@
 				<snsr_std:element name="WatchDirection" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="CameraName" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="CameraID" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="systemAlertTime" type="TimeType"/>
-				<snsr_std:element name="sensorAlertTime" type="TimeType"/>
+				<snsr_std:element name="SystemAlertTime" type="TimeType"/>
+				<snsr_std:element name="SensorAlertTime" type="TimeType"/>
 			</snsr_std:sequence>
 		</snsr_std:complexType>
 	</snsr_std:element>
@@ -154,7 +152,7 @@
 				<snsr_std:element name="Age" type="LimitedNonNegativeIntegerType" minOccurs="0"/> 
 				<snsr_std:element name="Reliability" type="Percent" minOccurs="0"/> 
 				<snsr_std:element name="Gender" type="GenderType" minOccurs="0"/> 
-				<snsr_std:element name="BirthDate" type="LimitedLengthString" minOccurs="0"/> 
+				<snsr_std:element name="BirthDate" type="TimeType" minOccurs="0"/> 
 				<snsr_std:element name="Permits" type="LimitedLengthString" minOccurs="0" maxOccurs="50"/>
 				<snsr_std:element name="Prevents" type="LimitedLengthString" minOccurs="0" maxOccurs="50"/>
 			</snsr_std:sequence>
@@ -168,7 +166,7 @@
 			<snsr_std:sequence>
 				<snsr_std:element name="IsLicensePlate" type="StatusType" minOccurs="0"/>
 				<snsr_std:element name="VehicleType" type="VehicleType" minOccurs="0"/>  <!-- Add Types of Detection on DetectionType -->				
-				<snsr_std:element name="Color" type="ColorType" minOccurs="0"/>				
+				<snsr_std:element name="Color" type="LimitedLengthString" minOccurs="0"/>				
 				<snsr_std:element name="VehicleMakerName" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="VehicleModelName" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="LicenseType" type="LicenseType" minOccurs="0"/>
@@ -692,6 +690,7 @@
 			<snsr_std:enumeration value="Bicycle"/>
 			<snsr_std:enumeration value="Scooter"/>
 			<snsr_std:enumeration value="Van"/>
+			<snsr_std:enumeration value="Bus"/>
 			<snsr_std:enumeration value="Reserved 1"/>
 			<snsr_std:enumeration value="Reserved 2"/>
 			<snsr_std:enumeration value="Reserved 3"/>
