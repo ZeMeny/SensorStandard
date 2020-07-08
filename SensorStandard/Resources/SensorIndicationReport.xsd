@@ -114,7 +114,7 @@
 			<snsr_std:sequence>
 				<snsr_std:element name="SystemType" type="SensorTypeType"/>
 				<snsr_std:element name="LocationName" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="WatchDirection" type="LimitedLengthString" minOccurs="0"/>
+				<snsr_std:element name="FacingDirection" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="CameraName" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="CameraID" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="SystemAlertTime" type="TimeType"/>
@@ -128,7 +128,7 @@
 	<snsr_std:element name="AlertIdentification">
 		<snsr_std:complexType>
 			<snsr_std:sequence>
-				<snsr_std:element name="AlertType" type="AnalyticAlertType"/> <!-- Add Types Harkasha-->
+				<snsr_std:element name="AlertType" type="AnalyticAlertType"/>
 				<snsr_std:element name="AlertSubType" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="AlertText" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="AlertStatus" type="StatusType" minOccurs="0"/>
@@ -168,7 +168,7 @@
 				<snsr_std:element name="Color" type="LimitedLengthString" minOccurs="0"/>				
 				<snsr_std:element name="VehicleMakerName" type="LimitedLengthString" minOccurs="0"/>
 				<snsr_std:element name="VehicleModelName" type="LimitedLengthString" minOccurs="0"/>
-				<snsr_std:element name="LicenseType" type="LicenseType" minOccurs="0"/>
+				<snsr_std:element name="LicensePlateType" type="LicensePlateType" minOccurs="0"/>
 				<snsr_std:element name="LicenseNumber" type="LimitedLengthString" minOccurs="0"/>
 			</snsr_std:sequence>
 		</snsr_std:complexType>
@@ -639,7 +639,7 @@
 	
 	-->
 	
-	<snsr_std:simpleType name="LicenseType">
+	<snsr_std:simpleType name="LicensePlateType">
 		<snsr_std:restriction base="snsr_std:string">
 			<snsr_std:enumeration value="Undefined"/>
 			<snsr_std:enumeration value="Israeli"/>

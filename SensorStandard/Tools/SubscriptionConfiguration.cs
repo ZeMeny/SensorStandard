@@ -4587,7 +4587,7 @@ public partial class AccuracyType {
     
     private DeltaTime timeRangeField;
     
-    private GeometricElement locationField;
+    private GeometricElement regionField;
     
     /// <remarks/>
     public DeltaTime TimeRange {
@@ -4600,12 +4600,12 @@ public partial class AccuracyType {
     }
     
     /// <remarks/>
-    public GeometricElement Location {
+    public GeometricElement Region {
         get {
-            return this.locationField;
+            return this.regionField;
         }
         set {
-            this.locationField = value;
+            this.regionField = value;
         }
     }
 }
@@ -4618,6 +4618,8 @@ public partial class AccuracyType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
 public partial class File {
     
+    private Point locationField;
+    
     private TimeType creationTimeField;
     
     private byte[] file1Field;
@@ -4625,6 +4627,16 @@ public partial class File {
     private string itemField;
     
     private ItemChoiceType3 itemElementNameField;
+    
+    /// <remarks/>
+    public Point Location {
+        get {
+            return this.locationField;
+        }
+        set {
+            this.locationField = value;
+        }
+    }
     
     /// <remarks/>
     public TimeType CreationTime {
@@ -7300,8 +7312,6 @@ public partial class VideoAnalyticDetectionType {
     
     private string siteIDField;
     
-    private string coordinatesField;
-    
     private SystemIdentification systemIdentificationField;
     
     private AlertIdentification alertIdentificationField;
@@ -7502,16 +7512,6 @@ public partial class VideoAnalyticDetectionType {
     }
     
     /// <remarks/>
-    public string Coordinates {
-        get {
-            return this.coordinatesField;
-        }
-        set {
-            this.coordinatesField = value;
-        }
-    }
-    
-    /// <remarks/>
     public SystemIdentification SystemIdentification {
         get {
             return this.systemIdentificationField;
@@ -7620,7 +7620,7 @@ public partial class SystemIdentification {
     
     private string locationNameField;
     
-    private string watchDirectionField;
+    private string facingDirectionField;
     
     private string cameraNameField;
     
@@ -7651,12 +7651,12 @@ public partial class SystemIdentification {
     }
     
     /// <remarks/>
-    public string WatchDirection {
+    public string FacingDirection {
         get {
-            return this.watchDirectionField;
+            return this.facingDirectionField;
         }
         set {
-            this.watchDirectionField = value;
+            this.facingDirectionField = value;
         }
     }
     
@@ -8036,9 +8036,9 @@ public partial class VehicleIdentification {
     
     private string vehicleModelNameField;
     
-    private LicenseType licenseTypeField;
+    private LicensePlateType licensePlateTypeField;
     
-    private bool licenseTypeFieldSpecified;
+    private bool licensePlateTypeFieldSpecified;
     
     private string licenseNumberField;
     
@@ -8115,23 +8115,23 @@ public partial class VehicleIdentification {
     }
     
     /// <remarks/>
-    public LicenseType LicenseType {
+    public LicensePlateType LicensePlateType {
         get {
-            return this.licenseTypeField;
+            return this.licensePlateTypeField;
         }
         set {
-            this.licenseTypeField = value;
+            this.licensePlateTypeField = value;
         }
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool LicenseTypeSpecified {
+    public bool LicensePlateTypeSpecified {
         get {
-            return this.licenseTypeFieldSpecified;
+            return this.licensePlateTypeFieldSpecified;
         }
         set {
-            this.licenseTypeFieldSpecified = value;
+            this.licensePlateTypeFieldSpecified = value;
         }
     }
     
@@ -8207,7 +8207,7 @@ public enum VehicleType {
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
-public enum LicenseType {
+public enum LicensePlateType {
     
     /// <remarks/>
     Undefined,
