@@ -102,6 +102,7 @@
 			<snsr_std:enumeration value="Unattended Ground Sensors"/>
 			<snsr_std:enumeration value="Underground Fence Device"/>
 			<snsr_std:enumeration value="Video Analytic System"/>
+			<snsr_std:enumeration value="Camera Network System"/>
 			<snsr_std:enumeration value="Reserved1"/>
 			<snsr_std:enumeration value="Reserved2"/>
 			<snsr_std:enumeration value="Reserved3"/>

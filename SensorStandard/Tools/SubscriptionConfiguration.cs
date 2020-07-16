@@ -836,6 +836,10 @@ public enum DeviceTypeType {
     VideoAnalyticSystem,
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlEnumAttribute("Camera Network System")]
+    CameraNetworkSystem,
+    
+    /// <remarks/>
     Reserved1,
     
     /// <remarks/>
