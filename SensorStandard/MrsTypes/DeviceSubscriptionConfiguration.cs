@@ -11,7 +11,7 @@ namespace SensorStandard.MrsTypes
     {
         public DeviceSubscriptionConfiguration()
         {
-            MrsMessageType = MrsMessageTypes.DeviceSubscription;
+            MrsMessageType = MrsMessageTypes.DeviceSubscriptionConfiguration;
         }
     }
 }

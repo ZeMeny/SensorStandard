@@ -10,7 +10,7 @@ namespace SensorStandard
     {
         DeviceConfiguration,
         DeviceStatusReport,
-        DeviceSubscription,
+        DeviceSubscriptionConfiguration,
         DeviceIndicationReport,
         CommandMessage
     }
