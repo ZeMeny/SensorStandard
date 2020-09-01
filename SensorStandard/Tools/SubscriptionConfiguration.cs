@@ -760,6 +760,10 @@ public enum DeviceTypeType {
     AcousticDetectionSystem,
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlEnumAttribute("Camera Network System")]
+    CameraNetworkSystem,
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlEnumAttribute("EO Device")]
     EODevice,
     
@@ -834,10 +838,6 @@ public enum DeviceTypeType {
     /// <remarks/>
     [System.Xml.Serialization.XmlEnumAttribute("Video Analytic System")]
     VideoAnalyticSystem,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("Camera Network System")]
-    CameraNetworkSystem,
     
     /// <remarks/>
     Reserved1,
@@ -1046,6 +1046,16 @@ public enum SensorTypeType {
     Inclinometer,
     
     /// <remarks/>
+    Microphone,
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlEnumAttribute("Video Analytic Camera")]
+    VideoAnalyticCamera,
+    
+    /// <remarks/>
+    LPR,
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlEnumAttribute("Video Fusion")]
     VideoFusion,
     
@@ -1173,9 +1183,6 @@ public enum SensorTypeType {
     StaringCamera,
     
     /// <remarks/>
-    LPR,
-    
-    /// <remarks/>
     [System.Xml.Serialization.XmlEnumAttribute("Shake Detector")]
     ShakeDetector,
     
@@ -1241,13 +1248,6 @@ public enum SensorTypeType {
     
     /// <remarks/>
     Recorder,
-    
-    /// <remarks/>
-    Microphone,
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("Video Analytic Camera")]
-    VideoAnalyticCamera,
     
     /// <remarks/>
     Reserved1,
@@ -4367,9 +4367,9 @@ public partial class AcousticDetectionType {
     
     private VelocityType detectionSpeedField;
     
-    private FireType fireTypeField;
+    private DetectionSubType detectionSubTypeField;
     
-    private bool fireTypeFieldSpecified;
+    private bool detectionSubTypeFieldSpecified;
     
     private AzimuthType fireAzimuthField;
     
@@ -4381,7 +4381,7 @@ public partial class AcousticDetectionType {
     
     private bool cEP90FieldSpecified;
     
-    private File audioFileField;
+    private AudioFile audioFileField;
     
     /// <remarks/>
     public Point Location {
@@ -4436,23 +4436,23 @@ public partial class AcousticDetectionType {
     }
     
     /// <remarks/>
-    public FireType FireType {
+    public DetectionSubType DetectionSubType {
         get {
-            return this.fireTypeField;
+            return this.detectionSubTypeField;
         }
         set {
-            this.fireTypeField = value;
+            this.detectionSubTypeField = value;
         }
     }
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool FireTypeSpecified {
+    public bool DetectionSubTypeSpecified {
         get {
-            return this.fireTypeFieldSpecified;
+            return this.detectionSubTypeFieldSpecified;
         }
         set {
-            this.fireTypeFieldSpecified = value;
+            this.detectionSubTypeFieldSpecified = value;
         }
     }
     
@@ -4508,7 +4508,7 @@ public partial class AcousticDetectionType {
     }
     
     /// <remarks/>
-    public File AudioFile {
+    public AudioFile AudioFile {
         get {
             return this.audioFileField;
         }
@@ -4545,25 +4545,37 @@ public partial class VelocityType {
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
-public enum FireType {
+public enum DetectionSubType {
     
     /// <remarks/>
     Undefined,
     
     /// <remarks/>
-    AT,
-    
-    /// <remarks/>
-    SmallArm,
-    
-    /// <remarks/>
-    Artillery,
+    Gunshot,
     
     /// <remarks/>
     Mortar,
     
     /// <remarks/>
+    RPG,
+    
+    /// <remarks/>
     Explosion,
+    
+    /// <remarks/>
+    Drone,
+    
+    /// <remarks/>
+    UAV,
+    
+    /// <remarks/>
+    MotorVehicle,
+    
+    /// <remarks/>
+    Voice,
+    
+    /// <remarks/>
+    Anomaly,
     
     /// <remarks/>
     TBD1,
@@ -4576,9 +4588,6 @@ public enum FireType {
     
     /// <remarks/>
     TBD4,
-    
-    /// <remarks/>
-    TBD5,
 }
 
 /// <remarks/>
@@ -4620,27 +4629,15 @@ public partial class AccuracyType {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
-public partial class File {
-    
-    private Point locationField;
+public partial class AudioFile {
     
     private TimeType creationTimeField;
     
-    private byte[] file1Field;
+    private byte[] fileField;
     
     private string itemField;
     
-    private ItemChoiceType3 itemElementNameField;
-    
-    /// <remarks/>
-    public Point Location {
-        get {
-            return this.locationField;
-        }
-        set {
-            this.locationField = value;
-        }
-    }
+    private Point locationField;
     
     /// <remarks/>
     public TimeType CreationTime {
@@ -4653,21 +4650,18 @@ public partial class File {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("File", DataType="base64Binary")]
-    public byte[] File1 {
+    [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+    public byte[] File {
         get {
-            return this.file1Field;
+            return this.fileField;
         }
         set {
-            this.file1Field = value;
+            this.fileField = value;
         }
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("NameJPEG", typeof(string))]
-    [System.Xml.Serialization.XmlElementAttribute("NameMP4", typeof(string))]
-    [System.Xml.Serialization.XmlElementAttribute("NameWAV", typeof(string))]
-    [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
+    [System.Xml.Serialization.XmlElementAttribute("NameWAV")]
     public string Item {
         get {
             return this.itemField;
@@ -4678,31 +4672,14 @@ public partial class File {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public ItemChoiceType3 ItemElementName {
+    public Point Location {
         get {
-            return this.itemElementNameField;
+            return this.locationField;
         }
         set {
-            this.itemElementNameField = value;
+            this.locationField = value;
         }
     }
-}
-
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD", IncludeInSchema=false)]
-public enum ItemChoiceType3 {
-    
-    /// <remarks/>
-    NameJPEG,
-    
-    /// <remarks/>
-    NameMP4,
-    
-    /// <remarks/>
-    NameWAV,
 }
 
 /// <remarks/>
@@ -5496,7 +5473,7 @@ public partial class AlertIndicationType {
     
     private object itemField;
     
-    private ItemChoiceType4 itemElementNameField;
+    private ItemChoiceType3 itemElementNameField;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("DoorAlertType", typeof(string))]
@@ -5514,7 +5491,7 @@ public partial class AlertIndicationType {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public ItemChoiceType4 ItemElementName {
+    public ItemChoiceType3 ItemElementName {
         get {
             return this.itemElementNameField;
         }
@@ -5562,7 +5539,7 @@ public enum SimpleDetectorAlertType {
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD", IncludeInSchema=false)]
-public enum ItemChoiceType4 {
+public enum ItemChoiceType3 {
     
     /// <remarks/>
     DoorAlertType,
@@ -5885,6 +5862,46 @@ public partial class FireDetectionType {
             this.accuracyField = value;
         }
     }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
+public enum FireType {
+    
+    /// <remarks/>
+    Undefined,
+    
+    /// <remarks/>
+    AT,
+    
+    /// <remarks/>
+    SmallArm,
+    
+    /// <remarks/>
+    Artillery,
+    
+    /// <remarks/>
+    Mortar,
+    
+    /// <remarks/>
+    Explosion,
+    
+    /// <remarks/>
+    TBD1,
+    
+    /// <remarks/>
+    TBD2,
+    
+    /// <remarks/>
+    TBD3,
+    
+    /// <remarks/>
+    TBD4,
+    
+    /// <remarks/>
+    TBD5,
 }
 
 /// <remarks/>
@@ -7326,9 +7343,9 @@ public partial class VideoAnalyticDetectionType {
     
     private Evidences[] evidencesField;
     
-    private File[] pictureField;
+    private ImageFile[] pictureField;
     
-    private File[] videoField;
+    private VideoFile[] videoField;
     
     /// <remarks/>
     public Point Location {
@@ -7568,7 +7585,7 @@ public partial class VideoAnalyticDetectionType {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Picture")]
-    public File[] Picture {
+    public ImageFile[] Picture {
         get {
             return this.pictureField;
         }
@@ -7579,7 +7596,7 @@ public partial class VideoAnalyticDetectionType {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Video")]
-    public File[] Video {
+    public VideoFile[] Video {
         get {
             return this.videoField;
         }
@@ -8040,7 +8057,7 @@ public partial class VehicleIdentification {
     
     private string vehicleModelNameField;
     
-    private LicensePlateType licensePlateTypeField;
+    private LicenseType licensePlateTypeField;
     
     private bool licensePlateTypeFieldSpecified;
     
@@ -8119,7 +8136,7 @@ public partial class VehicleIdentification {
     }
     
     /// <remarks/>
-    public LicensePlateType LicensePlateType {
+    public LicenseType LicensePlateType {
         get {
             return this.licensePlateTypeField;
         }
@@ -8211,7 +8228,7 @@ public enum VehicleType {
 [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
 [System.SerializableAttribute()]
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
-public enum LicensePlateType {
+public enum LicenseType {
     
     /// <remarks/>
     Undefined,
@@ -8315,6 +8332,124 @@ public partial class Evidences {
 [System.SerializableAttribute()]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
+public partial class ImageFile {
+    
+    private TimeType creationTimeField;
+    
+    private byte[] fileField;
+    
+    private string itemField;
+    
+    private Point locationField;
+    
+    /// <remarks/>
+    public TimeType CreationTime {
+        get {
+            return this.creationTimeField;
+        }
+        set {
+            this.creationTimeField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+    public byte[] File {
+        get {
+            return this.fileField;
+        }
+        set {
+            this.fileField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("NameJPEG")]
+    public string Item {
+        get {
+            return this.itemField;
+        }
+        set {
+            this.itemField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public Point Location {
+        get {
+            return this.locationField;
+        }
+        set {
+            this.locationField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(Namespace="urn:SNSR_STD")]
+public partial class VideoFile {
+    
+    private TimeType creationTimeField;
+    
+    private byte[] fileField;
+    
+    private string itemField;
+    
+    private Point locationField;
+    
+    /// <remarks/>
+    public TimeType CreationTime {
+        get {
+            return this.creationTimeField;
+        }
+        set {
+            this.creationTimeField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+    public byte[] File {
+        get {
+            return this.fileField;
+        }
+        set {
+            this.fileField = value;
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlElementAttribute("NameMP4")]
+    public string Item {
+        get {
+            return this.itemField;
+        }
+        set {
+            this.itemField = value;
+        }
+    }
+    
+    /// <remarks/>
+    public Point Location {
+        get {
+            return this.locationField;
+        }
+        set {
+            this.locationField = value;
+        }
+    }
+}
+
+/// <remarks/>
+[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+[System.SerializableAttribute()]
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="urn:SNSR_STD")]
 [System.Xml.Serialization.XmlRootAttribute(Namespace="urn:SNSR_STD", IsNullable=false)]
 public partial class VideoMotionDetectionType {
@@ -8345,7 +8480,7 @@ public partial class VideoMotionDetectionType {
     
     private AreaMeasuring sizeField;
     
-    private File[] mediaFileField;
+    private VideoFile[] mediaFileField;
     
     /// <remarks/>
     public GeometricElement LocationOnVideo {
@@ -8481,7 +8616,7 @@ public partial class VideoMotionDetectionType {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("MediaFile")]
-    public File[] MediaFile {
+    public VideoFile[] MediaFile {
         get {
             return this.mediaFileField;
         }
@@ -9176,6 +9311,15 @@ public enum SensorModeType {
     
     /// <remarks/>
     Tracking,
+    
+    /// <remarks/>
+    Stolen,
+    
+    /// <remarks/>
+    Error,
+    
+    /// <remarks/>
+    Alert,
     
     /// <remarks/>
     Reserved1,
@@ -10633,7 +10777,7 @@ public partial class PictureStatus {
     
     private string indicationIDField;
     
-    private File[] mediaFileField;
+    private ImageFile[] mediaFileField;
     
     /// <remarks/>
     public PictureState PictureState {
@@ -10658,7 +10802,7 @@ public partial class PictureStatus {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("MediaFile")]
-    public File[] MediaFile {
+    public ImageFile[] MediaFile {
         get {
             return this.mediaFileField;
         }

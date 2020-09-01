@@ -82,6 +82,7 @@
 			<snsr_std:enumeration value="Undefined"/>
 			<snsr_std:enumeration value="Device Hub"/>
 			<snsr_std:enumeration value="Acoustic Detection System"/>
+			<snsr_std:enumeration value="Camera Network System"/>
 			<snsr_std:enumeration value="EO Device"/>
 			<snsr_std:enumeration value="Fire Locating Device"/>
 			<snsr_std:enumeration value="Artillery Locating Device"/>
@@ -102,7 +103,6 @@
 			<snsr_std:enumeration value="Unattended Ground Sensors"/>
 			<snsr_std:enumeration value="Underground Fence Device"/>
 			<snsr_std:enumeration value="Video Analytic System"/>
-			<snsr_std:enumeration value="Camera Network System"/>
 			<snsr_std:enumeration value="Reserved1"/>
 			<snsr_std:enumeration value="Reserved2"/>
 			<snsr_std:enumeration value="Reserved3"/>
@@ -127,6 +127,9 @@
 			<snsr_std:enumeration value="Gyro Stabilizer"/>
 			<snsr_std:enumeration value="Electronic Stabilizer"/>
 			<snsr_std:enumeration value="Inclinometer"/>
+			<snsr_std:enumeration value="Microphone"/>
+			<snsr_std:enumeration value="Video Analytic Camera"/>
+			<snsr_std:enumeration value="LPR"/>
 			<snsr_std:enumeration value="Video Fusion"/>
 			<snsr_std:enumeration value="Video Encoder"/>
 			<snsr_std:enumeration value="Video Motion Detector"/>
@@ -162,7 +165,6 @@
 			<snsr_std:enumeration value="Radar"/>
 			<snsr_std:enumeration value="Stills Camera"/>
 			<snsr_std:enumeration value="Staring Camera"/>
-			<snsr_std:enumeration value="LPR"/>
 			<snsr_std:enumeration value="Shake Detector"/>
 			<snsr_std:enumeration value="Stairs Detector"/>
 			<snsr_std:enumeration value="Generator"/>
@@ -181,8 +183,6 @@
 			<snsr_std:enumeration value="Remote Power"/>
 			<snsr_std:enumeration value="Sensor Computer"/>
 			<snsr_std:enumeration value="Recorder"/>
-			<snsr_std:enumeration value="Microphone"/>
-			<snsr_std:enumeration value="Video Analytic Camera"/>
 			<snsr_std:enumeration value="Reserved1"/>
 			<snsr_std:enumeration value="Reserved2"/>
 			<snsr_std:enumeration value="Reserved3"/>
@@ -1248,19 +1248,41 @@
 	</snsr_std:complexType>
      <!-- 
 	  -->
-	<snsr_std:complexType name="File">
+	<snsr_std:complexType name="AudioFile">
 		<snsr_std:sequence>
+			<snsr_std:element name="CreationTime" type="TimeType" minOccurs="0"/>
+			<snsr_std:element name="File" type="snsr_std:base64Binary" />
+			<snsr_std:choice>
+				<snsr_std:element name="NameWAV" type="NameWAV"/>
+			</snsr_std:choice>
 			<snsr_std:element name="Location" type="Point" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!-- 	
+	  -->
+	<snsr_std:complexType name="ImageFile">
+		<snsr_std:sequence>
 			<snsr_std:element name="CreationTime" type="TimeType" minOccurs="0"/>
 			<snsr_std:element name="File" type="snsr_std:base64Binary" />
 			<snsr_std:choice>
 				<snsr_std:element name="NameJPEG" type="NameJPEG"/>
-				<snsr_std:element name="NameWAV" type="NameWAV"/>
-				<snsr_std:element name="NameMP4" type="NameMP4"/>
 			</snsr_std:choice>
+			<snsr_std:element name="Location" type="Point" minOccurs="0"/>
 		</snsr_std:sequence>
 	</snsr_std:complexType>
-	<!-- 	
+	<!-- 
+	-->
+	<snsr_std:complexType name="VideoFile">
+		<snsr_std:sequence>
+			<snsr_std:element name="CreationTime" type="TimeType" minOccurs="0"/>
+			<snsr_std:element name="File" type="snsr_std:base64Binary" />
+			<snsr_std:choice>
+				<snsr_std:element name="NameMP4" type="NameMP4"/>
+			</snsr_std:choice>
+			<snsr_std:element name="Location" type="Point" minOccurs="0"/>
+		</snsr_std:sequence>
+	</snsr_std:complexType>
+	<!--	
 
 	   -->
 	<snsr_std:simpleType name="NameJPEG">

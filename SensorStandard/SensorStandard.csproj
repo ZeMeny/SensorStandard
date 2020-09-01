@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exensions.cs" />
     <Compile Include="MrsMessage.cs" />
     <Compile Include="MrsMessageTypes.cs" />
     <Compile Include="MrsTypes\CommandMessage.cs" />
@@ -56,9 +57,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Extensions.cs" />
     <Compile Include="SNSR_STDSOAPService.cs" />
     <Compile Include="SNSR_STD_26.cs" />
+    <Compile Include="XmlSerializerCache.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -21,7 +21,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class LocationType
     {
@@ -49,7 +49,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class GeoPixelLocationType
     {
@@ -335,7 +335,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class GeodeticLocation
     {
@@ -438,7 +438,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class Latitude
     {
@@ -496,7 +496,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class Longitude
     {
@@ -556,7 +556,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class RelativeLocationType
     {
@@ -612,7 +612,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class Speed
     {
@@ -669,7 +669,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class CommandMessage
     {
@@ -902,6 +902,10 @@ namespace SensorStandard.MrsTypes
         AcousticDetectionSystem,
 
         /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Camera Network System")]
+        CameraNetworkSystem,
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("EO Device")]
         EODevice,
 
@@ -977,10 +981,6 @@ namespace SensorStandard.MrsTypes
         [System.Xml.Serialization.XmlEnumAttribute("Video Analytic System")]
         VideoAnalyticSystem,
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Camera Network System")]
-        CameraNetworkSystem,
-        
         /// <remarks/>
         Reserved1,
 
@@ -1212,6 +1212,16 @@ namespace SensorStandard.MrsTypes
         Inclinometer,
 
         /// <remarks/>
+        Microphone,
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Video Analytic Camera")]
+        VideoAnalyticCamera,
+
+        /// <remarks/>
+        LPR,
+
+        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Video Fusion")]
         VideoFusion,
 
@@ -1339,9 +1349,6 @@ namespace SensorStandard.MrsTypes
         StaringCamera,
 
         /// <remarks/>
-        LPR,
-
-        /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("Shake Detector")]
         ShakeDetector,
 
@@ -1407,13 +1414,6 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         Recorder,
-
-        /// <remarks/>
-        Microphone,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Video Analytic Camera")]
-        VideoAnalyticCamera,
 
         /// <remarks/>
         Reserved1,
@@ -2967,7 +2967,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class DetectionZoneTypeFrequencyRange
     {
 
@@ -3826,7 +3826,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class ReceiverCommandTypeFrequencyRange
     {
 
@@ -4598,7 +4598,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceIndicationReport
     {
@@ -4657,7 +4657,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class SensorIndicationReport
     {
@@ -4699,7 +4699,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class IndicationType
     {
@@ -4926,7 +4926,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AcousticDetectionType
     {
@@ -4941,9 +4941,9 @@ namespace SensorStandard.MrsTypes
 
         private VelocityType detectionSpeedField;
 
-        private FireType fireTypeField;
+        private DetectionSubType detectionSubTypeField;
 
-        private bool fireTypeFieldSpecified;
+        private bool detectionSubTypeFieldSpecified;
 
         private AzimuthType fireAzimuthField;
 
@@ -4955,7 +4955,7 @@ namespace SensorStandard.MrsTypes
 
         private bool cEP90FieldSpecified;
 
-        private File audioFileField;
+        private AudioFile audioFileField;
 
         /// <remarks/>
         public Point Location
@@ -5025,29 +5025,29 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public FireType FireType
+        public DetectionSubType DetectionSubType
         {
             get
             {
-                return this.fireTypeField;
+                return this.detectionSubTypeField;
             }
             set
             {
-                this.fireTypeField = value;
+                this.detectionSubTypeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FireTypeSpecified
+        public bool DetectionSubTypeSpecified
         {
             get
             {
-                return this.fireTypeFieldSpecified;
+                return this.detectionSubTypeFieldSpecified;
             }
             set
             {
-                this.fireTypeFieldSpecified = value;
+                this.detectionSubTypeFieldSpecified = value;
             }
         }
 
@@ -5118,7 +5118,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public File AudioFile
+        public AudioFile AudioFile
         {
             get
             {
@@ -5162,26 +5162,38 @@ namespace SensorStandard.MrsTypes
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public enum FireType
+    public enum DetectionSubType
     {
 
         /// <remarks/>
         Undefined,
 
         /// <remarks/>
-        AT,
-
-        /// <remarks/>
-        SmallArm,
-
-        /// <remarks/>
-        Artillery,
+        Gunshot,
 
         /// <remarks/>
         Mortar,
 
         /// <remarks/>
+        RPG,
+
+        /// <remarks/>
         Explosion,
+
+        /// <remarks/>
+        Drone,
+
+        /// <remarks/>
+        UAV,
+
+        /// <remarks/>
+        MotorVehicle,
+
+        /// <remarks/>
+        Voice,
+
+        /// <remarks/>
+        Anomaly,
 
         /// <remarks/>
         TBD1,
@@ -5194,9 +5206,6 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         TBD4,
-
-        /// <remarks/>
-        TBD5,
     }
 
     /// <remarks/>
@@ -5245,31 +5254,16 @@ namespace SensorStandard.MrsTypes
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public partial class File
+    public partial class AudioFile
     {
-
-        private Point locationField;
 
         private TimeType creationTimeField;
 
-        private byte[] file1Field;
+        private byte[] fileField;
 
         private string itemField;
 
-        private ItemChoiceType3 itemElementNameField;
-
-        /// <remarks/>
-        public Point Location
-        {
-            get
-            {
-                return this.locationField;
-            }
-            set
-            {
-                this.locationField = value;
-            }
-        }
+        private Point locationField;
 
         /// <remarks/>
         public TimeType CreationTime
@@ -5285,24 +5279,21 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("File", DataType = "base64Binary")]
-        public byte[] File1
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+        public byte[] File
         {
             get
             {
-                return this.file1Field;
+                return this.fileField;
             }
             set
             {
-                this.file1Field = value;
+                this.fileField = value;
             }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("NameJPEG", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("NameMP4", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("NameWAV", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
+        [System.Xml.Serialization.XmlElementAttribute("NameWAV")]
         public string Item
         {
             get
@@ -5316,35 +5307,17 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceType3 ItemElementName
+        public Point Location
         {
             get
             {
-                return this.itemElementNameField;
+                return this.locationField;
             }
             set
             {
-                this.itemElementNameField = value;
+                this.locationField = value;
             }
         }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD", IncludeInSchema = false)]
-    public enum ItemChoiceType3
-    {
-
-        /// <remarks/>
-        NameJPEG,
-
-        /// <remarks/>
-        NameMP4,
-
-        /// <remarks/>
-        NameWAV,
     }
 
     /// <remarks/>
@@ -5637,7 +5610,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VarianceLocation
     {
@@ -5840,7 +5813,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VectorDetectionSpeed
     {
@@ -6102,7 +6075,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AerialTrackDetectionType : AerialSingleDetectionType
     {
@@ -6273,14 +6246,14 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AlertIndicationType
     {
 
         private object itemField;
 
-        private ItemChoiceType4 itemElementNameField;
+        private ItemChoiceType3 itemElementNameField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DoorAlertType", typeof(string))]
@@ -6301,7 +6274,7 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceType4 ItemElementName
+        public ItemChoiceType3 ItemElementName
         {
             get
             {
@@ -6353,7 +6326,7 @@ namespace SensorStandard.MrsTypes
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD", IncludeInSchema = false)]
-    public enum ItemChoiceType4
+    public enum ItemChoiceType3
     {
 
         /// <remarks/>
@@ -6371,7 +6344,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class FenceDetectionType
     {
@@ -6596,7 +6569,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class FireDetectionType
     {
@@ -6757,6 +6730,47 @@ namespace SensorStandard.MrsTypes
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public enum FireType
+    {
+
+        /// <remarks/>
+        Undefined,
+
+        /// <remarks/>
+        AT,
+
+        /// <remarks/>
+        SmallArm,
+
+        /// <remarks/>
+        Artillery,
+
+        /// <remarks/>
+        Mortar,
+
+        /// <remarks/>
+        Explosion,
+
+        /// <remarks/>
+        TBD1,
+
+        /// <remarks/>
+        TBD2,
+
+        /// <remarks/>
+        TBD3,
+
+        /// <remarks/>
+        TBD4,
+
+        /// <remarks/>
+        TBD5,
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
     public enum ProjectileType
     {
 
@@ -6799,7 +6813,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class GeneralDetectionType
     {
@@ -6886,7 +6900,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class IntelligenceDetectionType
     {
@@ -7740,7 +7754,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class HopperParametersTypeHopRate
     {
 
@@ -7782,7 +7796,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class HopperParametersTypeHopPhase
     {
 
@@ -7824,7 +7838,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class HopperParametersTypeHopDuration
     {
 
@@ -8255,7 +8269,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class RadarTrackDetectionType : RadarSingleDetectionType
     {
@@ -8389,7 +8403,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VideoAnalyticDetectionType
     {
@@ -8440,9 +8454,9 @@ namespace SensorStandard.MrsTypes
 
         private Evidences[] evidencesField;
 
-        private File[] pictureField;
+        private ImageFile[] pictureField;
 
-        private File[] videoField;
+        private VideoFile[] videoField;
 
         /// <remarks/>
         public Point Location
@@ -8751,7 +8765,7 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Picture")]
-        public File[] Picture
+        public ImageFile[] Picture
         {
             get
             {
@@ -8765,7 +8779,7 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Video")]
-        public File[] Video
+        public VideoFile[] Video
         {
             get
             {
@@ -8806,7 +8820,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class SystemIdentification
     {
@@ -8922,7 +8936,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AlertIdentification
     {
@@ -9098,7 +9112,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PersonIdentification
     {
@@ -9295,7 +9309,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VehicleIdentification
     {
@@ -9314,7 +9328,7 @@ namespace SensorStandard.MrsTypes
 
         private string vehicleModelNameField;
 
-        private LicensePlateType licensePlateTypeField;
+        private LicenseType licensePlateTypeField;
 
         private bool licensePlateTypeFieldSpecified;
 
@@ -9414,7 +9428,7 @@ namespace SensorStandard.MrsTypes
         }
 
         /// <remarks/>
-        public LicensePlateType LicensePlateType
+        public LicenseType LicensePlateType
         {
             get
             {
@@ -9516,7 +9530,7 @@ namespace SensorStandard.MrsTypes
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
-    public enum LicensePlateType
+    public enum LicenseType
     {
 
         /// <remarks/>
@@ -9563,7 +9577,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class Evidences
     {
@@ -9634,7 +9648,151 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public partial class ImageFile
+    {
+
+        private TimeType creationTimeField;
+
+        private byte[] fileField;
+
+        private string itemField;
+
+        private Point locationField;
+
+        /// <remarks/>
+        public TimeType CreationTime
+        {
+            get
+            {
+                return this.creationTimeField;
+            }
+            set
+            {
+                this.creationTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+        public byte[] File
+        {
+            get
+            {
+                return this.fileField;
+            }
+            set
+            {
+                this.fileField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("NameJPEG")]
+        public string Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+
+        /// <remarks/>
+        public Point Location
+        {
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public partial class VideoFile
+    {
+
+        private TimeType creationTimeField;
+
+        private byte[] fileField;
+
+        private string itemField;
+
+        private Point locationField;
+
+        /// <remarks/>
+        public TimeType CreationTime
+        {
+            get
+            {
+                return this.creationTimeField;
+            }
+            set
+            {
+                this.creationTimeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+        public byte[] File
+        {
+            get
+            {
+                return this.fileField;
+            }
+            set
+            {
+                this.fileField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("NameMP4")]
+        public string Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+
+        /// <remarks/>
+        public Point Location
+        {
+            get
+            {
+                return this.locationField;
+            }
+            set
+            {
+                this.locationField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VideoMotionDetectionType
     {
@@ -9665,7 +9823,7 @@ namespace SensorStandard.MrsTypes
 
         private AreaMeasuring sizeField;
 
-        private File[] mediaFileField;
+        private VideoFile[] mediaFileField;
 
         /// <remarks/>
         public GeometricElement LocationOnVideo
@@ -9840,7 +9998,7 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("MediaFile")]
-        public File[] MediaFile
+        public VideoFile[] MediaFile
         {
             get
             {
@@ -9947,7 +10105,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceStatusReport
     {
@@ -10072,7 +10230,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DetailedDeviceBIT
     {
@@ -10348,7 +10506,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class SensorStatusReport
     {
@@ -10664,6 +10822,15 @@ namespace SensorStandard.MrsTypes
         Tracking,
 
         /// <remarks/>
+        Stolen,
+
+        /// <remarks/>
+        Error,
+
+        /// <remarks/>
+        Alert,
+
+        /// <remarks/>
         Reserved1,
 
         /// <remarks/>
@@ -10684,7 +10851,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class EnergyStatus
     {
@@ -10772,7 +10939,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AlertIndicatorStatus
     {
@@ -10846,7 +11013,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AntennaStatus
     {
@@ -11011,7 +11178,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DetectionControllerStatus
     {
@@ -11069,7 +11236,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DroneStatus
     {
@@ -11201,7 +11368,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class LRFStatus
     {
@@ -11296,7 +11463,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class OpticalStatus
     {
@@ -11540,7 +11707,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class FieldOfViewStatusType
     {
@@ -11597,7 +11764,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class ZoomStatusType
     {
@@ -11686,7 +11853,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class FocusStatusType
     {
@@ -11775,7 +11942,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class GainLevelStatusType
     {
@@ -11849,7 +12016,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PayloadStatus
     {
@@ -11905,7 +12072,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PedestalStatus
     {
@@ -12021,7 +12188,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PointerStatus
     {
@@ -12078,7 +12245,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class TransceiverStatus
     {
@@ -12232,7 +12399,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VideoSwitchStatus
     {
@@ -12259,7 +12426,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DebriefStatus
     {
@@ -12376,7 +12543,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PictureStatus
     {
@@ -12385,7 +12552,7 @@ namespace SensorStandard.MrsTypes
 
         private string indicationIDField;
 
-        private File[] mediaFileField;
+        private ImageFile[] mediaFileField;
 
         /// <remarks/>
         public PictureState PictureState
@@ -12416,7 +12583,7 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("MediaFile")]
-        public File[] MediaFile
+        public ImageFile[] MediaFile
         {
             get
             {
@@ -12556,7 +12723,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class SensorConfiguration
     {
@@ -12674,7 +12841,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AlertIndicatorConfiguration
     {
@@ -12831,7 +12998,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AntennaConfiguration
     {
@@ -13155,7 +13322,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class AntennaCommandConfiguration
     {
@@ -13213,7 +13380,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DebriefConfiguration
     {
@@ -13255,7 +13422,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DroneConfiguration
     {
@@ -13371,7 +13538,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class GyroStabilizationConfiguration
     {
@@ -13398,7 +13565,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class GyroStabilizationCommandConfiguration
     {
@@ -13471,7 +13638,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class OpticalConfiguration
     {
@@ -13544,7 +13711,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class OpticalCommandConfiguration
     {
@@ -13640,7 +13807,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class FieldOfViewConfigurationType
     {
@@ -13852,7 +14019,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class OpticalConfigurationOpticalCapabilities
     {
 
@@ -13932,7 +14099,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PayloadConfiguration
     {
@@ -13973,7 +14140,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PedestalConfiguration
     {
@@ -14220,7 +14387,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VideoSwitchConfiguration
     {
@@ -14261,7 +14428,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VideoSwitchCommandConfiguration
     {
@@ -14344,7 +14511,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PointerConfiguration
     {
@@ -14371,7 +14538,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class PointerCommandConfiguration
     {
@@ -14413,7 +14580,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class ReceiverConfiguration
     {
@@ -14517,7 +14684,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class ReceiverConfigurationFrequencyRange
     {
 
@@ -14557,7 +14724,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class TrackerConfiguration
     {
@@ -14584,7 +14751,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class TrackerCommandConfiguration
     {
@@ -14660,7 +14827,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VideoEncoderConfiguration
     {
@@ -14732,7 +14899,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class VideoMotionDetectorConfiguration
     {
@@ -14805,7 +14972,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     public partial class VideoMotionDetectorConfigurationOpticalCapabilities
     {
 
@@ -14973,7 +15140,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceConfiguration
     {
@@ -15203,7 +15370,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DetectionControllerConfiguration
     {
@@ -15230,7 +15397,7 @@ namespace SensorStandard.MrsTypes
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "urn:SNSR_STD")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "urn:SNSR_STD")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "urn:SNSR_STD", IsNullable = false)]
     public partial class DeviceSubscriptionConfiguration
     {
@@ -15412,5 +15579,4 @@ namespace SensorStandard.MrsTypes
         /// <remarks/>
         Reserved5,
     }
-
 }
