@@ -2337,16 +2337,14 @@ namespace SensorStandard.MrsTypes
 
         private object itemField;
 
-        private ItemChoiceType2 itemElementNameField;
-
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Circle", typeof(Circle))]
         [System.Xml.Serialization.XmlElementAttribute("Ellipse", typeof(Ellipse))]
         [System.Xml.Serialization.XmlElementAttribute("Line", typeof(Line))]
+        [System.Xml.Serialization.XmlElementAttribute("MultiPolygon", typeof(MultiPolygon))]
         [System.Xml.Serialization.XmlElementAttribute("Point", typeof(Point))]
         [System.Xml.Serialization.XmlElementAttribute("Polygon", typeof(Polygon))]
         [System.Xml.Serialization.XmlElementAttribute("Sector", typeof(Sector))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public object Item
         {
             get
@@ -2356,20 +2354,6 @@ namespace SensorStandard.MrsTypes
             set
             {
                 this.itemField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceType2 ItemElementName
-        {
-            get
-            {
-                return this.itemElementNameField;
-            }
-            set
-            {
-                this.itemElementNameField = value;
             }
         }
     }
@@ -2516,10 +2500,38 @@ namespace SensorStandard.MrsTypes
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
+    public partial class MultiPolygon
+    {
+
+        private Polygon[] polygonsField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Polygons")]
+        public Polygon[] Polygons
+        {
+            get
+            {
+                return this.polygonsField;
+            }
+            set
+            {
+                this.polygonsField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD")]
     public partial class Polygon
     {
 
         private Point[] pointField;
+
+        private string[] textField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Point")]
@@ -2534,32 +2546,20 @@ namespace SensorStandard.MrsTypes
                 this.pointField = value;
             }
         }
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD", IncludeInSchema = false)]
-    public enum ItemChoiceType2
-    {
 
         /// <remarks/>
-        Circle,
-
-        /// <remarks/>
-        Ellipse,
-
-        /// <remarks/>
-        Line,
-
-        /// <remarks/>
-        Point,
-
-        /// <remarks/>
-        Polygon,
-
-        /// <remarks/>
-        Sector,
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text
+        {
+            get
+            {
+                return this.textField;
+            }
+            set
+            {
+                this.textField = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -6253,7 +6253,7 @@ namespace SensorStandard.MrsTypes
 
         private object itemField;
 
-        private ItemChoiceType3 itemElementNameField;
+        private ItemChoiceType2 itemElementNameField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DoorAlertType", typeof(string))]
@@ -6274,7 +6274,7 @@ namespace SensorStandard.MrsTypes
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceType3 ItemElementName
+        public ItemChoiceType2 ItemElementName
         {
             get
             {
@@ -6326,7 +6326,7 @@ namespace SensorStandard.MrsTypes
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:SNSR_STD", IncludeInSchema = false)]
-    public enum ItemChoiceType3
+    public enum ItemChoiceType2
     {
 
         /// <remarks/>
